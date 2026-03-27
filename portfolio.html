@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio — Teema Solution</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<nav class="nav" id="mainNav">
+  <div class="nav__logo">
+    <img src="assets/logo.png" alt="Teema Solution" class="nav__logo-img" onerror="this.style.display='none'"/>
+    <span class="nav__logo-text">TEEMA <span>SOLUTION</span></span>
+  </div>
+  <ul class="nav__links">
+    <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html" class="active">Portfolio</a></li><li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav__cta"><a href="contact.html" class="btn btn--primary btn--sm">ติดต่อเรา</a></div>
+  <div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero__glow"></div>
+  <div class="container page-hero__content">
+    <div class="page-hero__breadcrumb"><a href="index.html">Home</a> / <span>Portfolio</span></div>
+    <span class="section-label section-label--w">Our Work</span>
+    <h1 class="section-title section-title--w" style="margin-top:8px;">ผลงานของเรา</h1>
+    <p class="section-sub section-sub--w">โปรเจกต์กว่า 50+ ชิ้น จากองค์กรชั้นนำทั้งภาครัฐและเอกชน</p>
+  </div>
+</section>
+
+<section class="portfolio" style="padding-top:64px;">
+  <div class="container">
+    <div class="portfolio__filter">
+      <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+      <button class="filter-btn" data-filter="website">Website</button>
+      <button class="filter-btn" data-filter="mobile">Mobile App</button>
+      <button class="filter-btn" data-filter="lineoa">LINE OA</button>
+      <button class="filter-btn" data-filter="seo">SEO & SEM</button>
+    </div>
+    <div class="portfolio__grid">
+      <div class="portfolio-card portfolio-card--wide reveal" data-type="website">
+        <img src="assets/portfolio/mitsubishi.jpg" alt="Mitsubishi"/>
+        <div class="portfolio-card__overlay">
+          <div class="portfolio-card__client">Mitsubishi Electric</div>
+          <div class="portfolio-card__title">Product Information Website & Interactive Indoor Air Quality</div>
+          <span class="portfolio-card__type">Website Development</span>
+        </div>
+        <div class="portfolio-card__arrow">↗</div>
+      </div>
+      <div class="portfolio-card reveal" data-type="website">
+        <img src="assets/portfolio/betagro.jpg" alt="Betagro"/>
+        <div class="portfolio-card__overlay">
+          <div class="portfolio-card__client">Betagro</div>
+          <div class="portfolio-card__title">Product Information Website</div>
+          <span class="portfolio-card__type">Website Design (All Page)</span>
+        </div>
+        <div class="portfolio-card__arrow">↗</div>
+      </div>
+      <div class="portfolio-card reveal reveal-delay-1" data-type="website mobile">
+        <img src="assets/portfolio/asiacem.jpg" alt="Asia Cement"/>
+        <div class="portfolio-card__overlay">
+          <div class="portfolio-card__client">Asia Cement</div>
+          <div class="portfolio-card__title">RMC e-Commerce B2B & B2C</div>
+          <span class="portfolio-card__type">Web App + Mobile App</span>
+        </div>
+        <div class="portfolio-card__arrow">↗</div>
+      </div>
+      <div class="portfolio-card reveal" data-type="website">
+        <img src="assets/portfolio/stellaplus.jpg" alt="Stella Plus"/>
+        <div class="portfolio-card__overlay">
+          <div class="portfolio-card__client">Stella Plus (Startup)</div>
+          <div class="portfolio-card__title">eSarabun — ระบบสารบรรณอิเล็กทรอนิกส์</div>
+          <span class="portfolio-card__type">SaaS — React + Next.js</span>
+        </div>
+        <div class="portfolio-card__arrow">↗</div>
+      </div>
+      <div class="portfolio-card reveal reveal-delay-1" data-type="website">
+        <img src="assets/portfolio/baac.jpg" alt="BAAC"/>
+        <div class="portfolio-card__overlay">
+          <div class="portfolio-card__client">BAAC (ธ.ก.ส.)</div>
+          <div class="portfolio-card__title">Website ข้อมูลผลิตภัณฑ์สินเชื่อเกษตรกร</div>
+          <span class="portfolio-card__type">Website Design (All Page)</span>
+        </div>
+        <div class="portfolio-card__arrow">↗</div>
+      </div>
+      <div class="portfolio-card reveal reveal-delay-2" data-type="website">
+        <img src="assets/portfolio/omron.jpg" alt="OMRON"/>
+        <div class="portfolio-card__overlay">
+          <div class="portfolio-card__client">OMRON</div>
+          <div class="portfolio-card__title">Store Locator Web App</div>
+          <span class="portfolio-card__type">Website Development</span>
+        </div>
+        <div class="portfolio-card__arrow">↗</div>
+      </div>
+      <div class="portfolio-card portfolio-card--wide reveal" data-type="seo">
+        <img src="assets/portfolio/sangthai.jpg" alt="Sangthai"/>
+        <div class="portfolio-card__overlay">
+          <div class="portfolio-card__client">Sangthai Metalsheet</div>
+          <div class="portfolio-card__title">SEO Strategy — Page Views +348% (82K → 367K)</div>
+          <span class="portfolio-card__type">SEO & Content Strategy</span>
+        </div>
+        <div class="portfolio-card__arrow">↗</div>
+      </div>
+      <div class="portfolio-card reveal" data-type="seo">
+        <img src="assets/portfolio/exta.jpg" alt="eXta"/>
+        <div class="portfolio-card__overlay">
+          <div class="portfolio-card__client">eXta (CP ALL)</div>
+          <div class="portfolio-card__title">CTR +354% vs Target</div>
+          <span class="portfolio-card__type">SEO & SEM</span>
+        </div>
+        <div class="portfolio-card__arrow">↗</div>
+      </div>
+      <div class="portfolio-card reveal reveal-delay-1" data-type="lineoa mobile">
+        <img src="assets/portfolio/toyota.jpg" alt="Toyota"/>
+        <div class="portfolio-card__overlay">
+          <div class="portfolio-card__client">Toyota Thailand</div>
+          <div class="portfolio-card__title">Road Safety LINE Web App 2023</div>
+          <span class="portfolio-card__type">LINE OA / Web App</span>
+        </div>
+        <div class="portfolio-card__arrow">↗</div>
+      </div>
+      <div class="portfolio-card reveal reveal-delay-2" data-type="mobile">
+        <img src="assets/portfolio/ccc.jpg" alt="Calories Credit"/>
+        <div class="portfolio-card__overlay">
+          <div class="portfolio-card__client">กระทรวงการท่องเที่ยวและกีฬา</div>
+          <div class="portfolio-card__title">Calories Credit Challenge App</div>
+          <span class="portfolio-card__type">Mobile App (iOS + Android)</span>
+        </div>
+        <div class="portfolio-card__arrow">↗</div>
+      </div>
+      <div class="portfolio-card reveal" data-type="lineoa">
+        <img src="assets/portfolio/novonordisk.jpg" alt="Novo Nordisk"/>
+        <div class="portfolio-card__overlay">
+          <div class="portfolio-card__client">Novo Nordisk</div>
+          <div class="portfolio-card__title">Novo Nordisk Connect LINE OA</div>
+          <span class="portfolio-card__type">LINE OA — Node.js</span>
+        </div>
+        <div class="portfolio-card__arrow">↗</div>
+      </div>
+      <div class="portfolio-card reveal reveal-delay-1" data-type="lineoa">
+        <img src="assets/portfolio/dhipaya.jpg" alt="Dhipaya"/>
+        <div class="portfolio-card__overlay">
+          <div class="portfolio-card__client">Dhipaya Insurance</div>
+          <div class="portfolio-card__title">TIP Renew — LINE OA</div>
+          <span class="portfolio-card__type">LINE OA</span>
+        </div>
+        <div class="portfolio-card__arrow">↗</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="cta-banner__orb"></div>
+  <div class="container" style="position:relative;z-index:2;">
+    <h2 class="cta-banner__title">พร้อมสร้างผลงาน<br/><span>ชิ้นต่อไป</span>ด้วยกัน?</h2>
+    <p class="cta-banner__sub">ปรึกษาทีมเราฟรี ไม่มีค่าใช้จ่าย</p>
+    <div class="cta-banner__actions">
+      <a href="contact.html" class="btn btn--purple btn--lg">ติดต่อเราเลย →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><div class="footer__brand-name">TEEMA <span>SOLUTION</span></div><p class="footer__brand-desc">ที่มาของ Solution ที่ดีที่สุด</p></div>
+      <div><p class="footer__col-title">Services</p><ul class="footer__links"><li><a href="services.html">Website Development</a></li><li><a href="services.html">Mobile Application</a></li><li><a href="services.html">SEO & SEM</a></li></ul></div>
+      <div><p class="footer__col-title">Company</p><ul class="footer__links"><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><p class="footer__col-title">Contact</p><ul class="footer__links"><li><a href="mailto:hello@teemasolution.com">hello@teemasolution.com</a></li><li><a href="#">02-xxx-xxxx</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><p class="footer__copy">© 2025 Teema Solution Co., Ltd.</p><div class="footer__socials"><a href="#" class="footer__social">LinkedIn</a><a href="#" class="footer__social">Facebook</a></div></div>
+  </div>
+</footer>
+<script>
+  const nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+  document.getElementById('hamburger').addEventListener('click',()=>{const l=document.querySelector('.nav__links');l.style.display=l.style.display==='flex'?'none':'flex';});
+  // Filter
+  document.querySelectorAll('.filter-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const f=btn.dataset.filter;
+      document.querySelectorAll('.portfolio-card').forEach(c=>{
+        c.style.display=(f==='all'||(c.dataset.type||'').includes(f))?'block':'none';
+      });
+    });
+  });
+  const obs=new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('visible');}),{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

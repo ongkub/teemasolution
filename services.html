@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services — Teema Solution</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<nav class="nav" id="mainNav">
+  <div class="nav__logo">
+    <img src="assets/logo.png" alt="Teema Solution" class="nav__logo-img" onerror="this.style.display='none'"/>
+    <span class="nav__logo-text">TEEMA <span>SOLUTION</span></span>
+  </div>
+  <ul class="nav__links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav__cta"><a href="contact.html" class="btn btn--primary btn--sm">ติดต่อเรา</a></div>
+  <div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero__glow"></div>
+  <div class="container page-hero__content">
+    <div class="page-hero__breadcrumb"><a href="index.html">Home</a> / <span>Services</span></div>
+    <span class="section-label section-label--w">What We Do</span>
+    <h1 class="section-title section-title--w" style="margin-top:8px;">Services ของเรา</h1>
+    <p class="section-sub section-sub--w">ครบทุก Solution ที่ธุรกิจคุณต้องการ ตั้งแต่ Design ไปจนถึง Deploy</p>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section style="background:var(--bg-off);padding:100px 0;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div class="service-card reveal">
+        <div class="service-card__icon">🌐</div>
+        <h3 class="service-card__title">Website Development</h3>
+        <p class="service-card__desc">พัฒนาเว็บไซต์ทุกประเภท ตั้งแต่ Corporate Site, e-Commerce ไปจนถึง Complex Web Application พร้อมระบบ Security</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span class="tag">React / Next.js</span><span class="tag">Node.js</span>
+          <span class="tag">PHP / Laravel</span><span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-card__icon">🔒</div>
+        <h3 class="service-card__title">Web Security</h3>
+        <p class="service-card__desc">ดูแลความปลอดภัยของเว็บไซต์ ป้องกัน Cyber Threats, Vulnerability Assessment และ PDPA Compliance</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span class="tag">SSL/TLS</span><span class="tag">Firewall</span><span class="tag">PDPA</span>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-card__icon">📱</div>
+        <h3 class="service-card__title">Mobile Application</h3>
+        <p class="service-card__desc">พัฒนา Native Mobile App ทั้ง iOS (Swift) และ Android (Kotlin) รองรับทั้ง B2C และ B2B</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span class="tag">Swift</span><span class="tag">Kotlin</span><span class="tag">LINE OA</span>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card__icon">🎨</div>
+        <h3 class="service-card__title">UI/UX Design</h3>
+        <p class="service-card__desc">ออกแบบ UI/UX ที่สวยงามและใช้งานง่าย สอดคล้องกับ Brand Identity ด้วย Figma และ Design System</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span class="tag">Figma</span><span class="tag">Prototype</span><span class="tag">Design System</span>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-card__icon">📈</div>
+        <h3 class="service-card__title">SEO & SEM</h3>
+        <p class="service-card__desc">เพิ่ม Organic Traffic ด้วย Technical SEO, Content Strategy และ Google Ads พิสูจน์แล้วด้วย +348% Page Views</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span class="tag">Google Ads</span><span class="tag">On-page SEO</span><span class="tag">Analytics</span>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-card__icon">☁️</div>
+        <h3 class="service-card__title">Cloud & Infrastructure</h3>
+        <p class="service-card__desc">วางระบบ Cloud Architecture บน AWS, Azure, DigitalOcean พร้อม DevOps และ CI/CD Pipeline</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">DigitalOcean</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tech Stack Navy Section -->
+<section class="section-navy" style="padding:100px 0;">
+  <div class="section-navy__glow"></div>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="text-center reveal" style="margin-bottom:56px;">
+      <span class="section-label section-label--w">Technology</span>
+      <h2 class="section-title section-title--w">Tech Stack ที่เราใช้</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;" class="reveal reveal-delay-1">
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px 24px;">
+        <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--purple-lt);margin-bottom:16px;">Frontend</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">React</span>
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Next.js</span>
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Bootstrap</span>
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Swift</span>
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Kotlin</span>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px 24px;">
+        <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--purple-lt);margin-bottom:16px;">Backend</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Node.js</span>
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">PHP / Laravel</span>
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">CodeIgniter</span>
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7)">.NET</span>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px 24px;">
+        <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--purple-lt);margin-bottom:16px;">Database</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">PostgreSQL</span>
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">MySQL</span>
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">MSSQL</span>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px 24px;">
+        <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--purple-lt);margin-bottom:16px;">Cloud</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">AWS</span>
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Azure</span>
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">DigitalOcean</span>
+          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">GDCC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="cta-banner__orb"></div>
+  <div class="container" style="position:relative;z-index:2;">
+    <h2 class="cta-banner__title">ต้องการ Solution แบบไหน?</h2>
+    <p class="cta-banner__sub">ทีม Teema Solution พร้อม Consult ฟรี</p>
+    <div class="cta-banner__actions">
+      <a href="contact.html" class="btn btn--purple btn--lg">ติดต่อเราเลย →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><div class="footer__brand-name">TEEMA <span>SOLUTION</span></div><p class="footer__brand-desc">ที่มาของ Solution ที่ดีที่สุด<br/>Software House & Digital Solutions</p></div>
+      <div><p class="footer__col-title">Services</p><ul class="footer__links"><li><a href="services.html#web">Website Development</a></li><li><a href="services.html#mobile">Mobile Application</a></li><li><a href="services.html#design">Design Direction</a></li><li><a href="services.html#seo">SEO & SEM</a></li></ul></div>
+      <div><p class="footer__col-title">Company</p><ul class="footer__links"><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><p class="footer__col-title">Contact</p><ul class="footer__links"><li><a href="mailto:hello@teemasolution.com">hello@teemasolution.com</a></li><li><a href="#">02-xxx-xxxx</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Teema Solution Co., Ltd.</p>
+      <div class="footer__socials"><a href="#" class="footer__social">LinkedIn</a><a href="#" class="footer__social">Facebook</a></div>
+    </div>
+  </div>
+</footer>
+<script>
+  const nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+  document.getElementById('hamburger').addEventListener('click',()=>{const l=document.querySelector('.nav__links');l.style.display=l.style.display==='flex'?'none':'flex';});
+  const obs=new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('visible');}),{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
