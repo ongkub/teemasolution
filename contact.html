@@ -2,8 +2,26 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact — Teema Solution</title>
+  <title>ติดต่อ Teema Solution | Software House และบริษัทรับจ้างเขียนโปรแกรม</title>
+  <meta name="description" content="ติดต่อ Teema Solution Software House และบริษัทรับจ้างเขียนโปรแกรม สำหรับงานพัฒนาเว็บไซต์ Mobile App LINE OA SEO และระบบธุรกิจ"/>
+  <meta name="keywords" content="ติดต่อ Teema Solution, Software House, บริษัทรับจ้างเขียนโปรแกรม, เขียนโปรแกรม, พัฒนาเว็บไซต์"/>
+  <meta name="robots" content="index,follow,max-image-preview:large"/>
+  <link rel="canonical" href="https://ongkub.github.io/teemasolution/contact.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Teema Solution"/>
+  <meta property="og:title" content="ติดต่อ Teema Solution | Software House และบริษัทรับจ้างเขียนโปรแกรม"/>
+  <meta property="og:description" content="ติดต่อทีม Teema Solution สำหรับงานเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App LINE OA SEO และระบบธุรกิจ"/>
+  <meta property="og:url" content="https://ongkub.github.io/teemasolution/contact.html"/>
+  <meta property="og:image" content="https://ongkub.github.io/teemasolution/img/logo/teema.png"/>
   <link rel="stylesheet" href="styles.css"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Teema Solution",
+    "url": "https://ongkub.github.io/teemasolution/contact.html"
+  }
+  </script>
 </head>
 <body>
 <nav class="nav" id="mainNav">
@@ -26,7 +44,7 @@
     <div class="page-hero__breadcrumb"><a href="index.html">Home</a> / <span>Contact</span></div>
     <span class="section-label section-label--w">Get In Touch</span>
     <h1 class="section-title section-title--w" style="margin-top:8px;">มาคุยกันได้เลย</h1>
-    <p class="section-sub section-sub--w">ปรึกษาโปรเจกต์ฟรี ทีมเราพร้อม Response ภายใน 1 วันทำการ</p>
+    <p class="section-sub section-sub--w">ติดต่อ Teema Solution เพื่อปรึกษางานเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App SEO และระบบธุรกิจได้ฟรี</p>
   </div>
 </section>
 
@@ -63,18 +81,23 @@
         <div class="contact-panel">
           <h3 style="font-size:22px;font-weight:700;color:var(--text-h);margin-bottom:6px;">ส่งข้อความหาเรา</h3>
           <p style="font-size:14px;font-weight:300;color:var(--text-body);margin-bottom:28px;">ทีมเราจะติดต่อกลับโดยเร็ว</p>
-          <form class="form" id="contactForm">
+          <form class="form" id="contactForm" action="https://formsubmit.co/contact@teemasolution.com" method="POST">
+            <input type="hidden" name="_subject" value="New inquiry from Teema Solution website"/>
+            <input type="hidden" name="_template" value="table"/>
+            <input type="hidden" name="_next" value="https://ongkub.github.io/teemasolution/thanks.html"/>
+            <input type="hidden" name="_captcha" value="true"/>
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none"/>
             <div class="form__row">
-              <div class="form__group"><label class="form__label">ชื่อ-นามสกุล *</label><input type="text" class="form__input" placeholder="กรอกชื่อของคุณ" required/></div>
-              <div class="form__group"><label class="form__label">บริษัท / องค์กร</label><input type="text" class="form__input" placeholder="ชื่อบริษัท"/></div>
+              <div class="form__group"><label class="form__label">ชื่อ-นามสกุล *</label><input type="text" name="full_name" class="form__input" placeholder="กรอกชื่อของคุณ" required/></div>
+              <div class="form__group"><label class="form__label">บริษัท / องค์กร</label><input type="text" name="company" class="form__input" placeholder="ชื่อบริษัท"/></div>
             </div>
             <div class="form__row">
-              <div class="form__group"><label class="form__label">Email *</label><input type="email" class="form__input" placeholder="your@email.com" required/></div>
-              <div class="form__group"><label class="form__label">เบอร์โทรศัพท์</label><input type="tel" class="form__input" placeholder="08x-xxx-xxxx"/></div>
+              <div class="form__group"><label class="form__label">Email *</label><input type="email" name="email" class="form__input" placeholder="your@email.com" required/></div>
+              <div class="form__group"><label class="form__label">เบอร์โทรศัพท์</label><input type="tel" name="phone" class="form__input" placeholder="08x-xxx-xxxx"/></div>
             </div>
             <div class="form__group">
               <label class="form__label">Service ที่สนใจ *</label>
-              <select class="form__select" required>
+              <select name="service_interest" class="form__select" required>
                 <option value="" disabled selected>เลือก Service</option>
                 <option>Website Development</option>
                 <option>Web Security</option>
@@ -87,7 +110,7 @@
             </div>
             <div class="form__group">
               <label class="form__label">Budget (ถ้ามี)</label>
-              <select class="form__select">
+              <select name="budget" class="form__select">
                 <option value="" disabled selected>เลือก Budget</option>
                 <option>ต่ำกว่า 100,000 บาท</option>
                 <option>100,000 – 500,000 บาท</option>
@@ -98,7 +121,7 @@
             </div>
             <div class="form__group">
               <label class="form__label">รายละเอียดโปรเจกต์ *</label>
-              <textarea class="form__textarea" placeholder="อธิบายโปรเจกต์โดยย่อ..." required></textarea>
+              <textarea name="project_details" class="form__textarea" placeholder="อธิบายโปรเจกต์โดยย่อ..." required></textarea>
             </div>
             <button type="submit" class="btn btn--purple btn--lg" style="width:100%;justify-content:center;">ส่งข้อความ →</button>
           </form>
@@ -123,7 +146,6 @@
   const nav=document.getElementById('mainNav');
   window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
   document.getElementById('hamburger').addEventListener('click',()=>nav.classList.toggle('menu-open'));
-  document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();alert('ขอบคุณที่ติดต่อเรา! ทีมงานจะติดต่อกลับภายใน 1 วันทำการ 🙏');});
   const obs=new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('visible');}),{threshold:0.1});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
