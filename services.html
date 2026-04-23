@@ -8,7 +8,7 @@
 <body>
 <nav class="nav" id="mainNav">
   <div class="nav__logo">
-    <img src="assets/logo.png" alt="Teema Solution" class="nav__logo-img" onerror="this.style.display='none'"/>
+    <img src="img/logo/teema.png" alt="Teema Solution" class="nav__logo-img"/>
     <span class="nav__logo-text">TEEMA <span>SOLUTION</span></span>
   </div>
   <ul class="nav__links">
@@ -35,7 +35,7 @@
 <!-- Services Grid -->
 <section style="background:var(--bg-off);padding:100px 0;">
   <div class="container">
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+    <div class="services-grid">
       <div class="service-card reveal">
         <div class="service-card__icon">🌐</div>
         <h3 class="service-card__title">Website Development</h3>
@@ -97,10 +97,10 @@
       <span class="section-label section-label--w">Technology</span>
       <h2 class="section-title section-title--w">Tech Stack ที่เราใช้</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;" class="reveal reveal-delay-1">
-      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px 24px;">
-        <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--purple-lt);margin-bottom:16px;">Frontend</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+    <div class="tech-grid reveal reveal-delay-1">
+      <div class="tech-card">
+        <div class="tech-card__label">Frontend</div>
+        <div class="tech-card__tags">
           <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">React</span>
           <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Next.js</span>
           <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Bootstrap</span>
@@ -108,26 +108,26 @@
           <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Kotlin</span>
         </div>
       </div>
-      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px 24px;">
-        <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--purple-lt);margin-bottom:16px;">Backend</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+      <div class="tech-card">
+        <div class="tech-card__label">Backend</div>
+        <div class="tech-card__tags">
           <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Node.js</span>
           <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">PHP / Laravel</span>
           <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">CodeIgniter</span>
           <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7)">.NET</span>
         </div>
       </div>
-      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px 24px;">
-        <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--purple-lt);margin-bottom:16px;">Database</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+      <div class="tech-card">
+        <div class="tech-card__label">Database</div>
+        <div class="tech-card__tags">
           <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">PostgreSQL</span>
           <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">MySQL</span>
           <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">MSSQL</span>
         </div>
       </div>
-      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px 24px;">
-        <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--purple-lt);margin-bottom:16px;">Cloud</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+      <div class="tech-card">
+        <div class="tech-card__label">Cloud</div>
+        <div class="tech-card__tags">
           <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">AWS</span>
           <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Azure</span>
           <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">DigitalOcean</span>
@@ -155,7 +155,7 @@
       <div><div class="footer__brand-name">TEEMA <span>SOLUTION</span></div><p class="footer__brand-desc">ที่มาของ Solution ที่ดีที่สุด<br/>Software House & Digital Solutions</p></div>
       <div><p class="footer__col-title">Services</p><ul class="footer__links"><li><a href="services.html#web">Website Development</a></li><li><a href="services.html#mobile">Mobile Application</a></li><li><a href="services.html#design">Design Direction</a></li><li><a href="services.html#seo">SEO & SEM</a></li></ul></div>
       <div><p class="footer__col-title">Company</p><ul class="footer__links"><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><p class="footer__col-title">Contact</p><ul class="footer__links"><li><a href="mailto:hello@teemasolution.com">hello@teemasolution.com</a></li><li><a href="#">02-xxx-xxxx</a></li></ul></div>
+      <div><p class="footer__col-title">Contact</p><ul class="footer__links"><li><a href="mailto:contact@teemasolution.com">contact@teemasolution.com</a></li><li><a href="tel:0615656599">0615656599</a></li></ul></div>
     </div>
     <div class="footer__bottom">
       <p class="footer__copy">© 2025 Teema Solution Co., Ltd.</p>
@@ -166,7 +166,7 @@
 <script>
   const nav=document.getElementById('mainNav');
   window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
-  document.getElementById('hamburger').addEventListener('click',()=>{const l=document.querySelector('.nav__links');l.style.display=l.style.display==='flex'?'none':'flex';});
+  document.getElementById('hamburger').addEventListener('click',()=>nav.classList.toggle('menu-open'));
   const obs=new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('visible');}),{threshold:0.1});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>

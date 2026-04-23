@@ -8,7 +8,7 @@
 <body>
 <nav class="nav" id="mainNav">
   <div class="nav__logo">
-    <img src="assets/logo.png" alt="Teema Solution" class="nav__logo-img" onerror="this.style.display='none'"/>
+    <img src="img/logo/teema.png" alt="Teema Solution" class="nav__logo-img"/>
     <span class="nav__logo-text">TEEMA <span>SOLUTION</span></span>
   </div>
   <ul class="nav__links">
@@ -38,25 +38,21 @@
         <span class="section-label">Contact Info</span>
         <h2 class="section-title section-title--sm" style="margin-top:8px;">ช่องทางติดต่อ</h2>
         <div class="divider"></div>
-        <div style="margin-top:36px;">
+        <div class="contact-info-list">
           <div class="contact__info-item">
             <div class="contact__info-icon">📧</div>
-            <div><div class="contact__info-title">Email</div><div class="contact__info-val">hello@teemasolution.com</div></div>
+            <div><div class="contact__info-title">Email</div><div class="contact__info-val">contact@teemasolution.com</div></div>
           </div>
           <div class="contact__info-item">
             <div class="contact__info-icon">📞</div>
-            <div><div class="contact__info-title">Phone</div><div class="contact__info-val">02-xxx-xxxx</div></div>
-          </div>
-          <div class="contact__info-item">
-            <div class="contact__info-icon">💬</div>
-            <div><div class="contact__info-title">LINE Official</div><div class="contact__info-val">@teemasolution</div></div>
+            <div><div class="contact__info-title">Phone</div><div class="contact__info-val">0615656599</div></div>
           </div>
           <div class="contact__info-item">
             <div class="contact__info-icon">📍</div>
-            <div><div class="contact__info-title">Address</div><div class="contact__info-val">กรุงเทพมหานคร ประเทศไทย</div></div>
+            <div><div class="contact__info-title">Address</div><div class="contact__info-val">81/7 หมู่5 ซอยหมู่บ้านทิพวัล ซอย 21/3 ถ.เทพารักษ์ ต.บางเมืองใหม่ อ.เมืองสมุทรปราการ จังหวัดสมุทรปราการ 10270</div></div>
           </div>
         </div>
-        <div style="background:var(--purple-dim);border:1px solid rgba(139,92,246,0.15);border-radius:var(--radius-lg);padding:24px;margin-top:32px;">
+        <div class="contact-note">
           <div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--purple);margin-bottom:8px;">⚡ Response Time</div>
           <div style="font-size:24px;font-weight:800;color:var(--navy);letter-spacing:-0.5px;">ภายใน 1 วันทำการ</div>
           <div style="font-size:13px;font-weight:300;color:var(--text-body);margin-top:4px;">จันทร์–ศุกร์ 9:00–18:00 น.</div>
@@ -64,7 +60,7 @@
       </div>
       <!-- Form -->
       <div class="reveal reveal-delay-1">
-        <div style="background:var(--bg-off);border-radius:var(--radius-lg);padding:44px;">
+        <div class="contact-panel">
           <h3 style="font-size:22px;font-weight:700;color:var(--text-h);margin-bottom:6px;">ส่งข้อความหาเรา</h3>
           <p style="font-size:14px;font-weight:300;color:var(--text-body);margin-bottom:28px;">ทีมเราจะติดต่อกลับโดยเร็ว</p>
           <form class="form" id="contactForm">
@@ -118,7 +114,7 @@
       <div><div class="footer__brand-name">TEEMA <span>SOLUTION</span></div><p class="footer__brand-desc">ที่มาของ Solution ที่ดีที่สุด</p></div>
       <div><p class="footer__col-title">Services</p><ul class="footer__links"><li><a href="services.html">Website Development</a></li><li><a href="services.html">Mobile Application</a></li><li><a href="services.html">SEO & SEM</a></li></ul></div>
       <div><p class="footer__col-title">Company</p><ul class="footer__links"><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><p class="footer__col-title">Contact</p><ul class="footer__links"><li><a href="mailto:hello@teemasolution.com">hello@teemasolution.com</a></li><li><a href="#">02-xxx-xxxx</a></li></ul></div>
+      <div><p class="footer__col-title">Contact</p><ul class="footer__links"><li><a href="mailto:contact@teemasolution.com">contact@teemasolution.com</a></li><li><a href="tel:0615656599">0615656599</a></li></ul></div>
     </div>
     <div class="footer__bottom"><p class="footer__copy">© 2025 Teema Solution Co., Ltd.</p><div class="footer__socials"><a href="#" class="footer__social">LinkedIn</a><a href="#" class="footer__social">Facebook</a></div></div>
   </div>
@@ -126,7 +122,7 @@
 <script>
   const nav=document.getElementById('mainNav');
   window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
-  document.getElementById('hamburger').addEventListener('click',()=>{const l=document.querySelector('.nav__links');l.style.display=l.style.display==='flex'?'none':'flex';});
+  document.getElementById('hamburger').addEventListener('click',()=>nav.classList.toggle('menu-open'));
   document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();alert('ขอบคุณที่ติดต่อเรา! ทีมงานจะติดต่อกลับภายใน 1 วันทำการ 🙏');});
   const obs=new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('visible');}),{threshold:0.1});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
