@@ -484,9 +484,8 @@ p  { color: var(--muted); }
 .page-hero__breadcrumb a:hover { color: oklch(78% 0.16 255); }
 
 /* page-hero always has dark bg — force bright text regardless of theme */
-.page-hero .section-label {
-  color: oklch(76% 0.18 290);
-}
+.page-hero .section-label { color: oklch(76% 0.14 188); }           /* dark: teal */
+[data-theme="light"] .page-hero .section-label { color: oklch(76% 0.18 290); } /* light: violet */
 .page-hero .section-title { color: #fff; }
 .page-hero .section-sub  { color: oklch(78% 0.012 250); }
 

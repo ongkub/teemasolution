@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ongkub.github.io/teemasolution/sitemap.xml
+Sitemap: https://teemasolution.com/sitemap.xml

@@ -7,14 +7,14 @@
   <meta name="description" content="บริการของ Teema Solution ครอบคลุม Software House, บริษัทรับจ้างเขียนโปรแกรม, พัฒนาเว็บไซต์, Mobile App, LINE OA, SEO, Web Security และ Cloud Infrastructure"/>
   <meta name="keywords" content="Software House, บริษัทรับจ้างเขียนโปรแกรม, เขียนโปรแกรม, พัฒนาเว็บไซต์, Mobile App, LINE OA, SEO, Teema Solution"/>
   <meta name="robots" content="index,follow,max-image-preview:large"/>
-  <link rel="canonical" href="https://ongkub.github.io/teemasolution/services.html"/>
+  <link rel="canonical" href="https://teemasolution.com/services.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Teema Solution"/>
   <meta property="og:title" content="Services | Software House รับเขียนโปรแกรม | Teema Solution"/>
   <meta property="og:description" content="บริการรับเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App LINE OA SEO Web Security และ Cloud Infrastructure"/>
-  <meta property="og:url" content="https://ongkub.github.io/teemasolution/services.html"/>
-  <meta property="og:image" content="https://ongkub.github.io/teemasolution/img/logo/teema.png"/>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Software Development Service","provider":{"@type":"Organization","name":"Teema Solution","url":"https://ongkub.github.io/teemasolution/"},"areaServed":"TH","description":"บริการรับเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App LINE OA SEO Web Security และ Cloud Infrastructure"}</script>
+  <meta property="og:url" content="https://teemasolution.com/services.html"/>
+  <meta property="og:image" content="https://teemasolution.com/img/logo/teema.png"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://teemasolution.com/#organization","name":"Teema Solution","url":"https://teemasolution.com/","logo":"https://teemasolution.com/img/logo/teema.png","email":"contact@teemasolution.com","telephone":"+66615656599","address":{"@type":"PostalAddress","streetAddress":"81/7 หมู่5 ซอยหมู่บ้านทิพวัล ซอย 21/3 ถ.เทพารักษ์ ต.บางเมืองใหม่","addressLocality":"เมืองสมุทรปราการ","addressRegion":"สมุทรปราการ","postalCode":"10270","addressCountry":"TH"}},{"@type":"WebPage","@id":"https://teemasolution.com/services.html#webpage","url":"https://teemasolution.com/services.html","name":"Services | Software House รับเขียนโปรแกรม พัฒนาเว็บไซต์ และ Mobile App | Teema Solution","isPartOf":{"@type":"WebSite","@id":"https://teemasolution.com/#website","url":"https://teemasolution.com/","name":"Teema Solution"},"about":{"@id":"https://teemasolution.com/#organization"},"description":"บริการของ Teema Solution ครอบคลุมพัฒนาเว็บไซต์ Mobile App LINE OA SEO Web Security และ Cloud Infrastructure","inLanguage":["th","en"]},{"@type":"BreadcrumbList","@id":"https://teemasolution.com/services.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://teemasolution.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://teemasolution.com/services.html"}]},{"@type":"Service","@id":"https://teemasolution.com/services.html#software-development-service","name":"Software Development Services by Teema Solution","serviceType":"Software Development Service","provider":{"@id":"https://teemasolution.com/#organization"},"areaServed":{"@type":"Country","name":"Thailand"},"url":"https://teemasolution.com/services.html","description":"Teema Solution provides website development, mobile application development, LINE OA and Mini Program development, UI/UX design direction, SEO/SEM optimization, web security, cloud infrastructure and deployment support for businesses in Thailand.","hasOfferCatalog":{"@type":"OfferCatalog","name":"Teema Solution Digital Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Website Development & Security","serviceType":"Website Development","description":"พัฒนาเว็บไซต์และเว็บแอปสำหรับองค์กร พร้อม performance, maintainability และ security"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Mobile Application (iOS & Android)","serviceType":"Mobile Application Development","description":"ออกแบบและพัฒนาแอปมือถือ iOS และ Android พร้อม backend integration"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"LINE OA & Mini Program","serviceType":"LINE OA Development","description":"สร้าง LIFF, campaign flow, member journey และ web app ที่เชื่อมระบบหลังบ้าน"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"UI/UX Design Direction","serviceType":"UI/UX Design","description":"ออกแบบ user journey, prototype และ design system ให้ทีมพัฒนาต่อยอดได้"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"SEO, SEM & Ads Optimization","serviceType":"SEO and SEM","description":"วาง technical SEO, search architecture, Google Ads และ analytics เพื่อสร้าง lead ที่วัดผลได้"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Cloud & Infrastructure","serviceType":"Cloud Infrastructure","description":"ออกแบบ cloud architecture และ deployment pipeline ให้ระบบ scale ได้และดูแลง่ายหลัง launch"}}]}}]}</script>
 
   <!-- Prevent FOUC: set theme + lang before first paint -->
   <script>
@@ -716,6 +716,28 @@
     .tech-tags { display: flex; flex-wrap: wrap; gap: 5px; }
 
     /* ═══════════════════════════════════════
+       ANSWER SUMMARY
+    ═══════════════════════════════════════ */
+    .answer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .answer-card {
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 20px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      transition: background var(--dur), border-color 200ms, box-shadow 200ms;
+    }
+    :root:not([data-theme="light"]) .answer-card { background: oklch(100% 0 0 / 0.035); }
+    .answer-card:hover { border-color: var(--accent-2); box-shadow: 0 4px 20px var(--glow); }
+    .answer-card h3 { font-size: 18px; margin: 10px 0 8px; }
+    .answer-card p { font-size: 13px; font-weight: 300; }
+    .answer-card .eyebrow { color: var(--accent); }
+
+    /* ═══════════════════════════════════════
        METHOD / PROCESS
     ═══════════════════════════════════════ */
     .method-grid {
@@ -984,6 +1006,7 @@
       .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .s-card.s-feat { min-height: 350px; }
       .tech-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .answer-grid { grid-template-columns: 1fr; }
       .method-grid, .work-grid { grid-template-columns: 1fr; }
       .cta-content { grid-template-columns: 1fr; }
       .section-head { grid-template-columns: 1fr; }
@@ -1282,6 +1305,36 @@
       </div>
     </section>
 
+    <!-- ── ANSWER SUMMARY ── -->
+    <section id="answer-summary">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow" data-i18n="answer.eyebrow">Quick answers</div>
+            <h2 data-i18n="answer.title">Teema Solution ช่วยธุรกิจทำอะไรได้บ้าง?</h2>
+          </div>
+          <p data-i18n="answer.desc">สรุปบริการแบบตรงประเด็นสำหรับคนที่กำลังมองหา Software House, บริษัทรับจ้างเขียนโปรแกรม หรือทีมพัฒนาเว็บไซต์และแอปที่ดูแลหลังส่งมอบจริง</p>
+        </div>
+        <div class="answer-grid reveal">
+          <article class="answer-card">
+            <div class="eyebrow" data-i18n="answer.1.label">Best for launch</div>
+            <h3 data-i18n="answer.1.title">รับทำเว็บไซต์และเว็บแอปองค์กร</h3>
+            <p data-i18n="answer.1.desc">Teema Solution พัฒนา Corporate Website, e-Commerce และ Complex Web App ด้วยโครงสร้างที่รองรับ SEO, ความเร็ว, ความปลอดภัย และการดูแลต่อหลัง launch</p>
+          </article>
+          <article class="answer-card">
+            <div class="eyebrow" data-i18n="answer.2.label">Best for customer journey</div>
+            <h3 data-i18n="answer.2.title">พัฒนา Mobile App, LINE OA และ Mini Program</h3>
+            <p data-i18n="answer.2.desc">เหมาะกับธุรกิจที่ต้องการเชื่อมประสบการณ์ลูกค้ากับระบบหลังบ้าน เช่น LIFF, campaign flow, member journey, iOS/Android app และ backend integration</p>
+          </article>
+          <article class="answer-card">
+            <div class="eyebrow" data-i18n="answer.3.label">Best for growth</div>
+            <h3 data-i18n="answer.3.title">วาง SEO, SEM, Security และ Cloud ให้ระบบโตได้</h3>
+            <p data-i18n="answer.3.desc">ทีมช่วยวาง technical SEO, analytics, web security, cloud architecture และ deployment pipeline เพื่อให้เว็บไซต์เป็นช่องทางสร้าง lead ที่วัดผลได้</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ── TECH STACK ── -->
     <section>
       <div class="wrap">
@@ -1532,10 +1585,10 @@
         'nav.home': 'Home', 'nav.services': 'Services', 'nav.portfolio': 'Portfolio', 'nav.about': 'About', 'nav.contact': 'Contact',
         'cta.portfolio': 'ดูผลงาน', 'cta.consult': 'ปรึกษาฟรี',
 
-        'hero.eyebrow': 'Software House · Thailand',
-        'hero.title':   'ที่มาของ <span>Solution</span><br/>ที่องค์กรวางใจ',
-        'hero.lead':    'Teema Solution คือ Software House สำหรับองค์กรที่ต้องการ Website, Mobile App, LINE OA, SEO, Web Security และระบบดิจิทัลคุณภาพ พร้อมทีมที่โฟกัสผลลัพธ์หลังส่งมอบจริง',
-        'hero.btn1': 'Explore Services', 'hero.btn2': 'ดูแนวทางการทำงาน',
+        'hero.eyebrow': 'Website · Mobile · LINE OA · SEO · Security',
+        'hero.title':   'บริการ<span>ดิจิทัล</span><br/>ครบทุก Solution',
+        'hero.lead':    'ไม่ว่าจะเป็น Website, Mobile App, LINE OA, SEO หรือ Web Security — Teema Solution ออกแบบและพัฒนาระบบที่ตอบโจทย์ธุรกิจคุณโดยเฉพาะ พร้อมทีมดูแลหลังส่งมอบจริง',
+        'hero.btn1': 'ดูบริการทั้งหมด', 'hero.btn2': 'ดูแนวทางการทำงาน',
 
         'proof.projects': 'Projects delivered', 'proof.years': 'ปีประสบการณ์',
         'proof.clients': 'องค์กรชั้นนำ', 'proof.referral': 'Repeat &amp; referral',
@@ -1563,6 +1616,19 @@
         's05.desc': 'วาง technical SEO, search architecture, Google Ads และ analytics เพื่อเปลี่ยนเว็บไซต์ให้เป็นช่องทางสร้าง lead ที่วัดผลได้ พิสูจน์แล้วด้วย +348% page views',
         's06.title': 'Cloud &amp; Infrastructure',
         's06.desc': 'ออกแบบ cloud architecture และ deployment pipeline ให้ระบบรองรับการเติบโต ลด downtime และดูแลง่ายหลัง launch',
+
+        'answer.eyebrow': 'Quick answers',
+        'answer.title': 'Teema Solution ช่วยธุรกิจทำอะไรได้บ้าง?',
+        'answer.desc': 'สรุปบริการแบบตรงประเด็นสำหรับคนที่กำลังมองหา Software House, บริษัทรับจ้างเขียนโปรแกรม หรือทีมพัฒนาเว็บไซต์และแอปที่ดูแลหลังส่งมอบจริง',
+        'answer.1.label': 'Best for launch',
+        'answer.1.title': 'รับทำเว็บไซต์และเว็บแอปองค์กร',
+        'answer.1.desc': 'Teema Solution พัฒนา Corporate Website, e-Commerce และ Complex Web App ด้วยโครงสร้างที่รองรับ SEO, ความเร็ว, ความปลอดภัย และการดูแลต่อหลัง launch',
+        'answer.2.label': 'Best for customer journey',
+        'answer.2.title': 'พัฒนา Mobile App, LINE OA และ Mini Program',
+        'answer.2.desc': 'เหมาะกับธุรกิจที่ต้องการเชื่อมประสบการณ์ลูกค้ากับระบบหลังบ้าน เช่น LIFF, campaign flow, member journey, iOS/Android app และ backend integration',
+        'answer.3.label': 'Best for growth',
+        'answer.3.title': 'วาง SEO, SEM, Security และ Cloud ให้ระบบโตได้',
+        'answer.3.desc': 'ทีมช่วยวาง technical SEO, analytics, web security, cloud architecture และ deployment pipeline เพื่อให้เว็บไซต์เป็นช่องทางสร้าง lead ที่วัดผลได้',
 
         'tech.eyebrow': 'Technology', 'tech.title': 'Tech Stack ที่เราใช้',
         'tech.desc': 'เลือก technology ที่เหมาะสมกับโปรเจกต์ ไม่ใช่แค่ที่ถนัด เพื่อให้ระบบที่ส่งมอบดูแลได้ในระยะยาว',
@@ -1611,10 +1677,10 @@
         'nav.home': 'Home', 'nav.services': 'Services', 'nav.portfolio': 'Portfolio', 'nav.about': 'About', 'nav.contact': 'Contact',
         'cta.portfolio': 'Portfolio', 'cta.consult': 'Free Consult',
 
-        'hero.eyebrow': 'Software House · Thailand',
-        'hero.title':   'The <span>Solution</span><br/>Enterprise Trusts',
-        'hero.lead':    'Teema Solution is a Software House for organizations that need Websites, Mobile Apps, LINE OA, SEO, Web Security and quality digital systems — with a team focused on real results after every delivery.',
-        'hero.btn1': 'Explore Services', 'hero.btn2': 'See Our Approach',
+        'hero.eyebrow': 'Website · Mobile · LINE OA · SEO · Security',
+        'hero.title':   'Digital <span>Services</span><br/>Built for Results',
+        'hero.lead':    'From Websites and Mobile Apps to LINE OA, SEO and Web Security — Teema Solution designs and builds systems tailored to your business, with a team that stays with you after delivery.',
+        'hero.btn1': 'Explore All Services', 'hero.btn2': 'See Our Approach',
 
         'proof.projects': 'Projects delivered', 'proof.years': 'Years of experience',
         'proof.clients': 'Leading organizations', 'proof.referral': 'Repeat &amp; referral',
@@ -1642,6 +1708,19 @@
         's05.desc': 'We set up technical SEO, search architecture, Google Ads and analytics to turn your website into a measurable lead channel — proven with +348% page view growth.',
         's06.title': 'Cloud &amp; Infrastructure',
         's06.desc': 'We design cloud architecture and deployment pipelines so your system can scale, minimise downtime and stay easy to maintain after launch.',
+
+        'answer.eyebrow': 'Quick answers',
+        'answer.title': 'What can Teema Solution help your business build?',
+        'answer.desc': 'A direct summary for teams looking for a software house, software development company, website development partner, app development team, or long-term digital systems partner.',
+        'answer.1.label': 'Best for launch',
+        'answer.1.title': 'Corporate websites and web applications',
+        'answer.1.desc': 'Teema Solution builds corporate websites, e-Commerce and complex web apps with a structure that supports SEO, speed, security and long-term maintenance after launch.',
+        'answer.2.label': 'Best for customer journey',
+        'answer.2.title': 'Mobile apps, LINE OA and Mini Programs',
+        'answer.2.desc': 'Ideal for businesses that need to connect customer journeys with back-end systems through LIFF, campaign flows, member journeys, iOS/Android apps and backend integration.',
+        'answer.3.label': 'Best for growth',
+        'answer.3.title': 'SEO, SEM, security and cloud for scalable systems',
+        'answer.3.desc': 'The team supports technical SEO, analytics, web security, cloud architecture and deployment pipelines so your website can become a measurable lead channel.',
 
         'tech.eyebrow': 'Technology', 'tech.title': 'Our Technology Stack',
         'tech.desc': 'We choose the right technology for each project — not just what\'s familiar — so the system we deliver stays maintainable long-term.',
