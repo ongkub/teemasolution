@@ -278,7 +278,7 @@ window.TR = {
 </script>
 <script src="theme.js"></script>
 <script>
-  /* Portfolio filter */
+  /* Portfolio filter with fade animation */
   document.querySelectorAll('.filter-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -287,15 +287,27 @@ window.TR = {
       document.querySelectorAll('.portfolio-card').forEach(function(card) {
         var type = card.dataset.type || '';
         var show = f === 'all' || type.includes(f);
-        card.style.display = show ? '' : 'none';
         if (show) {
-          /* restore wide span for wide cards when filter is 'all' */
-          if (card.classList.contains('portfolio-card--wide')) {
-            card.style.gridColumn = '';
-          }
+          card.style.display = '';
+          card.style.gridColumn = card.classList.contains('portfolio-card--wide') ? '' : '';
+          requestAnimationFrame(function() {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          });
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(12px)';
+          setTimeout(function() {
+            if (card.style.opacity === '0') card.style.display = 'none';
+          }, 280);
         }
       });
     });
+  });
+
+  /* Add base transition to cards for filter anim */
+  document.querySelectorAll('.portfolio-card').forEach(function(card) {
+    card.style.transition = 'opacity 0.28s ease, transform 0.28s ease, box-shadow 0.35s ease';
   });
 </script>
 </body>

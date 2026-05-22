@@ -85,4 +85,48 @@
   }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
 
+  /* ── Counter animation ──────────────────────────── */
+  function animateCount(el) {
+    var raw    = el.dataset.count;
+    if (!raw) return;
+    var target  = parseInt(raw, 10);
+    var suffix  = el.dataset.suffix || '';
+    var dur     = 1400;
+    var start   = null;
+    el.classList.add('stat-anim');
+    function tick(ts) {
+      if (!start) start = ts;
+      var p    = Math.min((ts - start) / dur, 1);
+      var ease = 1 - Math.pow(1 - p, 3);           /* ease-out cubic */
+      el.innerHTML = Math.floor(ease * target) + '<span>' + suffix + '</span>';
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  var countObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      animateCount(e.target);
+      countObs.unobserve(e.target);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-count]').forEach(function (el) {
+    countObs.observe(el);
+  });
+
+  /* ── Float animation (hero badges) ─────────────── */
+  document.querySelectorAll('.hero__float').forEach(function (el, i) {
+    el.style.animation = 'ts-float ' + (3.5 + i * 0.8) + 's ease-in-out infinite';
+    el.style.animationDelay = (i * 0.4) + 's';
+  });
+
+  /* ── Stagger children of grids on reveal ────────── */
+  document.querySelectorAll('.portfolio__grid, .values__grid, .stats-grid').forEach(function (grid) {
+    Array.from(grid.children).forEach(function (child, i) {
+      if (child.classList.contains('reveal')) {
+        child.style.transitionDelay = (i * 0.07) + 's';
+      }
+    });
+  });
+
 })();

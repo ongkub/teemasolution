@@ -111,6 +111,14 @@
       max-width: 520px;
       margin-bottom: 36px;
     }
+    /* Hero entrance */
+    .hero__tag    { animation: ts-fade-up 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
+    .hero__title  { animation: ts-fade-up 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s both; }
+    .hero__desc   { animation: ts-fade-up 0.8s cubic-bezier(0.16,1,0.3,1) 0.32s both; }
+    .hero__actions{ animation: ts-fade-up 0.7s cubic-bezier(0.16,1,0.3,1) 0.42s both; }
+    .hero__stats  { animation: ts-fade-up 0.7s cubic-bezier(0.16,1,0.3,1) 0.52s both; }
+    .hero__card   { animation: ts-fade-up 0.9s cubic-bezier(0.16,1,0.3,1) 0.25s both; }
+
     .hero__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
     .hero__stats { display: flex; gap: 40px; }
     .hero__stat-num {
@@ -261,15 +269,15 @@
       </div>
       <div class="hero__stats">
         <div>
-          <div class="hero__stat-num">50<span>+</span></div>
+          <div class="hero__stat-num" data-count="50" data-suffix="+">50<span>+</span></div>
           <div class="hero__stat-label" data-i18n="hero-stat-1">Projects Delivered</div>
         </div>
         <div>
-          <div class="hero__stat-num">10<span>+</span></div>
+          <div class="hero__stat-num" data-count="10" data-suffix="+">10<span>+</span></div>
           <div class="hero__stat-label" data-i18n="hero-stat-2">ปีประสบการณ์</div>
         </div>
         <div>
-          <div class="hero__stat-num">30<span>+</span></div>
+          <div class="hero__stat-num" data-count="30" data-suffix="+">30<span>+</span></div>
           <div class="hero__stat-label" data-i18n="hero-stat-3">ลูกค้าชั้นนำ</div>
         </div>
       </div>
@@ -423,19 +431,19 @@
     </div>
     <div class="stats-grid reveal reveal-delay-1">
       <div class="stat-cell">
-        <div class="stat-cell__num">50<span>+</span></div>
+        <div class="stat-cell__num" data-count="50" data-suffix="+">50<span>+</span></div>
         <div class="stat-cell__label" data-i18n="stat-1">โปรเจกต์ที่ส่งมอบสำเร็จ</div>
       </div>
       <div class="stat-cell">
-        <div class="stat-cell__num">10<span>+</span></div>
+        <div class="stat-cell__num" data-count="10" data-suffix="+">10<span>+</span></div>
         <div class="stat-cell__label" data-i18n="stat-2">ปีประสบการณ์</div>
       </div>
       <div class="stat-cell">
-        <div class="stat-cell__num">30<span>+</span></div>
+        <div class="stat-cell__num" data-count="30" data-suffix="+">30<span>+</span></div>
         <div class="stat-cell__label" data-i18n="stat-3">องค์กรชั้นนำที่ไว้วางใจ</div>
       </div>
       <div class="stat-cell">
-        <div class="stat-cell__num">348<span>%</span></div>
+        <div class="stat-cell__num" data-count="348" data-suffix="%">348<span>%</span></div>
         <div class="stat-cell__label" data-i18n="stat-4">Page View Growth (SEO)</div>
       </div>
     </div>
