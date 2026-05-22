@@ -63,11 +63,14 @@
       width: min(1280px, 100% - 40px);
       margin-inline: auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: minmax(0,1.1fr) minmax(320px,0.9fr);
+      gap: clamp(32px, 5vw, 64px);
       align-items: center;
       padding: clamp(40px, 6vw, 72px) 0 clamp(48px, 7vw, 80px);
     }
+    /* hero text — grid gap drives all spacing (like services.html) */
+    .hero__text { display: grid; gap: 20px; }
+
     .hero__tag {
       display: inline-flex;
       align-items: center;
@@ -77,7 +80,6 @@
       color: var(--accent);
       font-family: 'DM Mono', monospace;
       letter-spacing: 0.06em;
-      margin-bottom: 24px;
     }
     .hero__tag-dot {
       display: inline-block;
@@ -91,43 +93,54 @@
       50% { opacity: 0.5; transform: scale(0.7); }
     }
     .hero__title {
-      font-size: clamp(44px, 6vw, 80px);
+      font-size: clamp(34px, 4.4vw, 64px);
       font-weight: 800;
-      letter-spacing: -0.04em;
-      line-height: 1.0;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
       color: var(--fg);
-      margin-bottom: 24px;
     }
     .hero__title span { color: var(--accent); }
     .hero__desc {
-      font-size: 16px;
+      font-size: clamp(14px, 1.2vw, 16px);
       font-weight: 300;
       color: var(--muted);
-      line-height: 1.8;
-      max-width: 520px;
-      margin-bottom: 36px;
+      line-height: 1.75;
+      max-width: 500px;
     }
     /* Hero entrance */
-    .hero__tag    { animation: ts-fade-up 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
-    .hero__title  { animation: ts-fade-up 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s both; }
+    .hero__tag    { animation: ts-fade-up 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s  both; }
+    .hero__title  { animation: ts-fade-up 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s  both; }
     .hero__desc   { animation: ts-fade-up 0.8s cubic-bezier(0.16,1,0.3,1) 0.32s both; }
     .hero__actions{ animation: ts-fade-up 0.7s cubic-bezier(0.16,1,0.3,1) 0.42s both; }
     .hero__stats  { animation: ts-fade-up 0.7s cubic-bezier(0.16,1,0.3,1) 0.52s both; }
     .hero__card   { animation: ts-fade-up 0.9s cubic-bezier(0.16,1,0.3,1) 0.25s both; }
 
-    .hero__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
-    .hero__stats { display: flex; gap: 40px; }
+    .hero__actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    /* Stats — proof-row card style matching services.html */
+    .hero__stats {
+      display: flex;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .hero__stat {
+      flex: 1;
+      padding: 14px 18px;
+      border-right: 1px solid var(--border);
+    }
+    .hero__stat:last-child { border-right: none; }
     .hero__stat-num {
-      font-size: 32px;
+      font-size: clamp(22px, 2.4vw, 30px);
       font-weight: 800;
       color: var(--fg);
-      letter-spacing: -0.05em;
+      letter-spacing: -0.04em;
       line-height: 1;
       font-family: 'DM Mono', monospace;
     }
     .hero__stat-num span { color: var(--accent); }
     .hero__stat-label {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 300;
       color: var(--muted);
       margin-top: 4px;
@@ -207,9 +220,10 @@
     }
 
     @media (max-width: 900px) {
-      .hero__inner { grid-template-columns: 1fr; gap: 48px; padding: 60px 0; }
+      .hero__inner { grid-template-columns: 1fr; gap: 40px; padding: 48px 0 40px; }
       .hero__float { display: none; }
-      .hero__stats { gap: 24px; }
+      .hero__stats { border-radius: var(--radius-sm); }
+      .hero__stat  { padding: 12px 14px; }
     }
     @media (max-width: 540px) {
       .hero__actions { flex-direction: column; }
@@ -289,28 +303,28 @@
         <span data-i18n="hero-tag">Software House · Thailand</span>
       </div>
       <h1 class="hero__title" data-i18n="hero-title">ที่มาของ<br/><span>Solution</span><br/>ที่ดีที่สุด</h1>
-      <p class="hero__desc" data-i18n="hero-desc"><strong>Teema Solution</strong> คือ <strong>Software House</strong> และ <strong>บริษัทรับจ้างเขียนโปรแกรม</strong> ที่พร้อมส่งมอบบริการ <strong>เขียนโปรแกรม</strong>, พัฒนา Website, Mobile App, LINE OA, SEO และ Web Security สำหรับธุรกิจที่ต้องการระบบคุณภาพ</p>
+      <p class="hero__desc" data-i18n="hero-desc">Teema Solution คือ Software House สำหรับองค์กรที่ต้องการ Website, Mobile App, LINE OA, SEO, Web Security และระบบดิจิทัลคุณภาพ พร้อมทีมที่โฟกัสผลลัพธ์หลังส่งมอบจริง</p>
       <div class="hero__actions">
-        <a href="portfolio.html" class="btn btn--primary btn--lg" data-i18n="hero-btn-portfolio">ดูผลงานของเรา</a>
-        <a href="contact.html" class="btn btn--outline btn--lg" data-i18n="hero-btn-contact">ติดต่อเรา</a>
+        <a href="portfolio.html" class="btn btn-primary" data-i18n="hero-btn-portfolio">ดูผลงานของเรา</a>
+        <a href="contact.html"  class="btn btn-secondary" data-i18n="hero-btn-contact">ติดต่อเรา</a>
       </div>
       <div class="hero__stats">
-        <div>
+        <div class="hero__stat">
           <div class="hero__stat-num" data-count="50" data-suffix="+">50<span>+</span></div>
           <div class="hero__stat-label" data-i18n="hero-stat-1">Projects Delivered</div>
         </div>
-        <div>
+        <div class="hero__stat">
           <div class="hero__stat-num" data-count="10" data-suffix="+">10<span>+</span></div>
           <div class="hero__stat-label" data-i18n="hero-stat-2">ปีประสบการณ์</div>
         </div>
-        <div>
+        <div class="hero__stat">
           <div class="hero__stat-num" data-count="30" data-suffix="+">30<span>+</span></div>
           <div class="hero__stat-label" data-i18n="hero-stat-3">ลูกค้าชั้นนำ</div>
         </div>
       </div>
     </div>
     <div style="position:relative;">
-      <div class="hero__card">
+      <div class="hero__card glow-card">
         <div class="hero__card-label" data-i18n="hero-card-label">Services We Deliver</div>
         <div class="hero__card-list">
           <div class="hero__card-item"><span class="hero__card-dot"></span><span data-i18n="hero-card-1">Website Development &amp; Security</span></div>
@@ -357,8 +371,8 @@
 <!-- ══════════ CLIENTS ══════════ -->
 <section class="clients">
   <div class="container">
-    <p class="clients__label" data-i18n="clients-label">ลูกค้าที่ไว้วางใจเรา</p>
-    <div class="clients__logos">
+    <p class="clients__label reveal" data-i18n="clients-label">ลูกค้าที่ไว้วางใจเรา</p>
+    <div class="clients__logos reveal">
       <img src="img/logo/AirAsia.png"        alt="AirAsia"        class="clients__logo"/>
       <img src="img/logo/AstraZeneca.png"    alt="AstraZeneca"    class="clients__logo"/>
       <img src="img/logo/BBL.png"            alt="BBL"            class="clients__logo"/>
@@ -614,7 +628,7 @@ window.TR = {
     'cta.portfolio':'ดูผลงาน','cta.consult':'ปรึกษาฟรี',
     'hero-tag':'Software House · Thailand',
     'hero-title':'ที่มาของ<br/><span>Solution</span><br/>ที่ดีที่สุด',
-    'hero-desc':'<strong>Teema Solution</strong> คือ <strong>Software House</strong> และ <strong>บริษัทรับจ้างเขียนโปรแกรม</strong> ที่พร้อมส่งมอบบริการ <strong>เขียนโปรแกรม</strong>, พัฒนา Website, Mobile App, LINE OA, SEO และ Web Security สำหรับธุรกิจที่ต้องการระบบคุณภาพ',
+    'hero-desc':'Teema Solution คือ Software House สำหรับองค์กรที่ต้องการ Website, Mobile App, LINE OA, SEO, Web Security และระบบดิจิทัลคุณภาพ พร้อมทีมที่โฟกัสผลลัพธ์หลังส่งมอบจริง',
     'hero-btn-portfolio':'ดูผลงานของเรา','hero-btn-contact':'ติดต่อเรา',
     'hero-stat-1':'Projects Delivered','hero-stat-2':'ปีประสบการณ์','hero-stat-3':'ลูกค้าชั้นนำ',
     'hero-card-label':'Services We Deliver',
@@ -645,7 +659,7 @@ window.TR = {
     'cta.portfolio':'Portfolio','cta.consult':'Free Consult',
     'hero-tag':'Software House · Thailand',
     'hero-title':'The Source of<br/><span>the Best</span><br/>Solution',
-    'hero-desc':'<strong>Teema Solution</strong> is a <strong>Software House</strong> and <strong>software development company</strong> ready to deliver <strong>programming</strong>, Website, Mobile App, LINE OA, SEO and Web Security for businesses that demand quality systems.',
+    'hero-desc':'Teema Solution is a Software House for organizations that need Websites, Mobile Apps, LINE OA, SEO, Web Security and quality digital systems — with a team focused on real results after every delivery.',
     'hero-btn-portfolio':'View Our Work','hero-btn-contact':'Contact Us',
     'hero-stat-1':'Projects Delivered','hero-stat-2':'Years Experience','hero-stat-3':'Leading Clients',
     'hero-card-label':'Services We Deliver',

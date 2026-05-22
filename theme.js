@@ -76,7 +76,9 @@
       if (e.isIntersecting) e.target.classList.add('in');
     });
   }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+  document.querySelectorAll('.reveal, .reveal--left, .reveal--right, .reveal--scale').forEach(function (el) {
+    observer.observe(el);
+  });
 
   /* ── Counter animation ──────────────────────────── */
   function animateCount(el) {
@@ -114,11 +116,27 @@
   });
 
   /* ── Stagger children of grids on reveal ────────── */
-  document.querySelectorAll('.portfolio__grid, .values__grid, .stats-grid').forEach(function (grid) {
+  document.querySelectorAll(
+    '.portfolio__grid, .values__grid, .stats-grid, .service-list, .contact-grid, .bento, .clients__logos'
+  ).forEach(function (grid) {
     Array.from(grid.children).forEach(function (child, i) {
-      if (child.classList.contains('reveal')) {
+      if (
+        child.classList.contains('reveal') ||
+        child.classList.contains('reveal--scale') ||
+        child.classList.contains('reveal--left') ||
+        child.classList.contains('reveal--right')
+      ) {
         child.style.transitionDelay = (i * 0.07) + 's';
       }
+    });
+  });
+
+  /* ── Cursor glow tracker ────────────────────────── */
+  document.querySelectorAll('.glow-card').forEach(function (card) {
+    card.addEventListener('pointermove', function (e) {
+      var r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (e.clientY - r.top) + 'px');
     });
   });
 

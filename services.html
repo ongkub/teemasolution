@@ -478,9 +478,12 @@
     .tile::after {
       content: "";
       position: absolute;
-      inset: auto 0 0;
-      height: 72%;
-      background: linear-gradient(180deg, transparent 0%, oklch(0% 0 0 / 0.6) 50%, oklch(0% 0 0 / 0.92) 100%);
+      inset: 0;
+      background: linear-gradient(180deg,
+        oklch(0% 0 0 / 0.22) 0%,
+        oklch(0% 0 0 / 0.38) 40%,
+        oklch(0% 0 0 / 0.72) 70%,
+        oklch(0% 0 0 / 0.94) 100%);
       z-index: 1;
     }
 
@@ -611,9 +614,19 @@
     }
     [data-theme="light"] .s-card {
       background:
-        radial-gradient(550px circle at var(--mx) var(--my), var(--glow), transparent 47%),
-        var(--bg-2);
-      box-shadow: var(--shadow);
+        radial-gradient(550px circle at var(--mx) var(--my), oklch(65% 0.2 255 / 0.16), transparent 47%),
+        linear-gradient(145deg, oklch(22% 0.028 247), oklch(17% 0.026 247));
+      border-color: oklch(100% 0 0 / 0.1);
+      box-shadow: none;
+    }
+    [data-theme="light"] .s-card h3    { color: #fff; }
+    [data-theme="light"] .s-card p     { color: oklch(76% 0.012 250); }
+    [data-theme="light"] .s-num        { color: oklch(76% 0.14 188); }
+    [data-theme="light"] .s-icon       { color: oklch(76% 0.14 188); border-color: oklch(100% 0 0 / 0.12); }
+    [data-theme="light"] .s-card .tag  {
+      border-color: oklch(100% 0 0 / 0.14);
+      color: oklch(74% 0.01 250);
+      background: oklch(100% 0 0 / 0.05);
     }
 
     .s-card:hover {
@@ -627,16 +640,9 @@
       grid-column: span 2;
       min-height: 380px;
       background:
-        linear-gradient(108deg, oklch(0% 0 0 / 0.76) 0%, oklch(0% 0 0 / 0.28) 55%, transparent 100%),
-        radial-gradient(640px circle at var(--mx) var(--my), var(--heat-glow), transparent 47%),
-        url("img/Image_Mitsubishi_Electric_1440x810.jpg") center/cover;
+        radial-gradient(640px circle at var(--mx) var(--my), var(--heat-glow), transparent 47%);
     }
     .s-card.s-feat:hover { border-color: var(--accent-2); }
-
-    /* Force white text on featured (dark photo overlay) */
-    .s-card.s-feat h3,
-    .s-card.s-feat p { color: #fff; }
-    .s-card.s-feat p  { opacity: 0.85; }
 
     .s-top {
       display: flex; align-items: flex-start;
@@ -1134,11 +1140,11 @@
       <div class="wrap hero-grid">
 
         <div class="hero-copy reveal">
-          <div class="eyebrow" data-i18n="hero.eyebrow">Software House · Thailand</div>
-          <h1 class="hero-title" data-i18n="hero.title">ที่มาของ <span>Solution</span><br/>ที่องค์กรวางใจ</h1>
-          <p class="lead" data-i18n="hero.lead">Teema Solution คือ Software House สำหรับองค์กรที่ต้องการ Website, Mobile App, LINE OA, SEO, Web Security และระบบดิจิทัลคุณภาพ พร้อมทีมที่โฟกัสผลลัพธ์หลังส่งมอบจริง</p>
+          <div class="eyebrow" data-i18n="hero.eyebrow">Website · Mobile · LINE OA · SEO · Security</div>
+          <h1 class="hero-title" data-i18n="hero.title">บริการ<span>ดิจิทัล</span><br/>ครบทุก Solution</h1>
+          <p class="lead" data-i18n="hero.lead">ไม่ว่าจะเป็น Website, Mobile App, LINE OA, SEO หรือ Web Security — Teema Solution ออกแบบและพัฒนาระบบที่ตอบโจทย์ธุรกิจคุณโดยเฉพาะ พร้อมทีมดูแลหลังส่งมอบจริง</p>
           <div class="hero-actions">
-            <a class="btn btn-primary"   href="#services" data-i18n="hero.btn1">Explore Services</a>
+            <a class="btn btn-primary"   href="#services" data-i18n="hero.btn1">ดูบริการทั้งหมด</a>
             <a class="btn btn-secondary" href="#method"   data-i18n="hero.btn2">ดูแนวทางการทำงาน</a>
           </div>
           <div class="proof-row" aria-label="Track record">
