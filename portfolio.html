@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" data-theme="dark" data-lang="th">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script>(function(){var t=localStorage.getItem('ts-theme')||'dark';var l=localStorage.getItem('ts-lang')||'th';document.documentElement.dataset.theme=t;document.documentElement.dataset.lang=l;document.documentElement.lang=l==='en'?'en':'th';})();</script>
   <title>Portfolio ผลงานเขียนโปรแกรม เว็บไซต์ และ Mobile App | Teema Solution</title>
   <meta name="description" content="รวมผลงานของ Teema Solution ในการรับเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App LINE OA และ SEO จากองค์กรชั้นนำทั้งภาครัฐและเอกชน"/>
   <meta name="keywords" content="Teema Solution, Software House, บริษัทรับจ้างเขียนโปรแกรม, เขียนโปรแกรม, Portfolio, พัฒนาเว็บไซต์, Mobile App"/>
@@ -13,138 +15,155 @@
   <meta property="og:description" content="รวมผลงานรับเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App LINE OA และ SEO ของ Teema Solution"/>
   <meta property="og:url" content="https://ongkub.github.io/teemasolution/portfolio.html"/>
   <meta property="og:image" content="https://ongkub.github.io/teemasolution/img/Image_Mitsubishi_Electric_1440x810.jpg"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="theme.css"/>
 </head>
 <body>
+
+<!-- ══════════ NAV ══════════ -->
 <nav class="nav" id="mainNav">
-  <div class="nav__logo">
+  <a href="index.html" class="nav__logo">
     <img src="img/logo/teema.png" alt="Teema Solution" class="nav__logo-img"/>
     <span class="nav__logo-text">TEEMA <span>SOLUTION</span></span>
-  </div>
+  </a>
   <ul class="nav__links">
-    <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
-    <li><a href="portfolio.html" class="active">Portfolio</a></li><li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+    <li><a href="services.html" data-i18n="nav-services">Services</a></li>
+    <li><a href="portfolio.html" class="active" data-i18n="nav-portfolio">Portfolio</a></li>
+    <li><a href="about.html" data-i18n="nav-about">About</a></li>
+    <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
   </ul>
-  <div class="nav__cta"><a href="contact.html" class="btn btn--primary btn--sm">ติดต่อเรา</a></div>
+  <div class="nav-controls">
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme"></button>
+    <button class="lang-btn" id="langBtn" aria-label="Switch language">
+      <span class="lang-th">TH</span><span class="lang-sep"> | </span><span class="lang-en">EN</span>
+    </button>
+  </div>
+  <div class="nav__cta">
+    <a href="contact.html" class="btn btn--primary btn--sm" data-i18n="nav-cta">ติดต่อเรา</a>
+  </div>
   <div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
 
+<!-- ══════════ PAGE HERO ══════════ -->
 <section class="page-hero">
   <div class="page-hero__glow"></div>
   <div class="container page-hero__content">
-    <div class="page-hero__breadcrumb"><a href="index.html">Home</a> / <span>Portfolio</span></div>
-    <span class="section-label section-label--w">Our Work</span>
-    <h1 class="section-title section-title--w" style="margin-top:8px;">ผลงานของเรา</h1>
-    <p class="section-sub section-sub--w">ผลงานรับเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App LINE OA และ SEO จากโปรเจกต์กว่า 50+ ชิ้น</p>
+    <div class="page-hero__breadcrumb"><a href="index.html">Home</a> / <span data-i18n="hero-breadcrumb">Portfolio</span></div>
+    <span class="section-label section-label--w" data-i18n="hero-label">Our Work</span>
+    <h1 class="section-title section-title--w" style="margin-top:8px;" data-i18n="hero-title">ผลงานของเรา</h1>
+    <p class="section-sub section-sub--w" data-i18n="hero-sub">ผลงานรับเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App LINE OA และ SEO จากโปรเจกต์กว่า 50+ ชิ้น</p>
   </div>
 </section>
 
+<!-- ══════════ PORTFOLIO ══════════ -->
 <section class="portfolio" style="padding-top:64px;">
   <div class="container">
     <div class="portfolio__filter">
-      <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
-      <button class="filter-btn" data-filter="website">Website</button>
-      <button class="filter-btn" data-filter="mobile">Mobile App</button>
-      <button class="filter-btn" data-filter="lineoa">LINE OA</button>
-      <button class="filter-btn" data-filter="seo">SEO & SEM</button>
+      <button class="filter-btn active" data-filter="all" data-i18n="filter-all">ทั้งหมด</button>
+      <button class="filter-btn" data-filter="website" data-i18n="filter-website">Website</button>
+      <button class="filter-btn" data-filter="mobile" data-i18n="filter-mobile">Mobile App</button>
+      <button class="filter-btn" data-filter="lineoa" data-i18n="filter-lineoa">LINE OA</button>
+      <button class="filter-btn" data-filter="seo" data-i18n="filter-seo">SEO &amp; SEM</button>
     </div>
-    <div class="portfolio__grid">
+    <div class="portfolio__grid" id="portfolioGrid">
       <div class="portfolio-card portfolio-card--wide reveal" data-type="website">
-        <img src="img/Image_Mitsubishi_Electric_1440x810.jpg" alt="Mitsubishi"/>
+        <img src="img/Image_Mitsubishi_Electric_1440x810.jpg" alt="Mitsubishi Electric" loading="lazy"/>
         <div class="portfolio-card__overlay">
           <div class="portfolio-card__client">Mitsubishi Electric</div>
-          <div class="portfolio-card__title">Product Information Website Design</div>
-          <span class="portfolio-card__type">Website Design (All Page)</span>
+          <div class="portfolio-card__title" data-i18n="p1-title">Product Information Website Design</div>
+          <span class="portfolio-card__type" data-i18n="p1-type">Website Design (All Page)</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card reveal" data-type="website">
-        <img src="img/Image_Betagro_1080x810.jpg" alt="Betagro"/>
+        <img src="img/Image_Betagro_1080x810.jpg" alt="BET AGRO" loading="lazy"/>
         <div class="portfolio-card__overlay">
           <div class="portfolio-card__client">BET AGRO</div>
-          <div class="portfolio-card__title">Product Information Website Design</div>
-          <span class="portfolio-card__type">Website Design (All Page)</span>
+          <div class="portfolio-card__title" data-i18n="p2-title">Product Information Website Design</div>
+          <span class="portfolio-card__type" data-i18n="p2-type">Website Design (All Page)</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card reveal" data-type="website">
-        <img src="img/Image_Stella_1080x810.jpg" alt="Stella Plus"/>
+        <img src="img/Image_Stella_1080x810.jpg" alt="Stella Plus" loading="lazy"/>
         <div class="portfolio-card__overlay">
           <div class="portfolio-card__client">Stella Plus (Startup)</div>
-          <div class="portfolio-card__title">eSarabun & eHR for Local Government</div>
+          <div class="portfolio-card__title" data-i18n="p3-title">eSarabun &amp; eHR for Local Government</div>
           <span class="portfolio-card__type">SaaS — React + Next.js</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card reveal reveal-delay-1" data-type="website">
-        <img src="img/Image_BAAC_1080x810.jpg" alt="BAAC"/>
+        <img src="img/Image_BAAC_1080x810.jpg" alt="BAAC" loading="lazy"/>
         <div class="portfolio-card__overlay">
           <div class="portfolio-card__client">BAAC (ธ.ก.ส.)</div>
-          <div class="portfolio-card__title">Agricultural Loan Information Website</div>
-          <span class="portfolio-card__type">Website Design (All Page)</span>
+          <div class="portfolio-card__title" data-i18n="p4-title">Agricultural Loan Information Website</div>
+          <span class="portfolio-card__type" data-i18n="p4-type">Website Design (All Page)</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card reveal reveal-delay-2" data-type="website">
-        <img src="img/Image_Omron_1080x810.jpg" alt="OMRON"/>
+        <img src="img/Image_Omron_1080x810.jpg" alt="OMRON" loading="lazy"/>
         <div class="portfolio-card__overlay">
           <div class="portfolio-card__client">OMRON</div>
-          <div class="portfolio-card__title">Store Locator Website</div>
-          <span class="portfolio-card__type">Website Design (All Page)</span>
+          <div class="portfolio-card__title" data-i18n="p5-title">Store Locator Website</div>
+          <span class="portfolio-card__type" data-i18n="p5-type">Website Design (All Page)</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card portfolio-card--wide reveal" data-type="seo">
-        <img src="img/Image_SangThai_1440x810.jpg" alt="Sangthai"/>
+        <img src="img/Image_SangThai_1440x810.jpg" alt="Sangthai Metalsheet" loading="lazy"/>
         <div class="portfolio-card__overlay">
           <div class="portfolio-card__client">Sangthai Metalsheet</div>
-          <div class="portfolio-card__title">SEO Strategy — Page Views +348% (82K → 367K)</div>
-          <span class="portfolio-card__type">SEO & SEM</span>
+          <div class="portfolio-card__title" data-i18n="p6-title">SEO Strategy — Page Views +348% (82K → 367K)</div>
+          <span class="portfolio-card__type">SEO &amp; SEM</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card reveal reveal-delay-1" data-type="lineoa mobile">
-        <img src="img/Image_Toyota_1080x810.jpg" alt="Toyota"/>
+        <img src="img/Image_Toyota_1080x810.jpg" alt="Toyota Thailand" loading="lazy"/>
         <div class="portfolio-card__overlay">
           <div class="portfolio-card__client">Toyota Thailand</div>
-          <div class="portfolio-card__title">Road Safety LINE Web App 2023</div>
+          <div class="portfolio-card__title" data-i18n="p7-title">Road Safety LINE Web App 2023</div>
           <span class="portfolio-card__type">LINE OA / Web App</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card portfolio-card--wide reveal" data-type="seo">
-        <img src="img/Image_eXta_1080x810.jpg" alt="eXta"/>
+        <img src="img/Image_eXta_1080x810.jpg" alt="eXta CP ALL" loading="lazy"/>
         <div class="portfolio-card__overlay">
           <div class="portfolio-card__client">eXta (CP ALL)</div>
-          <div class="portfolio-card__title">SEO & SEM Ads Optimization</div>
-          <span class="portfolio-card__type">SEO & SEM</span>
+          <div class="portfolio-card__title" data-i18n="p8-title">SEO &amp; SEM Ads Optimization</div>
+          <span class="portfolio-card__type">SEO &amp; SEM</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card reveal reveal-delay-2" data-type="mobile">
-        <img src="img/Image_Calories_Credit_Challenge_1080x810.jpg" alt="Calories Credit"/>
+        <img src="img/Image_Calories_Credit_Challenge_1080x810.jpg" alt="Calories Credit Challenge" loading="lazy"/>
         <div class="portfolio-card__overlay">
-          <div class="portfolio-card__client">กระทรวงการท่องเที่ยวและกีฬา</div>
-          <div class="portfolio-card__title">Calories Credit Challenge App</div>
+          <div class="portfolio-card__client" data-i18n="p9-client">กระทรวงการท่องเที่ยวและกีฬา</div>
+          <div class="portfolio-card__title" data-i18n="p9-title">Calories Credit Challenge App</div>
           <span class="portfolio-card__type">Mobile App (iOS + Android)</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card portfolio-card--wide reveal" data-type="lineoa">
-        <img src="img/Image_Novo_Norvisk_1080x810.jpg" alt="Novo Nordisk"/>
+        <img src="img/Image_Novo_Norvisk_1080x810.jpg" alt="Novo Nordisk" loading="lazy"/>
         <div class="portfolio-card__overlay">
           <div class="portfolio-card__client">Novo Nordisk</div>
-          <div class="portfolio-card__title">Novo Nordisk Connect</div>
+          <div class="portfolio-card__title" data-i18n="p10-title">Novo Nordisk Connect</div>
           <span class="portfolio-card__type">LINE Official Account</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card reveal reveal-delay-1" data-type="lineoa">
-        <img src="img/Image_Dhipaya_1080x810.jpg" alt="Dhipaya"/>
+        <img src="img/Image_Dhipaya_1080x810.jpg" alt="Dhipaya Insurance" loading="lazy"/>
         <div class="portfolio-card__overlay">
           <div class="portfolio-card__client">Dhipaya Insurance</div>
-          <div class="portfolio-card__title">TIP Renew</div>
+          <div class="portfolio-card__title" data-i18n="p11-title">TIP Renew</div>
           <span class="portfolio-card__type">LINE Official Account</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
@@ -153,47 +172,131 @@
   </div>
 </section>
 
+<!-- ══════════ CTA ══════════ -->
 <section class="cta-banner">
   <div class="cta-banner__orb"></div>
   <div class="container" style="position:relative;z-index:2;">
-    <h2 class="cta-banner__title">พร้อมสร้างผลงาน<br/><span>ชิ้นต่อไป</span>ด้วยกัน?</h2>
-    <p class="cta-banner__sub">ปรึกษาทีมเราฟรี ไม่มีค่าใช้จ่าย</p>
+    <h2 class="cta-banner__title" data-i18n="cta-title">พร้อมสร้างผลงาน<br/><span>ชิ้นต่อไป</span>ด้วยกัน?</h2>
+    <p class="cta-banner__sub" data-i18n="cta-sub">ปรึกษาทีมเราฟรี ไม่มีค่าใช้จ่าย</p>
     <div class="cta-banner__actions">
-      <a href="contact.html" class="btn btn--purple btn--lg">ติดต่อเราเลย →</a>
+      <a href="contact.html" class="btn btn--purple btn--lg" data-i18n="cta-btn">ติดต่อเราเลย →</a>
     </div>
   </div>
 </section>
 
+<!-- ══════════ FOOTER ══════════ -->
 <footer class="footer">
   <div class="container">
     <div class="footer__grid">
-      <div><div class="footer__brand-name">TEEMA <span>SOLUTION</span></div><p class="footer__brand-desc">ที่มาของ Solution ที่ดีที่สุด</p></div>
-      <div><p class="footer__col-title">Services</p><ul class="footer__links"><li><a href="services.html">Website Development</a></li><li><a href="services.html">Mobile Application</a></li><li><a href="services.html">SEO & SEM</a></li></ul></div>
-      <div><p class="footer__col-title">Company</p><ul class="footer__links"><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><p class="footer__col-title">Contact</p><ul class="footer__links"><li><a href="mailto:contact@teemasolution.com">contact@teemasolution.com</a></li><li><a href="tel:0615656599">0615656599</a></li></ul></div>
+      <div>
+        <div class="footer__brand-name">TEEMA <span>SOLUTION</span></div>
+        <p class="footer__brand-desc" data-i18n="footer-brand">ที่มาของ Solution ที่ดีที่สุด</p>
+      </div>
+      <div>
+        <p class="footer__col-title" data-i18n="footer-col-services">Services</p>
+        <ul class="footer__links">
+          <li><a href="services.html" data-i18n="footer-svc-1">Website Development</a></li>
+          <li><a href="services.html" data-i18n="footer-svc-2">Mobile Application</a></li>
+          <li><a href="services.html" data-i18n="footer-svc-3">SEO &amp; SEM</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-title" data-i18n="footer-col-company">Company</p>
+        <ul class="footer__links">
+          <li><a href="about.html" data-i18n="footer-about">About Us</a></li>
+          <li><a href="portfolio.html" data-i18n="footer-portfolio">Portfolio</a></li>
+          <li><a href="contact.html" data-i18n="footer-contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-title" data-i18n="footer-col-contact">Contact</p>
+        <ul class="footer__links">
+          <li><a href="mailto:contact@teemasolution.com">contact@teemasolution.com</a></li>
+          <li><a href="tel:0615656599">0615656599</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer__bottom"><p class="footer__copy">© 2025 Teema Solution Co., Ltd.</p><div class="footer__socials"><a href="#" class="footer__social">LinkedIn</a><a href="#" class="footer__social">Facebook</a></div></div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Teema Solution Co., Ltd.</p>
+      <div class="footer__socials">
+        <a href="#" class="footer__social">LinkedIn</a>
+        <a href="#" class="footer__social">Facebook</a>
+      </div>
+    </div>
   </div>
 </footer>
+
 <script>
-  const nav=document.getElementById('mainNav');
-  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
-  document.getElementById('hamburger').addEventListener('click',()=>nav.classList.toggle('menu-open'));
-  // Filter
-  const portfolioGrid = document.querySelector('.portfolio__grid');
-  document.querySelectorAll('.filter-btn').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+window.TR = {
+  th: {
+    'nav-home':'Home','nav-services':'Services','nav-portfolio':'Portfolio','nav-about':'About','nav-contact':'Contact','nav-cta':'ติดต่อเรา',
+    'hero-breadcrumb':'Portfolio','hero-label':'Our Work',
+    'hero-title':'ผลงานของเรา',
+    'hero-sub':'ผลงานรับเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App LINE OA และ SEO จากโปรเจกต์กว่า 50+ ชิ้น',
+    'filter-all':'ทั้งหมด','filter-website':'Website','filter-mobile':'Mobile App','filter-lineoa':'LINE OA','filter-seo':'SEO &amp; SEM',
+    'p1-title':'Product Information Website Design','p1-type':'Website Design (All Page)',
+    'p2-title':'Product Information Website Design','p2-type':'Website Design (All Page)',
+    'p3-title':'eSarabun &amp; eHR for Local Government',
+    'p4-title':'Agricultural Loan Information Website','p4-type':'Website Design (All Page)',
+    'p5-title':'Store Locator Website','p5-type':'Website Design (All Page)',
+    'p6-title':'SEO Strategy — Page Views +348% (82K → 367K)',
+    'p7-title':'Road Safety LINE Web App 2023',
+    'p8-title':'SEO &amp; SEM Ads Optimization',
+    'p9-client':'กระทรวงการท่องเที่ยวและกีฬา','p9-title':'Calories Credit Challenge App',
+    'p10-title':'Novo Nordisk Connect',
+    'p11-title':'TIP Renew',
+    'cta-title':'พร้อมสร้างผลงาน<br/><span>ชิ้นต่อไป</span>ด้วยกัน?','cta-sub':'ปรึกษาทีมเราฟรี ไม่มีค่าใช้จ่าย','cta-btn':'ติดต่อเราเลย →',
+    'footer-brand':'ที่มาของ Solution ที่ดีที่สุด',
+    'footer-col-services':'Services','footer-svc-1':'Website Development','footer-svc-2':'Mobile Application','footer-svc-3':'SEO &amp; SEM',
+    'footer-col-company':'Company','footer-about':'About Us','footer-portfolio':'Portfolio','footer-contact':'Contact',
+    'footer-col-contact':'Contact'
+  },
+  en: {
+    'nav-home':'Home','nav-services':'Services','nav-portfolio':'Portfolio','nav-about':'About','nav-contact':'Contact','nav-cta':'Contact Us',
+    'hero-breadcrumb':'Portfolio','hero-label':'Our Work',
+    'hero-title':'Our Projects',
+    'hero-sub':'Programming, Website, Mobile App, LINE OA and SEO projects — 50+ delivered for leading organizations.',
+    'filter-all':'All','filter-website':'Website','filter-mobile':'Mobile App','filter-lineoa':'LINE OA','filter-seo':'SEO &amp; SEM',
+    'p1-title':'Product Information Website Design','p1-type':'Website Design (All Pages)',
+    'p2-title':'Product Information Website Design','p2-type':'Website Design (All Pages)',
+    'p3-title':'eSarabun &amp; eHR for Local Government',
+    'p4-title':'Agricultural Loan Information Website','p4-type':'Website Design (All Pages)',
+    'p5-title':'Store Locator Website','p5-type':'Website Design (All Pages)',
+    'p6-title':'SEO Strategy — Page Views +348% (82K → 367K)',
+    'p7-title':'Road Safety LINE Web App 2023',
+    'p8-title':'SEO &amp; SEM Ads Optimization',
+    'p9-client':'Ministry of Tourism and Sports','p9-title':'Calories Credit Challenge App',
+    'p10-title':'Novo Nordisk Connect',
+    'p11-title':'TIP Renew',
+    'cta-title':'Ready to Build the<br/><span>Next Project</span>Together?','cta-sub':'Free consultation, no obligations','cta-btn':'Contact Us Now →',
+    'footer-brand':'The Source of the Best Solution',
+    'footer-col-services':'Services','footer-svc-1':'Website Development','footer-svc-2':'Mobile Application','footer-svc-3':'SEO &amp; SEM',
+    'footer-col-company':'Company','footer-about':'About Us','footer-portfolio':'Portfolio','footer-contact':'Contact',
+    'footer-col-contact':'Contact'
+  }
+};
+</script>
+<script src="theme.js"></script>
+<script>
+  /* Portfolio filter */
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
-      const f=btn.dataset.filter;
-      portfolioGrid.classList.toggle('is-filtered', f !== 'all');
-      document.querySelectorAll('.portfolio-card').forEach(c=>{
-        c.style.display=(f==='all'||(c.dataset.type||'').includes(f))?'block':'none';
+      var f = btn.dataset.filter;
+      document.querySelectorAll('.portfolio-card').forEach(function(card) {
+        var type = card.dataset.type || '';
+        var show = f === 'all' || type.includes(f);
+        card.style.display = show ? '' : 'none';
+        if (show) {
+          /* restore wide span for wide cards when filter is 'all' */
+          if (card.classList.contains('portfolio-card--wide')) {
+            card.style.gridColumn = '';
+          }
+        }
       });
     });
   });
-  const obs=new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('visible');}),{threshold:0.1});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>

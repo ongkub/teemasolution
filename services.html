@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" data-theme="dark" data-lang="th">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services | Software House รับเขียนโปรแกรม พัฒนาเว็บไซต์ และ Mobile App | Teema Solution</title>
   <meta name="description" content="บริการของ Teema Solution ครอบคลุม Software House, บริษัทรับจ้างเขียนโปรแกรม, พัฒนาเว็บไซต์, Mobile App, LINE OA, SEO, Web Security และ Cloud Infrastructure"/>
   <meta name="keywords" content="Software House, บริษัทรับจ้างเขียนโปรแกรม, เขียนโปรแกรม, พัฒนาเว็บไซต์, Mobile App, LINE OA, SEO, Teema Solution"/>
@@ -13,186 +14,1776 @@
   <meta property="og:description" content="บริการรับเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App LINE OA SEO Web Security และ Cloud Infrastructure"/>
   <meta property="og:url" content="https://ongkub.github.io/teemasolution/services.html"/>
   <meta property="og:image" content="https://ongkub.github.io/teemasolution/img/logo/teema.png"/>
-  <link rel="stylesheet" href="styles.css"/>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Software Development Service",
-    "provider": {
-      "@type": "Organization",
-      "name": "Teema Solution",
-      "url": "https://ongkub.github.io/teemasolution/"
-    },
-    "areaServed": "TH",
-    "description": "บริการรับเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App LINE OA SEO Web Security และ Cloud Infrastructure"
-  }
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Software Development Service","provider":{"@type":"Organization","name":"Teema Solution","url":"https://ongkub.github.io/teemasolution/"},"areaServed":"TH","description":"บริการรับเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App LINE OA SEO Web Security และ Cloud Infrastructure"}</script>
+
+  <!-- Prevent FOUC: set theme + lang before first paint -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('ts-theme') || 'dark';
+      var l = localStorage.getItem('ts-lang')  || 'th';
+      document.documentElement.dataset.theme = t;
+      document.documentElement.dataset.lang  = l;
+      document.documentElement.lang = l === 'en' ? 'en' : 'th';
+    })();
   </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ═══════════════════════════════════════
+       DESIGN TOKENS — DARK MODE (default)
+    ═══════════════════════════════════════ */
+    :root {
+      --bg:        oklch(12% 0.018 247);
+      --bg-2:      oklch(16% 0.026 247);
+      --surface:   oklch(20% 0.028 247);
+      --fg:        oklch(97% 0.004 250);
+      --muted:     oklch(68% 0.018 250);
+      --soft:      oklch(84% 0.016 250);
+      --border:    oklch(32% 0.03 247);
+      --accent:    oklch(65% 0.2 255);
+      --accent-2:  oklch(76% 0.14 188);
+      --glow:      oklch(65% 0.2 255 / 0.22);
+      --heat-glow: oklch(72% 0.17 54 / 0.16);
+      --shadow:    none;
+      --r:  14px;
+      --rl: 28px;
+      --max: 1440px;
+      --font: 'Kanit', system-ui, sans-serif;
+      --mono: 'DM Mono', ui-monospace, monospace;
+      --dur: 280ms;
+    }
+
+    /* ═══════════════════════════════════════
+       LIGHT MODE OVERRIDES
+    ═══════════════════════════════════════ */
+    [data-theme="light"] {
+      --bg:        #F2F5FC;
+      --bg-2:      #FFFFFF;
+      --surface:   #FFFFFF;
+      --fg:        #1B2A50;
+      --muted:     #4B5A85;
+      --soft:      #2D3D6B;
+      --border:    #D5DFF0;
+      --accent:    #1B3A8F;
+      --accent-2:  #7C3AED;
+      --glow:      rgba(27,58,143,0.09);
+      --heat-glow: rgba(124,58,237,0.07);
+      --shadow:    0 2px 18px rgba(27,58,143,0.07);
+    }
+
+    /* ═══════════════════════════════════════
+       BASE
+    ═══════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg); }
+
+    body {
+      font-family: var(--font);
+      font-weight: 300;
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      transition: background var(--dur) ease, color var(--dur) ease;
+    }
+
+    /* Dark body background */
+    :root:not([data-theme="light"]) body {
+      background:
+        radial-gradient(circle at 14% 0%,  oklch(65% 0.2 255 / 0.18),  transparent 28rem),
+        radial-gradient(circle at 88% 8%,  oklch(72% 0.17 54 / 0.14),  transparent 32rem),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 52%, var(--bg) 100%);
+    }
+
+    /* Light body background */
+    [data-theme="light"] body {
+      background:
+        radial-gradient(circle at 14% 0%,  rgba(27,58,143,0.05),  transparent 28rem),
+        radial-gradient(circle at 88% 8%,  rgba(124,58,237,0.04), transparent 32rem),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 60%, var(--bg) 100%);
+    }
+
+    /* Grid overlay */
+    body::before {
+      content: "";
+      position: fixed; inset: 0;
+      pointer-events: none;
+      background-size: 72px 72px;
+      mask-image: linear-gradient(180deg, black, transparent 70%);
+      z-index: 0;
+      transition: opacity var(--dur) ease;
+    }
+    :root:not([data-theme="light"]) body::before {
+      background-image:
+        linear-gradient(oklch(100% 0 0 / 0.028) 1px, transparent 1px),
+        linear-gradient(90deg, oklch(100% 0 0 / 0.028) 1px, transparent 1px);
+    }
+    [data-theme="light"] body::before {
+      background-image:
+        linear-gradient(oklch(0% 0 0 / 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, oklch(0% 0 0 / 0.035) 1px, transparent 1px);
+    }
+
+    img { max-width: 100%; display: block; }
+    a   { color: inherit; text-decoration: none; }
+    ul  { list-style: none; }
+    button { font-family: var(--font); }
+
+    .wrap {
+      width: min(100% - 40px, var(--max));
+      margin-inline: auto;
+    }
+
+    /* ═══════════════════════════════════════
+       TYPOGRAPHY
+    ═══════════════════════════════════════ */
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      line-height: 1;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+      color: var(--fg);
+    }
+    h1 { font-size: clamp(40px, 6.2vw, 92px); }
+    h2 { font-size: clamp(28px, 3.8vw, 62px); }
+    h3 { font-size: clamp(19px, 1.8vw, 28px); }
+    h4 { font-size: 17px; }
+    p  { color: var(--muted); }
+
+    .lead {
+      font-size: clamp(15px, 1.5vw, 19px);
+      color: var(--soft);
+      font-weight: 300;
+      max-width: 640px;
+    }
+
+    /* ═══════════════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════════════ */
+    .site-header {
+      position: sticky;
+      top: 0; z-index: 50;
+      border-bottom: 1px solid transparent;
+      transition:
+        background var(--dur) ease,
+        border-color var(--dur) ease,
+        box-shadow var(--dur) ease;
+    }
+
+    :root:not([data-theme="light"]) .site-header {
+      background: oklch(12% 0.018 247 / 0.84);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    [data-theme="light"] .site-header {
+      background: rgba(242,245,252,0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom-color: var(--border);
+    }
+
+    .site-header.scrolled {
+      box-shadow: 0 2px 24px oklch(0% 0 0 / 0.2);
+      border-bottom-color: var(--border) !important;
+    }
+
+    .nav-row {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--fg);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .brand img {
+      width: 38px; height: 38px;
+      border-radius: 9px;
+      object-fit: contain;
+      background: #fff;
+      padding: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(12px, 1.8vw, 28px);
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--muted);
+    }
+    .nav-links a { position: relative; transition: color 160ms; }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 1.5px;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: width 200ms ease;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] { color: var(--fg); }
+    .nav-links a:hover::after,
+    .nav-links a[aria-current="page"]::after { width: 100%; }
+
+    /* Nav controls group */
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-shrink: 0;
+    }
+
+    /* Theme toggle */
+    .theme-btn {
+      position: relative;
+      width: 36px; height: 36px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: oklch(100% 0 0 / 0.04);
+      color: var(--fg);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: background 160ms, border-color 160ms;
+    }
+    .theme-btn:hover { background: oklch(100% 0 0 / 0.1); border-color: var(--accent); }
+
+    [data-theme="light"] .theme-btn { background: rgba(27,58,143,0.06); }
+    [data-theme="light"] .theme-btn:hover { background: rgba(27,58,143,0.12); }
+
+    .theme-btn svg { position: absolute; transition: opacity 220ms, transform 220ms; }
+
+    /* Dark mode: show sun icon (click → go light) */
+    .icon-sun  { opacity: 1; transform: scale(1); }
+    .icon-moon { opacity: 0; transform: scale(0.6) rotate(30deg); }
+
+    /* Light mode: show moon icon (click → go dark) */
+    [data-theme="light"] .icon-sun  { opacity: 0; transform: scale(0.6) rotate(-30deg); }
+    [data-theme="light"] .icon-moon { opacity: 1; transform: scale(1) rotate(0deg); }
+
+    /* Language toggle */
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0 11px;
+      min-height: 36px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      background: oklch(100% 0 0 / 0.04);
+      cursor: pointer;
+      transition: background 160ms, border-color 160ms;
+    }
+    .lang-btn:hover { border-color: var(--accent); background: oklch(100% 0 0 / 0.08); }
+    [data-theme="light"] .lang-btn { background: rgba(27,58,143,0.04); }
+
+    .lang-sep { opacity: 0.3; margin: 0 2px; }
+
+    /* Active language is brighter */
+    .lang-th, .lang-en { transition: color 160ms, opacity 160ms; }
+    html:not([data-lang="en"]) .lang-th { color: var(--fg); }
+    html:not([data-lang="en"]) .lang-en { opacity: 0.38; }
+    html[data-lang="en"] .lang-en { color: var(--fg); }
+    html[data-lang="en"] .lang-th { opacity: 0.38; }
+
+    /* Nav CTA buttons */
+    .nav-btns { display: flex; align-items: center; gap: 7px; }
+
+    .btn {
+      display: inline-flex;
+      min-height: 38px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 0 16px;
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 160ms, box-shadow 160ms, background 160ms, border-color 160ms, color 160ms;
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 20px var(--glow);
+    }
+    .btn-primary:hover { box-shadow: 0 0 32px var(--glow); }
+
+    .btn-secondary {
+      color: var(--soft);
+      border-color: var(--border);
+      background: oklch(100% 0 0 / 0.04);
+    }
+    [data-theme="light"] .btn-secondary {
+      background: transparent;
+    }
+    .btn-secondary:hover {
+      color: var(--fg);
+      border-color: var(--accent);
+      background: oklch(65% 0.2 255 / 0.08);
+    }
+
+    /* Mobile hamburger */
+    .menu-btn {
+      display: none;
+      width: 40px; height: 40px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: oklch(100% 0 0 / 0.04);
+      color: var(--fg);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      transition: background 160ms;
+      flex-shrink: 0;
+    }
+    .menu-btn:hover { background: oklch(100% 0 0 / 0.1); }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 2px;
+      padding: 10px 0 14px;
+      border-top: 1px solid var(--border);
+    }
+    .mobile-menu a {
+      padding: 10px 12px;
+      border-radius: var(--r);
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--soft);
+      transition: background 160ms, color 160ms;
+    }
+    .mobile-menu a:hover,
+    .mobile-menu a[aria-current="page"] {
+      background: oklch(100% 0 0 / 0.06);
+      color: var(--fg);
+    }
+    [data-theme="light"] .mobile-menu a:hover,
+    [data-theme="light"] .mobile-menu a[aria-current="page"] {
+      background: rgba(27,58,143,0.06);
+    }
+
+    .mobile-btns {
+      display: flex; gap: 7px;
+      padding: 6px 0 4px;
+    }
+    .mobile-btns .btn { flex: 1; justify-content: center; }
+
+    .site-header.nav-open .mobile-menu,
+    .site-header.nav-open .mobile-btns { display: flex; }
+
+    /* ═══════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════ */
+    .hero {
+      position: relative;
+      padding: clamp(60px, 9vw, 112px) 0 clamp(40px, 7vw, 84px);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(330px, 0.88fr);
+      gap: clamp(26px, 5vw, 64px);
+      align-items: end;
+    }
+
+    .hero-copy { display: grid; gap: 20px; }
+    .hero-title span { color: var(--accent-2); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    /* Proof row */
+    .proof-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+    }
+    .proof {
+      padding: 15px;
+      background: var(--bg);
+      transition: background var(--dur);
+    }
+    :root:not([data-theme="light"]) .proof { background: oklch(100% 0 0 / 0.03); }
+    [data-theme="light"] .proof { background: var(--bg-2); }
+    .proof:hover { background: var(--surface) !important; }
+    .proof strong {
+      display: block;
+      font-family: var(--mono);
+      font-size: clamp(20px, 2.6vw, 34px);
+      font-weight: 700;
+      line-height: 1;
+      color: var(--fg);
+    }
+    .proof span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    /* Mosaic */
+    .mosaic {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-rows: 232px 165px 165px;
+      gap: 12px;
+    }
+
+    .tile {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid oklch(100% 0 0 / 0.1);
+      border-radius: var(--rl);
+      background: var(--surface);
+      isolation: isolate;
+    }
+    [data-theme="light"] .tile { border-color: var(--border); }
+
+    .tile::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 58%;
+      background: linear-gradient(180deg, transparent, oklch(0% 0 0 / 0.88));
+      z-index: 1;
+    }
+
+    .tile-main  { grid-row: span 3; background: url("img/tile-main.png") center/cover; }
+    .tile-stella { background: url("img/Image_Stella_1080x810.jpg") center/cover; }
+    .tile-toyota { background: url("img/Image_Toyota_1080x810.jpg") center/cover; }
+
+    .tile-stat {
+      display: grid; place-items: center;
+      background:
+        radial-gradient(circle at 32% 52%, var(--glow), transparent 68%),
+        var(--surface);
+    }
+    .tile-stat::after { display: none; }
+    .tile-stat-inner { text-align: center; padding: 16px; }
+    .tile-stat-num {
+      display: block;
+      font-family: var(--mono);
+      font-size: clamp(32px, 4vw, 54px);
+      font-weight: 700;
+      color: var(--fg);
+      line-height: 1;
+    }
+    .tile-stat-label {
+      display: block;
+      margin-top: 5px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .tile-label {
+      position: absolute;
+      left: 16px; right: 16px; bottom: 14px;
+      z-index: 2;
+    }
+    .tile-label strong {
+      display: block;
+      font-size: clamp(15px, 1.6vw, 22px);
+      font-weight: 600;
+      line-height: 1.1;
+    }
+    .tile-label small {
+      display: block;
+      margin-top: 5px;
+      color: oklch(88% 0.01 250);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    /* ═══════════════════════════════════════
+       SECTIONS
+    ═══════════════════════════════════════ */
+    section { padding: clamp(50px, 7vw, 100px) 0; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(250px, 0.46fr);
+      gap: 20px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+    .section-head p { font-size: 14px; color: var(--soft); font-weight: 300; }
+
+    /* ═══════════════════════════════════════
+       CHIPS / FILTER
+    ═══════════════════════════════════════ */
+    .chip-bar { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 16px; }
+    .chip {
+      min-height: 36px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0 14px;
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--muted);
+      background: oklch(100% 0 0 / 0.03);
+      cursor: pointer;
+      transition: color 160ms, border-color 160ms, background 160ms;
+    }
+    [data-theme="light"] .chip { background: var(--bg-2); }
+    .chip[aria-pressed="true"],
+    .chip:hover {
+      color: var(--fg);
+      border-color: var(--accent);
+      background: oklch(65% 0.2 255 / 0.09);
+    }
+    [data-theme="light"] .chip[aria-pressed="true"],
+    [data-theme="light"] .chip:hover {
+      background: rgba(27,58,143,0.08);
+    }
+
+    /* ═══════════════════════════════════════
+       SERVICE BENTO CARDS
+    ═══════════════════════════════════════ */
+    .bento {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .s-card {
+      --mx: 50%; --my: 50%;
+      position: relative;
+      min-height: 320px;
+      display: grid;
+      align-content: space-between;
+      gap: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--rl);
+      padding: 22px;
+      transition: transform 180ms ease, border-color 200ms ease, box-shadow 200ms ease;
+    }
+
+    :root:not([data-theme="light"]) .s-card {
+      background:
+        radial-gradient(550px circle at var(--mx) var(--my), var(--glow), transparent 47%),
+        linear-gradient(145deg, oklch(100% 0 0 / 0.055), oklch(100% 0 0 / 0.018));
+    }
+    [data-theme="light"] .s-card {
+      background:
+        radial-gradient(550px circle at var(--mx) var(--my), var(--glow), transparent 47%),
+        var(--bg-2);
+      box-shadow: var(--shadow);
+    }
+
+    .s-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 8px 32px var(--glow);
+    }
+
+    /* Featured card — always shows photo bg */
+    .s-card.s-feat {
+      grid-column: span 2;
+      min-height: 380px;
+      background:
+        linear-gradient(108deg, oklch(0% 0 0 / 0.76) 0%, oklch(0% 0 0 / 0.28) 55%, transparent 100%),
+        radial-gradient(640px circle at var(--mx) var(--my), var(--heat-glow), transparent 47%),
+        url("img/Image_Mitsubishi_Electric_1440x810.jpg") center/cover;
+    }
+    .s-card.s-feat:hover { border-color: var(--accent-2); }
+
+    /* Force white text on featured (dark photo overlay) */
+    .s-card.s-feat h3,
+    .s-card.s-feat p { color: #fff; }
+    .s-card.s-feat p  { opacity: 0.85; }
+
+    .s-top {
+      display: flex; align-items: flex-start;
+      justify-content: space-between; gap: 12px;
+    }
+    .s-num { font-family: var(--mono); font-size: 12px; color: var(--accent-2); }
+
+    .s-icon {
+      display: grid;
+      width: 44px; height: 44px;
+      place-items: center;
+      border: 1px solid oklch(100% 0 0 / 0.13);
+      border-radius: 12px;
+      background: oklch(0% 0 0 / 0.2);
+      backdrop-filter: blur(8px);
+      color: var(--fg);
+      flex-shrink: 0;
+      transition: background 160ms, border-color 160ms;
+    }
+    [data-theme="light"] .s-icon {
+      border-color: var(--border);
+      background: var(--bg);
+    }
+    .s-card.s-feat .s-icon {
+      border-color: rgba(255,255,255,0.2);
+      background: rgba(0,0,0,0.25);
+      color: #fff;
+    }
+
+    .s-card h3 { margin-bottom: 8px; }
+    .s-card p  { font-size: 14px; color: var(--soft); font-weight: 300; max-width: 540px; }
+
+    .tag-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 14px; }
+    .tag {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px 9px;
+      color: var(--muted);
+      background: var(--surface);
+      font-family: var(--mono);
+      font-size: 11px;
+      transition: background 160ms, color 160ms;
+    }
+    [data-theme="light"] .tag { background: var(--bg); }
+    .s-card.s-feat .tag {
+      border-color: rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.22);
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* ═══════════════════════════════════════
+       TECH STACK
+    ═══════════════════════════════════════ */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .tech-card {
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 20px 16px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      transition: background var(--dur), border-color 200ms, box-shadow 200ms;
+    }
+    :root:not([data-theme="light"]) .tech-card { background: oklch(100% 0 0 / 0.035); }
+    .tech-card:hover { border-color: var(--accent); box-shadow: 0 4px 20px var(--glow); }
+    .tech-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      margin-bottom: 12px;
+    }
+    .tech-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+
+    /* ═══════════════════════════════════════
+       METHOD / PROCESS
+    ═══════════════════════════════════════ */
+    .method-grid {
+      display: grid;
+      grid-template-columns: 0.74fr 1fr;
+      gap: 14px;
+    }
+
+    .signal-panel {
+      border: 1px solid var(--border);
+      border-radius: var(--rl);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      transition: background var(--dur);
+    }
+    :root:not([data-theme="light"]) .signal-panel {
+      background:
+        radial-gradient(circle at 86% 10%, var(--glow), transparent 22rem),
+        oklch(100% 0 0 / 0.04);
+    }
+    [data-theme="light"] .signal-panel {
+      background:
+        radial-gradient(circle at 86% 10%, var(--glow), transparent 22rem),
+        var(--bg-2);
+    }
+
+    .signal-panel h3 { font-size: clamp(22px, 2.6vw, 42px); margin-top: 8px; }
+    .signal-list { margin-top: 20px; }
+    .signal {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+      font-size: 13px;
+      color: var(--soft);
+    }
+    .signal:last-child { border-bottom: none; }
+    .signal b { font-family: var(--mono); font-size: 18px; font-weight: 700; color: var(--fg); }
+
+    .timeline { display: grid; gap: 10px; align-content: start; }
+    .step {
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 18px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      transition: background var(--dur), border-color 200ms, box-shadow 200ms;
+    }
+    :root:not([data-theme="light"]) .step { background: oklch(100% 0 0 / 0.035); }
+    .step:hover { border-color: var(--accent-2); box-shadow: 0 4px 20px var(--glow); }
+    .step-num {
+      display: grid;
+      width: 44px; height: 44px;
+      place-items: center;
+      border-radius: 50%;
+      color: oklch(12% 0.018 247);
+      background: var(--accent-2);
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .step h4 { margin-bottom: 5px; }
+    .step p  { font-size: 13px; font-weight: 300; }
+
+    /* ═══════════════════════════════════════
+       SELECTED WORK
+    ═══════════════════════════════════════ */
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 14px;
+    }
+    .case-card {
+      position: relative;
+      min-height: 440px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--rl);
+    }
+    .case-card img { width: 100%; height: 100%; min-height: 440px; object-fit: cover; }
+    .case-card::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 30%, oklch(0% 0 0 / 0.9));
+    }
+    .case-copy {
+      position: absolute; z-index: 2;
+      left: 22px; right: 22px; bottom: 20px;
+    }
+    .case-copy h3 { margin-top: 4px; color: #fff; }
+    .case-copy p  { margin-top: 6px; font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.72); }
+
+    .case-stack { display: grid; gap: 12px; }
+    .mini-case {
+      display: grid;
+      grid-template-columns: 106px minmax(0, 1fr);
+      gap: 12px;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 12px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      transition: background var(--dur), border-color 200ms, box-shadow 200ms;
+    }
+    :root:not([data-theme="light"]) .mini-case { background: oklch(100% 0 0 / 0.035); }
+    .mini-case:hover { border-color: var(--accent); box-shadow: 0 4px 18px var(--glow); }
+    .mini-case img { aspect-ratio: 4/3; width: 100%; border-radius: 8px; object-fit: cover; }
+    .mini-case h4 { font-size: 15px; margin-bottom: 3px; }
+    .mini-case p  { font-size: 12px; font-weight: 300; }
+
+    /* ═══════════════════════════════════════
+       CLIENT LOGOS
+    ═══════════════════════════════════════ */
+    .client-grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--rl);
+      overflow: hidden;
+    }
+    .client-cell {
+      display: grid; min-height: 86px;
+      place-items: center;
+      padding: 12px 8px;
+      background: var(--bg);
+      transition: background 200ms;
+    }
+    :root:not([data-theme="light"]) .client-cell { background: oklch(100% 0 0 / 0.04); }
+    [data-theme="light"] .client-cell { background: var(--bg-2); }
+    .client-cell:hover { background: var(--surface) !important; }
+
+    .client-cell img {
+      max-height: 36px; width: auto; max-width: 90%;
+      object-fit: contain;
+      transition: transform 0.25s ease, opacity 0.25s;
+      opacity: 0.82;
+    }
+    .client-cell:hover img {
+      transform: scale(1.12);
+      opacity: 1;
+    }
+
+    /* ═══════════════════════════════════════
+       CTA
+    ═══════════════════════════════════════ */
+    .cta { padding-bottom: clamp(58px, 8vw, 108px); }
+    .cta-panel {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid oklch(100% 0 0 / 0.12);
+      border-radius: calc(var(--rl) + 8px);
+      padding: clamp(24px, 5vw, 58px);
+      background:
+        linear-gradient(112deg, oklch(0% 0 0 / 0.88) 0%, oklch(0% 0 0 / 0.48) 50%, transparent 100%),
+        radial-gradient(circle at 80% 20%, oklch(76% 0.14 188 / 0.2), transparent 26rem),
+        url("img/bg_hori.png") center/cover;
+    }
+    .cta-panel::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 14% 80%, oklch(65% 0.2 255 / 0.14), transparent 22rem);
+      pointer-events: none;
+    }
+
+    .cta-content {
+      position: relative; z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(255px, 0.42fr);
+      gap: 24px;
+      align-items: end;
+    }
+    /* Force white text in CTA (dark photo overlay) */
+    .cta-panel h2,
+    .cta-panel .eyebrow,
+    .cta-panel .lead { color: #fff; }
+    .cta-panel .eyebrow { color: oklch(76% 0.14 188); }
+    .cta-panel .lead { color: rgba(255,255,255,0.78); }
+    .cta-panel h2 { margin-top: 10px; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+
+    .contact-card {
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--r);
+      padding: 16px;
+      background: rgba(0,0,0,0.48);
+      backdrop-filter: blur(16px);
+    }
+    .c-line {
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 10px 0;
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+    }
+    .c-line:last-child { border-bottom: none; }
+    .c-line b {
+      font-family: var(--mono); font-size: 11px;
+      font-weight: 500; color: rgba(255,255,255,0.92);
+      text-align: right;
+    }
+
+    /* ═══════════════════════════════════════
+       FOOTER — stays dark in both themes
+    ═══════════════════════════════════════ */
+    .footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 48px 0 28px;
+      background: oklch(9% 0.014 247);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-brand { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: 0.04em; }
+    .footer-brand span { color: oklch(76% 0.14 188); }
+    .footer-desc { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 220px; }
+    .footer-col-title {
+      font-family: var(--mono);
+      font-size: 10px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255,255,255,0.26); margin-bottom: 13px;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.46); transition: color 160ms; }
+    .footer-links a:hover { color: rgba(255,255,255,0.86); }
+    .footer-bottom {
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 12px;
+      padding-top: 20px;
+    }
+    .footer-copy { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.22); }
+    .footer-socials { display: flex; gap: 14px; }
+    .footer-socials a { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.3); transition: color 160ms; }
+    .footer-socials a:hover { color: oklch(76% 0.14 188); }
+
+    /* ═══════════════════════════════════════
+       SCROLL REVEAL
+    ═══════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 500ms ease, transform 500ms ease;
+    }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════ */
+    @media (max-width: 1180px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: 270px 190px; }
+      .tile-main { grid-row: auto; grid-column: span 2; }
+      .tile-stat { display: none; }
+      .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .s-card.s-feat { min-height: 350px; }
+      .tech-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .method-grid, .work-grid { grid-template-columns: 1fr; }
+      .cta-content { grid-template-columns: 1fr; }
+      .section-head { grid-template-columns: 1fr; }
+      .client-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+    }
+
+    @media (max-width: 768px) {
+      .wrap { width: min(100% - 28px, var(--max)); }
+      .nav-links, .nav-btns { display: none; }
+      .menu-btn { display: inline-flex; }
+      .hero { padding-top: 42px; }
+      .proof-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: 190px 140px; }
+      .tile-main { grid-column: span 2; }
+      .bento { grid-template-columns: 1fr; }
+      .s-card.s-feat { grid-column: auto; min-height: 290px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .step { grid-template-columns: 1fr; }
+      .step-num { width: 38px; height: 38px; }
+      .mini-case { grid-template-columns: 90px 1fr; }
+      .client-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: clamp(32px, 10vw, 46px); }
+      .mosaic { grid-template-columns: 1fr; grid-template-rows: 220px; }
+      .tile-stella, .tile-toyota, .tile-stat { display: none; }
+      .tile-main { grid-column: 1; }
+      .proof { padding: 11px; }
+      .proof strong { font-size: 20px; }
+      .s-card { padding: 17px; min-height: 260px; }
+      .tech-grid { grid-template-columns: 1fr; }
+      .client-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .mini-case { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
 <body>
-<nav class="nav" id="mainNav">
-  <div class="nav__logo">
-    <img src="img/logo/teema.png" alt="Teema Solution" class="nav__logo-img"/>
-    <span class="nav__logo-text">TEEMA <span>SOLUTION</span></span>
-  </div>
-  <ul class="nav__links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html" class="active">Services</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <div class="nav__cta"><a href="contact.html" class="btn btn--primary btn--sm">ติดต่อเรา</a></div>
-  <div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
-</nav>
 
-<section class="page-hero">
-  <div class="page-hero__glow"></div>
-  <div class="container page-hero__content">
-    <div class="page-hero__breadcrumb"><a href="index.html">Home</a> / <span>Services</span></div>
-    <span class="section-label section-label--w">What We Do</span>
-    <h1 class="section-title section-title--w" style="margin-top:8px;">Services ของเรา</h1>
-    <p class="section-sub section-sub--w">ครบทุก Solution ที่ธุรกิจคุณต้องการ ตั้งแต่บริษัทรับจ้างเขียนโปรแกรม พัฒนาเว็บไซต์ ไปจนถึง Mobile App, SEO และ Deploy</p>
-  </div>
-</section>
+  <!-- ── HEADER ── -->
+  <header class="site-header" id="siteHeader">
+    <div class="wrap nav-row">
+      <a class="brand" href="index.html">
+        <img src="img/logo/teema.png" alt="Teema Solution"/>
+        TEEMA SOLUTION
+      </a>
 
-<!-- Services Grid -->
-<section style="background:var(--bg-off);padding:100px 0;">
-  <div class="container">
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-card__icon">🌐</div>
-        <h3 class="service-card__title">Website Development</h3>
-        <p class="service-card__desc">พัฒนาเว็บไซต์ทุกประเภท ตั้งแต่ Corporate Site, e-Commerce ไปจนถึง Complex Web Application พร้อมระบบ Security</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
-          <span class="tag">React / Next.js</span><span class="tag">Node.js</span>
-          <span class="tag">PHP / Laravel</span><span class="tag">PostgreSQL</span>
-        </div>
-      </div>
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-card__icon">🔒</div>
-        <h3 class="service-card__title">Web Security</h3>
-        <p class="service-card__desc">ดูแลความปลอดภัยของเว็บไซต์ ป้องกัน Cyber Threats, Vulnerability Assessment และ PDPA Compliance</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
-          <span class="tag">SSL/TLS</span><span class="tag">Firewall</span><span class="tag">PDPA</span>
-        </div>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-card__icon">📱</div>
-        <h3 class="service-card__title">Mobile Application</h3>
-        <p class="service-card__desc">พัฒนา Native Mobile App ทั้ง iOS (Swift) และ Android (Kotlin) รองรับทั้ง B2C และ B2B</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
-          <span class="tag">Swift</span><span class="tag">Kotlin</span><span class="tag">LINE OA</span>
-        </div>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-card__icon">🎨</div>
-        <h3 class="service-card__title">UI/UX Design</h3>
-        <p class="service-card__desc">ออกแบบ UI/UX ที่สวยงามและใช้งานง่าย สอดคล้องกับ Brand Identity ด้วย Figma และ Design System</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
-          <span class="tag">Figma</span><span class="tag">Prototype</span><span class="tag">Design System</span>
-        </div>
-      </div>
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-card__icon">📈</div>
-        <h3 class="service-card__title">SEO & SEM</h3>
-        <p class="service-card__desc">เพิ่ม Organic Traffic ด้วย Technical SEO, Content Strategy และ Google Ads พิสูจน์แล้วด้วย +348% Page Views</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
-          <span class="tag">Google Ads</span><span class="tag">On-page SEO</span><span class="tag">Analytics</span>
-        </div>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-card__icon">☁️</div>
-        <h3 class="service-card__title">Cloud & Infrastructure</h3>
-        <p class="service-card__desc">วางระบบ Cloud Architecture บน AWS, Azure, DigitalOcean พร้อม DevOps และ CI/CD Pipeline</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
-          <span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">DigitalOcean</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="services.html" aria-current="page" data-i18n="nav.services">Services</a>
+        <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
 
-<!-- Tech Stack Navy Section -->
-<section class="section-navy" style="padding:100px 0;">
-  <div class="section-navy__glow"></div>
-  <div class="container" style="position:relative;z-index:2;">
-    <div class="text-center reveal" style="margin-bottom:56px;">
-      <span class="section-label section-label--w">Technology</span>
-      <h2 class="section-title section-title--w">Tech Stack ที่เราใช้</h2>
-    </div>
-    <div class="tech-grid reveal reveal-delay-1">
-      <div class="tech-card">
-        <div class="tech-card__label">Frontend</div>
-        <div class="tech-card__tags">
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">React</span>
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Next.js</span>
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Bootstrap</span>
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Swift</span>
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Kotlin</span>
-        </div>
-      </div>
-      <div class="tech-card">
-        <div class="tech-card__label">Backend</div>
-        <div class="tech-card__tags">
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Node.js</span>
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">PHP / Laravel</span>
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">CodeIgniter</span>
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7)">.NET</span>
-        </div>
-      </div>
-      <div class="tech-card">
-        <div class="tech-card__label">Database</div>
-        <div class="tech-card__tags">
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">PostgreSQL</span>
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">MySQL</span>
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">MSSQL</span>
-        </div>
-      </div>
-      <div class="tech-card">
-        <div class="tech-card__label">Cloud</div>
-        <div class="tech-card__tags">
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">AWS</span>
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">Azure</span>
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">DigitalOcean</span>
-          <span class="tag" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">GDCC</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      <!-- Controls: theme + lang toggles -->
+      <div class="nav-controls">
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle theme">
+          <!-- Sun icon: shown in dark mode -->
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="2"  x2="12" y2="4"/>
+            <line x1="12" y1="20" x2="12" y2="22"/>
+            <line x1="4.22" y1="4.22"  x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="2"  y1="12" x2="4"  y2="12"/>
+            <line x1="20" y1="12" x2="22" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <!-- Moon icon: shown in light mode -->
+          <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+        </button>
 
-<section class="cta-banner">
-  <div class="cta-banner__orb"></div>
-  <div class="container" style="position:relative;z-index:2;">
-    <h2 class="cta-banner__title">ต้องการ Solution แบบไหน?</h2>
-    <p class="cta-banner__sub">ทีม Teema Solution พร้อม Consult ฟรี</p>
-    <div class="cta-banner__actions">
-      <a href="contact.html" class="btn btn--purple btn--lg">ติดต่อเราเลย →</a>
-    </div>
-  </div>
-</section>
+        <button class="lang-btn" id="langBtn" type="button" aria-label="Toggle language">
+          <span class="lang-th">TH</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-en">EN</span>
+        </button>
+      </div>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div><div class="footer__brand-name">TEEMA <span>SOLUTION</span></div><p class="footer__brand-desc">ที่มาของ Solution ที่ดีที่สุด<br/>Software House & Digital Solutions</p></div>
-      <div><p class="footer__col-title">Services</p><ul class="footer__links"><li><a href="services.html#web">Website Development</a></li><li><a href="services.html#mobile">Mobile Application</a></li><li><a href="services.html#design">Design Direction</a></li><li><a href="services.html#seo">SEO & SEM</a></li></ul></div>
-      <div><p class="footer__col-title">Company</p><ul class="footer__links"><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><p class="footer__col-title">Contact</p><ul class="footer__links"><li><a href="mailto:contact@teemasolution.com">contact@teemasolution.com</a></li><li><a href="tel:0615656599">0615656599</a></li></ul></div>
+      <div class="nav-btns">
+        <a class="btn btn-secondary" href="portfolio.html" data-i18n="cta.portfolio">ดูผลงาน</a>
+        <a class="btn btn-primary"   href="contact.html"   data-i18n="cta.consult">ปรึกษาฟรี</a>
+      </div>
+
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg width="17" height="12" viewBox="0 0 17 12" fill="none" aria-hidden="true">
+          <rect y="0"  width="17" height="2" rx="1" fill="currentColor"/>
+          <rect y="5"  width="11" height="2" rx="1" fill="currentColor"/>
+          <rect y="10" width="17" height="2" rx="1" fill="currentColor"/>
+        </svg>
+      </button>
     </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2025 Teema Solution Co., Ltd.</p>
-      <div class="footer__socials"><a href="#" class="footer__social">LinkedIn</a><a href="#" class="footer__social">Facebook</a></div>
+
+    <!-- Mobile menu drawer -->
+    <div class="wrap">
+      <nav class="mobile-menu" aria-label="Mobile navigation">
+        <a href="index.html"      data-i18n="nav.home">Home</a>
+        <a href="services.html"   data-i18n="nav.services" aria-current="page">Services</a>
+        <a href="portfolio.html"  data-i18n="nav.portfolio">Portfolio</a>
+        <a href="about.html"      data-i18n="nav.about">About</a>
+        <a href="contact.html"    data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="mobile-btns">
+        <a class="btn btn-secondary" href="portfolio.html" data-i18n="cta.portfolio">ดูผลงาน</a>
+        <a class="btn btn-primary"   href="contact.html"   data-i18n="cta.consult">ปรึกษาฟรี</a>
+      </div>
     </div>
-  </div>
-</footer>
-<script>
-  const nav=document.getElementById('mainNav');
-  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
-  document.getElementById('hamburger').addEventListener('click',()=>nav.classList.toggle('menu-open'));
-  const obs=new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('visible');}),{threshold:0.1});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-</script>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+
+        <div class="hero-copy reveal">
+          <div class="eyebrow" data-i18n="hero.eyebrow">Software House · Thailand</div>
+          <h1 class="hero-title" data-i18n="hero.title">ที่มาของ <span>Solution</span><br/>ที่องค์กรวางใจ</h1>
+          <p class="lead" data-i18n="hero.lead">Teema Solution คือ Software House สำหรับองค์กรที่ต้องการ Website, Mobile App, LINE OA, SEO, Web Security และระบบดิจิทัลคุณภาพ พร้อมทีมที่โฟกัสผลลัพธ์หลังส่งมอบจริง</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary"   href="#services" data-i18n="hero.btn1">Explore Services</a>
+            <a class="btn btn-secondary" href="#method"   data-i18n="hero.btn2">ดูแนวทางการทำงาน</a>
+          </div>
+          <div class="proof-row" aria-label="Track record">
+            <div class="proof"><strong>50+</strong><span data-i18n="proof.projects">Projects delivered</span></div>
+            <div class="proof"><strong>10+</strong><span data-i18n="proof.years">ปีประสบการณ์</span></div>
+            <div class="proof"><strong>30+</strong><span data-i18n="proof.clients">องค์กรชั้นนำ</span></div>
+            <div class="proof"><strong>98%</strong><span data-i18n="proof.referral">Repeat &amp; referral</span></div>
+          </div>
+        </div>
+
+        <div class="mosaic reveal" aria-label="Selected work preview" style="transition-delay:.1s">
+          <article class="tile tile-main">
+            <div class="tile-label">
+              <small data-i18n="tile.main.sub">Enterprise digital capability</small>
+              <strong data-i18n="tile.main.title">Corporate web &amp; digital systems for leading brands</strong>
+            </div>
+          </article>
+          <article class="tile tile-stella">
+            <div class="tile-label">
+              <small data-i18n="tile.stella.sub">Web application</small>
+              <strong>Stella Plus</strong>
+            </div>
+          </article>
+          <article class="tile tile-toyota">
+            <div class="tile-label">
+              <small data-i18n="tile.toyota.sub">LINE OA / Web app</small>
+              <strong>Toyota Thailand</strong>
+            </div>
+          </article>
+          <article class="tile tile-stat" aria-hidden="true">
+            <div class="tile-stat-inner">
+              <span class="tile-stat-num">348%</span>
+              <span class="tile-stat-label" data-i18n="tile.stat.label">SEO page view growth</span>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── SERVICES ── -->
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow" data-i18n="svc.eyebrow">Services we deliver</div>
+            <h2 data-i18n="svc.title">ครบทุก Solution ที่ธุรกิจต้องการ</h2>
+          </div>
+          <p data-i18n="svc.desc">เลือกดู capability ตามเป้าหมายของโปรเจกต์ ตั้งแต่ build app ใหม่, เพิ่มความปลอดภัย, เชื่อม LINE ecosystem ไปจนถึง scale traffic ด้วย SEO/SEM</p>
+        </div>
+
+        <div class="chip-bar reveal" role="group" aria-label="Filter services">
+          <button class="chip" type="button" data-filter="all"    aria-pressed="true"  data-i18n="chip.all">All capabilities</button>
+          <button class="chip" type="button" data-filter="build"  aria-pressed="false" data-i18n="chip.build">Build</button>
+          <button class="chip" type="button" data-filter="growth" aria-pressed="false" data-i18n="chip.growth">Growth</button>
+          <button class="chip" type="button" data-filter="secure" aria-pressed="false" data-i18n="chip.secure">Security</button>
+        </div>
+
+        <div class="bento" id="bentoGrid">
+
+          <!-- 01 Website Dev (featured) -->
+          <article class="s-card s-feat reveal" id="web" data-cat="build">
+            <div class="s-top">
+              <span class="s-num">01</span>
+              <span class="s-icon" aria-hidden="true">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+              </span>
+            </div>
+            <div>
+              <h3 data-i18n="s01.title">Website Development &amp; Security</h3>
+              <p  data-i18n="s01.desc">พัฒนาเว็บไซต์และเว็บแอปสำหรับองค์กรด้วย React, Next.js, Node.js และ PHP พร้อม performance, maintainability และ security ตั้งแต่สถาปัตยกรรมแรก ไม่ว่าจะเป็น Corporate Site, e-Commerce หรือ Complex Web App</p>
+              <div class="tag-row">
+                <span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Node.js</span><span class="tag">PHP / Laravel</span><span class="tag">Web Security</span><span class="tag">SSL/TLS</span><span class="tag">PDPA</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 02 Mobile App -->
+          <article class="s-card reveal" id="mobile" data-cat="build" style="transition-delay:.06s">
+            <div class="s-top">
+              <span class="s-num">02</span>
+              <span class="s-icon" aria-hidden="true">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2" width="10" height="20" rx="3"/><circle cx="12" cy="17" r="1" fill="currentColor" stroke="none"/></svg>
+              </span>
+            </div>
+            <div>
+              <h3 data-i18n="s02.title">Mobile Application (iOS &amp; Android)</h3>
+              <p  data-i18n="s02.desc">ออกแบบและพัฒนาแอปมือถือสำหรับ workflow จริงของธุรกิจ ทั้ง Native iOS และ Android พร้อม backend integration และ release process ที่ครบถ้วน</p>
+              <div class="tag-row">
+                <span class="tag">Swift</span><span class="tag">Kotlin</span><span class="tag">iOS</span><span class="tag">Android</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03 LINE OA -->
+          <article class="s-card reveal" data-cat="build" style="transition-delay:.12s">
+            <div class="s-top">
+              <span class="s-num">03</span>
+              <span class="s-icon" aria-hidden="true">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+              </span>
+            </div>
+            <div>
+              <h3 data-i18n="s03.title">LINE OA &amp; Mini Program</h3>
+              <p  data-i18n="s03.desc">สร้างประสบการณ์ลูกค้าใน LINE ecosystem ตั้งแต่ LIFF, campaign flow, member journey ไปจนถึง web app ที่เชื่อมกับระบบหลังบ้าน</p>
+              <div class="tag-row">
+                <span class="tag">LINE OA</span><span class="tag">LIFF</span><span class="tag">Mini Program</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04 UI/UX -->
+          <article class="s-card reveal" id="design" data-cat="growth" style="transition-delay:.06s">
+            <div class="s-top">
+              <span class="s-num">04</span>
+              <span class="s-icon" aria-hidden="true">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+            </div>
+            <div>
+              <h3 data-i18n="s04.title">UI/UX Design Direction</h3>
+              <p  data-i18n="s04.desc">แปลงโจทย์ธุรกิจและ user journey ให้เป็น interface ที่ใช้งานง่าย พร้อม prototype, design system และ direction ที่ทีม dev ทำต่อได้จริง</p>
+              <div class="tag-row">
+                <span class="tag">Figma</span><span class="tag">Prototype</span><span class="tag">Design System</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 05 SEO/SEM -->
+          <article class="s-card reveal" id="seo" data-cat="growth" style="transition-delay:.12s">
+            <div class="s-top">
+              <span class="s-num">05</span>
+              <span class="s-icon" aria-hidden="true">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              </span>
+            </div>
+            <div>
+              <h3 data-i18n="s05.title">SEO, SEM &amp; Ads Optimization</h3>
+              <p  data-i18n="s05.desc">วาง technical SEO, search architecture, Google Ads และ analytics เพื่อเปลี่ยนเว็บไซต์ให้เป็นช่องทางสร้าง lead ที่วัดผลได้ พิสูจน์แล้วด้วย +348% page views</p>
+              <div class="tag-row">
+                <span class="tag">Google Ads</span><span class="tag">Technical SEO</span><span class="tag">Analytics</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 06 Cloud -->
+          <article class="s-card reveal" data-cat="secure" style="transition-delay:.18s">
+            <div class="s-top">
+              <span class="s-num">06</span>
+              <span class="s-icon" aria-hidden="true">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+              </span>
+            </div>
+            <div>
+              <h3 data-i18n="s06.title">Cloud &amp; Infrastructure</h3>
+              <p  data-i18n="s06.desc">ออกแบบ cloud architecture และ deployment pipeline ให้ระบบรองรับการเติบโต ลด downtime และดูแลง่ายหลัง launch</p>
+              <div class="tag-row">
+                <span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">DigitalOcean</span><span class="tag">CI/CD</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TECH STACK ── -->
+    <section>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow" data-i18n="tech.eyebrow">Technology</div>
+            <h2 data-i18n="tech.title">Tech Stack ที่เราใช้</h2>
+          </div>
+          <p data-i18n="tech.desc">เลือก technology ที่เหมาะสมกับโปรเจกต์ ไม่ใช่แค่ที่ถนัด เพื่อให้ระบบที่ส่งมอบดูแลได้ในระยะยาว</p>
+        </div>
+        <div class="tech-grid reveal">
+          <div class="tech-card">
+            <div class="tech-label" data-i18n="tech.frontend">Frontend</div>
+            <div class="tech-tags"><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Bootstrap</span><span class="tag">Swift</span><span class="tag">Kotlin</span></div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-label" data-i18n="tech.backend">Backend</div>
+            <div class="tech-tags"><span class="tag">Node.js</span><span class="tag">PHP / Laravel</span><span class="tag">CodeIgniter</span><span class="tag">.NET</span></div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-label" data-i18n="tech.database">Database</div>
+            <div class="tech-tags"><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">MSSQL</span></div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-label" data-i18n="tech.cloud">Cloud</div>
+            <div class="tech-tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">DigitalOcean</span><span class="tag">GDCC</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── METHOD ── -->
+    <section id="method">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow" data-i18n="method.eyebrow">How we work</div>
+            <h2 data-i18n="method.title">แนวทางการทำงานของ Teema</h2>
+          </div>
+          <p data-i18n="method.desc">ทุกโปรเจกต์เริ่มจาก business outcome ไม่ใช่แค่ feature list เพื่อให้สิ่งที่ build ตอบโจทย์ธุรกิจจริง</p>
+        </div>
+        <div class="method-grid">
+          <aside class="signal-panel reveal">
+            <div class="eyebrow" data-i18n="signal.eyebrow">Track record</div>
+            <h3 data-i18n="signal.title">ตัวเลขที่พิสูจน์ผลงานจริง</h3>
+            <div class="signal-list">
+              <div class="signal"><span data-i18n="sig.1">Projects delivered successfully</span><b>50+</b></div>
+              <div class="signal"><span data-i18n="sig.2">ปีประสบการณ์</span><b>10+</b></div>
+              <div class="signal"><span data-i18n="sig.3">องค์กรชั้นนำที่ไว้วางใจ</span><b>30+</b></div>
+              <div class="signal"><span data-i18n="sig.4">Page view growth (SEO)</span><b>348%</b></div>
+              <div class="signal"><span data-i18n="sig.5">Repeat &amp; referral clients</span><b>98%</b></div>
+            </div>
+          </aside>
+          <div class="timeline reveal" style="transition-delay:.1s">
+            <article class="step">
+              <div class="step-num" aria-hidden="true">01</div>
+              <div>
+                <h4 data-i18n="step1.title">Scope around business outcome</h4>
+                <p  data-i18n="step1.desc">เริ่มจาก goal, user journey, data flow และความเสี่ยงของระบบ เพื่อให้สิ่งที่ build ตอบโจทย์ธุรกิจ ไม่ใช่แค่หน้าตาสวย</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step-num" aria-hidden="true">02</div>
+              <div>
+                <h4 data-i18n="step2.title">Prototype, validate, then engineer</h4>
+                <p  data-i18n="step2.desc">ทำ UX direction และ prototype ก่อนลง production code ลดรอบแก้ ลด ambiguity และทำให้ stakeholder เห็นภาพเดียวกัน</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step-num" aria-hidden="true">03</div>
+              <div>
+                <h4 data-i18n="step3.title">Secure launch with measurable growth</h4>
+                <p  data-i18n="step3.desc">ส่งมอบพร้อม security, SEO, analytics และ infrastructure ที่ติดตามผลได้หลัง go-live เพื่อให้ success guarantee ตรวจสอบได้จริง</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SELECTED WORK ── -->
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow" data-i18n="work.eyebrow">Selected work</div>
+            <h2 data-i18n="work.title">งานจริงจากองค์กรที่ไว้ใจ Teema</h2>
+          </div>
+          <p data-i18n="work.desc">ผลงานที่ส่งมอบจริง เพื่อพิสูจน์คุณภาพและความสามารถในการทำงานกับองค์กรขนาดใหญ่</p>
+        </div>
+        <div class="work-grid">
+          <article class="case-card reveal">
+            <img src="img/Image_Mitsubishi_Electric_1080x810.jpg" alt="Mitsubishi Electric website project"/>
+            <div class="case-copy">
+              <div class="eyebrow" data-i18n="w1.sub">Product information website</div>
+              <h3 data-i18n="w1.title">Mitsubishi Electric</h3>
+              <p  data-i18n="w1.desc">Website Design (All Page) สำหรับ product information experience ขององค์กรระดับโลก</p>
+            </div>
+          </article>
+          <div class="case-stack">
+            <article class="mini-case reveal" style="transition-delay:.07s">
+              <img src="img/Image_Stella_1080x810.jpg" alt="Stella Plus web application"/>
+              <div>
+                <div class="eyebrow" data-i18n="w2.sub">Web application</div>
+                <h4 data-i18n="w2.title">Stella Plus</h4>
+                <p  data-i18n="w2.desc">eSarabun &amp; eHR for Local Government</p>
+              </div>
+            </article>
+            <article class="mini-case reveal" style="transition-delay:.13s">
+              <img src="img/Image_Toyota_1080x810.jpg" alt="Toyota Thailand LINE Web App"/>
+              <div>
+                <div class="eyebrow" data-i18n="w3.sub">LINE OA / Web app</div>
+                <h4 data-i18n="w3.title">Toyota Thailand</h4>
+                <p  data-i18n="w3.desc">Road Safety LINE Web App 2023</p>
+              </div>
+            </article>
+            <article class="mini-case reveal" style="transition-delay:.19s">
+              <img src="img/Image_BAAC_1080x810.jpg" alt="BAAC government system"/>
+              <div>
+                <div class="eyebrow" data-i18n="w4.sub">Government web system</div>
+                <h4 data-i18n="w4.title">BAAC</h4>
+                <p  data-i18n="w4.desc">ระบบสารสนเทศสำหรับองค์กรรัฐ</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TRUSTED BY ── -->
+    <section>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow" data-i18n="trust.eyebrow">Trusted by</div>
+            <h2 data-i18n="trust.title">ลูกค้าที่ไว้วางใจ Teema Solution</h2>
+          </div>
+          <p data-i18n="trust.desc">30+ องค์กรชั้นนำทั้งภาครัฐและเอกชนที่เลือกใช้บริการและกลับมาใช้ซ้ำ</p>
+        </div>
+        <div class="client-grid reveal" aria-label="Client organizations">
+          <div class="client-cell"><img src="img/logo/AirAsia.png"       alt="AirAsia"/></div>
+          <div class="client-cell"><img src="img/logo/AstraZeneca.png"   alt="AstraZeneca"/></div>
+          <div class="client-cell"><img src="img/logo/BBL.png"           alt="Bangkok Bank"/></div>
+          <div class="client-cell"><img src="img/logo/BMA.png"           alt="Bangkok Metropolitan Administration"/></div>
+          <div class="client-cell"><img src="img/logo/BUA.png"           alt="BUA"/></div>
+          <div class="client-cell"><img src="img/logo/CMU.png"           alt="Chiang Mai University"/></div>
+          <div class="client-cell"><img src="img/logo/CMUEAF.png"        alt="CMU Engineering"/></div>
+          <div class="client-cell"><img src="img/logo/CMUENG.png"        alt="CMU Engineering"/></div>
+          <div class="client-cell"><img src="img/logo/Chula.png"         alt="Chulalongkorn University"/></div>
+          <div class="client-cell"><img src="img/logo/Democrat.png"      alt="Democrat Party"/></div>
+          <div class="client-cell"><img src="img/logo/Dhipaya.png"       alt="Dhipaya Insurance"/></div>
+          <div class="client-cell"><img src="img/logo/EDF-Thailand.png"  alt="EDF Thailand"/></div>
+          <div class="client-cell"><img src="img/logo/Falcon.png"        alt="Falcon"/></div>
+          <div class="client-cell"><img src="img/logo/GHB.png"           alt="GHB"/></div>
+          <div class="client-cell"><img src="img/logo/Image.png"         alt="GC"/></div>
+          <div class="client-cell"><img src="img/logo/KU.png"            alt="Kasetsart University"/></div>
+          <div class="client-cell"><img src="img/logo/MOFA.png"          alt="Ministry of Foreign Affairs"/></div>
+          <div class="client-cell"><img src="img/logo/MOTS.png"          alt="Ministry of Tourism and Sports"/></div>
+          <div class="client-cell"><img src="img/logo/NSI.png"           alt="NSI"/></div>
+          <div class="client-cell"><img src="img/logo/Novo-Nordisk.png"  alt="Novo Nordisk"/></div>
+          <div class="client-cell"><img src="img/logo/RID.png"           alt="Royal Irrigation Department"/></div>
+          <div class="client-cell"><img src="img/logo/SCB.png"           alt="SCB"/></div>
+          <div class="client-cell"><img src="img/logo/SMEDBank.png"      alt="SME D Bank"/></div>
+          <div class="client-cell"><img src="img/logo/SPU.png"           alt="Sripatum University"/></div>
+          <div class="client-cell"><img src="img/logo/Samitivej.png"     alt="Samitivej Hospital"/></div>
+          <div class="client-cell"><img src="img/logo/ThaiPost.png"      alt="Thailand Post"/></div>
+          <div class="client-cell"><img src="img/logo/WSPA-Thailand.png" alt="WSPA Thailand"/></div>
+          <div class="client-cell"><img src="img/logo/giz-Germany.png"   alt="GIZ Germany"/></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta" id="contact">
+      <div class="wrap">
+        <div class="cta-panel reveal">
+          <div class="cta-content">
+            <div>
+              <div class="eyebrow" data-i18n="cta.eyebrow">Ready to start?</div>
+              <h2 data-i18n="cta.title">พร้อมสร้าง Solution<br/>ด้วยกัน</h2>
+              <p class="lead" data-i18n="cta.lead">ปรึกษาทีม Teema Solution ฟรี เพื่อประเมิน scope, risk, timeline และเส้นทางสู่ launch ที่เหมาะกับธุรกิจคุณ</p>
+              <div class="cta-actions">
+                <a class="btn btn-primary"   href="contact.html"   data-i18n="cta.btn1">ติดต่อเราเลย</a>
+                <a class="btn btn-secondary" href="portfolio.html" data-i18n="cta.btn2" style="color:#fff;border-color:rgba(255,255,255,0.3);">ดูผลงานก่อน</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="c-line"><span data-i18n="contact.email">Email</span>    <b>contact@teemasolution.com</b></div>
+              <div class="c-line"><span data-i18n="contact.phone">Phone</span>    <b>061-565-6599</b></div>
+              <div class="c-line"><span data-i18n="contact.location">Location</span><b>Thailand</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">TEEMA <span>SOLUTION</span></div>
+          <p class="footer-desc" data-i18n="footer.desc">ที่มาของ Solution ที่ดีที่สุด<br/>Software House &amp; Digital Solutions Thailand</p>
+        </div>
+        <div>
+          <p class="footer-col-title" data-i18n="footer.col.services">Services</p>
+          <ul class="footer-links">
+            <li><a href="services.html#web"    data-i18n="footer.s1">Website Development</a></li>
+            <li><a href="services.html#mobile" data-i18n="footer.s2">Mobile Application</a></li>
+            <li><a href="services.html#design" data-i18n="footer.s3">Design Direction</a></li>
+            <li><a href="services.html#seo"    data-i18n="footer.s4">SEO &amp; SEM</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title" data-i18n="footer.col.company">Company</p>
+          <ul class="footer-links">
+            <li><a href="about.html"     data-i18n="footer.c1">About Us</a></li>
+            <li><a href="portfolio.html" data-i18n="footer.c2">Portfolio</a></li>
+            <li><a href="contact.html"   data-i18n="footer.c3">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title" data-i18n="footer.col.contact">Contact</p>
+          <ul class="footer-links">
+            <li><a href="mailto:contact@teemasolution.com">contact@teemasolution.com</a></li>
+            <li><a href="tel:0615656599">061-565-6599</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy" data-i18n="footer.copy">© 2025 Teema Solution Co., Ltd. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#">LinkedIn</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ═══════════════════════════════════════════
+       TRANSLATIONS
+    ═══════════════════════════════════════════ */
+    const tr = {
+      th: {
+        'nav.home': 'Home', 'nav.services': 'Services', 'nav.portfolio': 'Portfolio', 'nav.about': 'About', 'nav.contact': 'Contact',
+        'cta.portfolio': 'ดูผลงาน', 'cta.consult': 'ปรึกษาฟรี',
+
+        'hero.eyebrow': 'Software House · Thailand',
+        'hero.title':   'ที่มาของ <span>Solution</span><br/>ที่องค์กรวางใจ',
+        'hero.lead':    'Teema Solution คือ Software House สำหรับองค์กรที่ต้องการ Website, Mobile App, LINE OA, SEO, Web Security และระบบดิจิทัลคุณภาพ พร้อมทีมที่โฟกัสผลลัพธ์หลังส่งมอบจริง',
+        'hero.btn1': 'Explore Services', 'hero.btn2': 'ดูแนวทางการทำงาน',
+
+        'proof.projects': 'Projects delivered', 'proof.years': 'ปีประสบการณ์',
+        'proof.clients': 'องค์กรชั้นนำ', 'proof.referral': 'Repeat &amp; referral',
+
+        'tile.main.sub': 'Enterprise digital capability',
+        'tile.main.title': 'Corporate web &amp; digital systems for leading brands',
+        'tile.stella.sub': 'Web application', 'tile.toyota.sub': 'LINE OA / Web app',
+        'tile.stat.label': 'SEO page view growth',
+
+        'svc.eyebrow': 'Services we deliver',
+        'svc.title': 'ครบทุก Solution ที่ธุรกิจต้องการ',
+        'svc.desc': 'เลือกดู capability ตามเป้าหมายของโปรเจกต์ ตั้งแต่ build app ใหม่, เพิ่มความปลอดภัย, เชื่อม LINE ecosystem ไปจนถึง scale traffic ด้วย SEO/SEM',
+
+        'chip.all': 'All capabilities', 'chip.build': 'Build', 'chip.growth': 'Growth', 'chip.secure': 'Security',
+
+        's01.title': 'Website Development &amp; Security',
+        's01.desc': 'พัฒนาเว็บไซต์และเว็บแอปสำหรับองค์กรด้วย React, Next.js, Node.js และ PHP พร้อม performance, maintainability และ security ตั้งแต่สถาปัตยกรรมแรก ไม่ว่าจะเป็น Corporate Site, e-Commerce หรือ Complex Web App',
+        's02.title': 'Mobile Application (iOS &amp; Android)',
+        's02.desc': 'ออกแบบและพัฒนาแอปมือถือสำหรับ workflow จริงของธุรกิจ ทั้ง Native iOS และ Android พร้อม backend integration และ release process ที่ครบถ้วน',
+        's03.title': 'LINE OA &amp; Mini Program',
+        's03.desc': 'สร้างประสบการณ์ลูกค้าใน LINE ecosystem ตั้งแต่ LIFF, campaign flow, member journey ไปจนถึง web app ที่เชื่อมกับระบบหลังบ้าน',
+        's04.title': 'UI/UX Design Direction',
+        's04.desc': 'แปลงโจทย์ธุรกิจและ user journey ให้เป็น interface ที่ใช้งานง่าย พร้อม prototype, design system และ direction ที่ทีม dev ทำต่อได้จริง',
+        's05.title': 'SEO, SEM &amp; Ads Optimization',
+        's05.desc': 'วาง technical SEO, search architecture, Google Ads และ analytics เพื่อเปลี่ยนเว็บไซต์ให้เป็นช่องทางสร้าง lead ที่วัดผลได้ พิสูจน์แล้วด้วย +348% page views',
+        's06.title': 'Cloud &amp; Infrastructure',
+        's06.desc': 'ออกแบบ cloud architecture และ deployment pipeline ให้ระบบรองรับการเติบโต ลด downtime และดูแลง่ายหลัง launch',
+
+        'tech.eyebrow': 'Technology', 'tech.title': 'Tech Stack ที่เราใช้',
+        'tech.desc': 'เลือก technology ที่เหมาะสมกับโปรเจกต์ ไม่ใช่แค่ที่ถนัด เพื่อให้ระบบที่ส่งมอบดูแลได้ในระยะยาว',
+        'tech.frontend': 'Frontend', 'tech.backend': 'Backend', 'tech.database': 'Database', 'tech.cloud': 'Cloud',
+
+        'method.eyebrow': 'How we work', 'method.title': 'แนวทางการทำงานของ Teema',
+        'method.desc': 'ทุกโปรเจกต์เริ่มจาก business outcome ไม่ใช่แค่ feature list เพื่อให้สิ่งที่ build ตอบโจทย์ธุรกิจจริง',
+
+        'signal.eyebrow': 'Track record', 'signal.title': 'ตัวเลขที่พิสูจน์ผลงานจริง',
+        'sig.1': 'Projects delivered successfully', 'sig.2': 'ปีประสบการณ์',
+        'sig.3': 'องค์กรชั้นนำที่ไว้วางใจ', 'sig.4': 'Page view growth (SEO)',
+        'sig.5': 'Repeat &amp; referral clients',
+
+        'step1.title': 'Scope around business outcome',
+        'step1.desc': 'เริ่มจาก goal, user journey, data flow และความเสี่ยงของระบบ เพื่อให้สิ่งที่ build ตอบโจทย์ธุรกิจ ไม่ใช่แค่หน้าตาสวย',
+        'step2.title': 'Prototype, validate, then engineer',
+        'step2.desc': 'ทำ UX direction และ prototype ก่อนลง production code ลดรอบแก้ ลด ambiguity และทำให้ stakeholder เห็นภาพเดียวกัน',
+        'step3.title': 'Secure launch with measurable growth',
+        'step3.desc': 'ส่งมอบพร้อม security, SEO, analytics และ infrastructure ที่ติดตามผลได้หลัง go-live เพื่อให้ success guarantee ตรวจสอบได้จริง',
+
+        'work.eyebrow': 'Selected work', 'work.title': 'งานจริงจากองค์กรที่ไว้ใจ Teema',
+        'work.desc': 'ผลงานที่ส่งมอบจริง เพื่อพิสูจน์คุณภาพและความสามารถในการทำงานกับองค์กรขนาดใหญ่',
+        'w1.sub': 'Product information website', 'w1.title': 'Mitsubishi Electric',
+        'w1.desc': 'Website Design (All Page) สำหรับ product information experience ขององค์กรระดับโลก',
+        'w2.sub': 'Web application', 'w2.title': 'Stella Plus', 'w2.desc': 'eSarabun &amp; eHR for Local Government',
+        'w3.sub': 'LINE OA / Web app', 'w3.title': 'Toyota Thailand', 'w3.desc': 'Road Safety LINE Web App 2023',
+        'w4.sub': 'Government web system', 'w4.title': 'BAAC', 'w4.desc': 'ระบบสารสนเทศสำหรับองค์กรรัฐ',
+
+        'trust.eyebrow': 'Trusted by', 'trust.title': 'ลูกค้าที่ไว้วางใจ Teema Solution',
+        'trust.desc': '30+ องค์กรชั้นนำทั้งภาครัฐและเอกชนที่เลือกใช้บริการและกลับมาใช้ซ้ำ',
+
+        'cta.eyebrow': 'Ready to start?', 'cta.title': 'พร้อมสร้าง Solution<br/>ด้วยกัน',
+        'cta.lead': 'ปรึกษาทีม Teema Solution ฟรี เพื่อประเมิน scope, risk, timeline และเส้นทางสู่ launch ที่เหมาะกับธุรกิจคุณ',
+        'cta.btn1': 'ติดต่อเราเลย', 'cta.btn2': 'ดูผลงานก่อน',
+        'contact.email': 'Email', 'contact.phone': 'Phone', 'contact.location': 'Location',
+
+        'footer.desc': 'ที่มาของ Solution ที่ดีที่สุด<br/>Software House &amp; Digital Solutions Thailand',
+        'footer.col.services': 'Services', 'footer.col.company': 'Company', 'footer.col.contact': 'Contact',
+        'footer.s1': 'Website Development', 'footer.s2': 'Mobile Application',
+        'footer.s3': 'Design Direction', 'footer.s4': 'SEO &amp; SEM',
+        'footer.c1': 'About Us', 'footer.c2': 'Portfolio', 'footer.c3': 'Contact',
+        'footer.copy': '© 2025 Teema Solution Co., Ltd. All rights reserved.',
+      },
+
+      en: {
+        'nav.home': 'Home', 'nav.services': 'Services', 'nav.portfolio': 'Portfolio', 'nav.about': 'About', 'nav.contact': 'Contact',
+        'cta.portfolio': 'Portfolio', 'cta.consult': 'Free Consult',
+
+        'hero.eyebrow': 'Software House · Thailand',
+        'hero.title':   'The <span>Solution</span><br/>Enterprise Trusts',
+        'hero.lead':    'Teema Solution is a Software House for organizations that need Websites, Mobile Apps, LINE OA, SEO, Web Security and quality digital systems — with a team focused on real results after every delivery.',
+        'hero.btn1': 'Explore Services', 'hero.btn2': 'See Our Approach',
+
+        'proof.projects': 'Projects delivered', 'proof.years': 'Years of experience',
+        'proof.clients': 'Leading organizations', 'proof.referral': 'Repeat &amp; referral',
+
+        'tile.main.sub': 'Enterprise digital capability',
+        'tile.main.title': 'Corporate web &amp; digital systems for leading brands',
+        'tile.stella.sub': 'Web application', 'tile.toyota.sub': 'LINE OA / Web app',
+        'tile.stat.label': 'SEO page view growth',
+
+        'svc.eyebrow': 'Services we deliver',
+        'svc.title': 'Everything your business needs',
+        'svc.desc': 'Browse capabilities by project goal — from building new apps and hardening security, to connecting the LINE ecosystem and scaling traffic with SEO/SEM.',
+
+        'chip.all': 'All capabilities', 'chip.build': 'Build', 'chip.growth': 'Growth', 'chip.secure': 'Security',
+
+        's01.title': 'Website Development &amp; Security',
+        's01.desc': 'We build websites and web apps for organizations using React, Next.js, Node.js and PHP — with performance, maintainability and security from day one. Corporate sites, e-Commerce and complex web applications.',
+        's02.title': 'Mobile Application (iOS &amp; Android)',
+        's02.desc': 'We design and develop native mobile apps for real business workflows — both iOS and Android — complete with backend integration and a full release process.',
+        's03.title': 'LINE OA &amp; Mini Program',
+        's03.desc': 'We build customer experiences inside the LINE ecosystem: LIFF apps, campaign flows, member journeys and web apps connected to your back-end systems.',
+        's04.title': 'UI/UX Design Direction',
+        's04.desc': 'We translate business goals and user journeys into easy-to-use interfaces — complete with prototypes, design systems and direction your dev team can build from.',
+        's05.title': 'SEO, SEM &amp; Ads Optimization',
+        's05.desc': 'We set up technical SEO, search architecture, Google Ads and analytics to turn your website into a measurable lead channel — proven with +348% page view growth.',
+        's06.title': 'Cloud &amp; Infrastructure',
+        's06.desc': 'We design cloud architecture and deployment pipelines so your system can scale, minimise downtime and stay easy to maintain after launch.',
+
+        'tech.eyebrow': 'Technology', 'tech.title': 'Our Technology Stack',
+        'tech.desc': 'We choose the right technology for each project — not just what\'s familiar — so the system we deliver stays maintainable long-term.',
+        'tech.frontend': 'Frontend', 'tech.backend': 'Backend', 'tech.database': 'Database', 'tech.cloud': 'Cloud',
+
+        'method.eyebrow': 'How we work', 'method.title': 'The Teema Approach',
+        'method.desc': 'Every project starts from business outcomes, not just feature lists — so what we build actually solves the real problem.',
+
+        'signal.eyebrow': 'Track record', 'signal.title': 'Numbers that prove real results',
+        'sig.1': 'Projects delivered successfully', 'sig.2': 'Years of experience',
+        'sig.3': 'Leading organizations served', 'sig.4': 'Page view growth (SEO)',
+        'sig.5': 'Repeat &amp; referral clients',
+
+        'step1.title': 'Scope around business outcome',
+        'step1.desc': 'We start with goals, user journeys, data flows and system risk — so what we build answers the real business need, not just looks good.',
+        'step2.title': 'Prototype, validate, then engineer',
+        'step2.desc': 'We do UX direction and prototyping before production code — reducing revision cycles, cutting ambiguity and aligning every stakeholder.',
+        'step3.title': 'Secure launch with measurable growth',
+        'step3.desc': 'We deliver with security, SEO, analytics and infrastructure that can be tracked post go-live — making our success guarantee verifiable.',
+
+        'work.eyebrow': 'Selected work', 'work.title': 'Real work from organizations that trust Teema',
+        'work.desc': 'Delivered projects that prove our quality and ability to collaborate with large-scale organizations.',
+        'w1.sub': 'Product information website', 'w1.title': 'Mitsubishi Electric',
+        'w1.desc': 'Full website design (all pages) for a world-class product information experience.',
+        'w2.sub': 'Web application', 'w2.title': 'Stella Plus', 'w2.desc': 'eSarabun &amp; eHR for Local Government',
+        'w3.sub': 'LINE OA / Web app', 'w3.title': 'Toyota Thailand', 'w3.desc': 'Road Safety LINE Web App 2023',
+        'w4.sub': 'Government web system', 'w4.title': 'BAAC', 'w4.desc': 'Information system for a government organization.',
+
+        'trust.eyebrow': 'Trusted by', 'trust.title': 'Clients who trust Teema Solution',
+        'trust.desc': '30+ leading organizations — public and private sector — who chose our services and came back.',
+
+        'cta.eyebrow': 'Ready to start?', 'cta.title': 'Let\'s build something<br/>great together',
+        'cta.lead': 'Consult with Teema Solution — free of charge — to assess scope, risk, timeline and the right path to launch for your business.',
+        'cta.btn1': 'Contact Us', 'cta.btn2': 'See Our Portfolio',
+        'contact.email': 'Email', 'contact.phone': 'Phone', 'contact.location': 'Location',
+
+        'footer.desc': 'Where the best Solution comes from.<br/>Software House &amp; Digital Solutions Thailand',
+        'footer.col.services': 'Services', 'footer.col.company': 'Company', 'footer.col.contact': 'Contact',
+        'footer.s1': 'Website Development', 'footer.s2': 'Mobile Application',
+        'footer.s3': 'Design Direction', 'footer.s4': 'SEO &amp; SEM',
+        'footer.c1': 'About Us', 'footer.c2': 'Portfolio', 'footer.c3': 'Contact',
+        'footer.copy': '© 2025 Teema Solution Co., Ltd. All rights reserved.',
+      }
+    };
+
+    /* ═══════════════════════════════════════════
+       THEME TOGGLE
+    ═══════════════════════════════════════════ */
+    const html    = document.documentElement;
+    const hdr     = document.getElementById('siteHeader');
+    const themeBtn = document.getElementById('themeBtn');
+
+    themeBtn.addEventListener('click', () => {
+      const next = html.dataset.theme === 'light' ? 'dark' : 'light';
+      html.dataset.theme = next;
+      localStorage.setItem('ts-theme', next);
+    });
+
+    /* ═══════════════════════════════════════════
+       LANGUAGE TOGGLE
+    ═══════════════════════════════════════════ */
+    const langBtn = document.getElementById('langBtn');
+
+    function applyLang(lang) {
+      html.dataset.lang = lang;
+      html.lang = lang === 'en' ? 'en' : 'th';
+      localStorage.setItem('ts-lang', lang);
+      const dict = tr[lang] || tr.th;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const val = dict[el.dataset.i18n];
+        if (val !== undefined) el.innerHTML = val;
+      });
+    }
+
+    langBtn.addEventListener('click', () => {
+      applyLang(html.dataset.lang === 'en' ? 'th' : 'en');
+    });
+
+    // Apply saved language on load
+    applyLang(html.dataset.lang || 'th');
+
+    /* ═══════════════════════════════════════════
+       NAV SCROLL + MOBILE MENU
+    ═══════════════════════════════════════════ */
+    window.addEventListener('scroll', () => {
+      hdr.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    document.getElementById('menuBtn').addEventListener('click', function() {
+      const open = hdr.classList.toggle('nav-open');
+      this.setAttribute('aria-expanded', String(open));
+    });
+
+    /* ═══════════════════════════════════════════
+       SERVICE CARD CURSOR GLOW
+    ═══════════════════════════════════════════ */
+    document.querySelectorAll('.s-card').forEach(card => {
+      card.addEventListener('pointermove', e => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+        card.style.setProperty('--my', `${e.clientY - r.top}px`);
+      });
+    });
+
+    /* ═══════════════════════════════════════════
+       SERVICE FILTER
+    ═══════════════════════════════════════════ */
+    const chips = document.querySelectorAll('.chip');
+    const cards = document.querySelectorAll('.s-card');
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const f = chip.dataset.filter;
+        chips.forEach(c => c.setAttribute('aria-pressed', String(c === chip)));
+        cards.forEach(card => {
+          const show = f === 'all' || card.dataset.cat === f;
+          card.style.display = show ? 'grid' : 'none';
+        });
+        const feat = document.querySelector('.s-feat');
+        if (feat && feat.style.display !== 'none') {
+          feat.style.gridColumn = (f === 'all' || f === 'build') ? 'span 2' : 'span 1';
+        }
+      });
+    });
+
+    /* ═══════════════════════════════════════════
+       SCROLL REVEAL
+    ═══════════════════════════════════════════ */
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
 </body>
 </html>

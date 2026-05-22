@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" data-theme="dark" data-lang="th">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Anti-FOUC: apply saved theme+lang before paint -->
+  <script>(function(){var t=localStorage.getItem('ts-theme')||'dark';var l=localStorage.getItem('ts-lang')||'th';document.documentElement.dataset.theme=t;document.documentElement.dataset.lang=l;document.documentElement.lang=l==='en'?'en':'th';})();</script>
   <title>Teema Solution | Software House บริษัทรับจ้างเขียนโปรแกรม และรับเขียนโปรแกรม</title>
   <meta name="description" content="Teema Solution คือ Software House และบริษัทรับจ้างเขียนโปรแกรม ให้บริการเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App LINE OA SEO และระบบธุรกิจครบวงจร"/>
   <meta name="keywords" content="Software House, บริษัทรับจ้างเขียนโปรแกรม, เขียนโปรแกรม, Teema Solution, รับทำเว็บ, พัฒนาเว็บไซต์, Mobile App, LINE OA, SEO"/>
@@ -15,70 +17,229 @@
   <meta property="og:url" content="https://ongkub.github.io/teemasolution/"/>
   <meta property="og:image" content="https://ongkub.github.io/teemasolution/img/logo/teema.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Teema Solution | Software House บริษัทรับจ้างเขียนโปรแกรม"/>
-  <meta name="twitter:description" content="รับเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App LINE OA SEO และระบบธุรกิจครบวงจร"/>
-  <link rel="stylesheet" href="styles.css"/>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Teema Solution",
-    "url": "https://ongkub.github.io/teemasolution/",
-    "logo": "https://ongkub.github.io/teemasolution/img/logo/teema.png",
-    "image": "https://ongkub.github.io/teemasolution/img/logo/teema.png",
-    "description": "Teema Solution คือ Software House และบริษัทรับจ้างเขียนโปรแกรม ให้บริการเขียนโปรแกรม พัฒนาเว็บไซต์ Mobile App LINE OA SEO และระบบธุรกิจครบวงจร",
-    "email": "contact@teemasolution.com",
-    "telephone": "0615656599",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "81/7 หมู่5 ซอยหมู่บ้านทิพวัล ซอย 21/3 ถ.เทพารักษ์ ต.บางเมืองใหม่",
-      "addressLocality": "เมืองสมุทรปราการ",
-      "addressRegion": "สมุทรปราการ",
-      "postalCode": "10270",
-      "addressCountry": "TH"
-    },
-    "sameAs": [],
-    "serviceType": [
-      "Software House",
-      "บริษัทรับจ้างเขียนโปรแกรม",
-      "เขียนโปรแกรม",
-      "Website Development",
-      "Mobile Application Development",
-      "LINE OA Development",
-      "SEO"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Teema Solution",
-    "url": "https://ongkub.github.io/teemasolution/"
-  }
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="theme.css"/>
+  <style>
+    /* ── Hero ──────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--bg);
+      padding-top: 68px;
+    }
+    .hero__grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(oklch(100% 0 0 / 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, oklch(100% 0 0 / 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+    }
+    [data-theme="light"] .hero__grid {
+      background-image:
+        linear-gradient(oklch(30% 0.05 247 / 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, oklch(30% 0.05 247 / 0.05) 1px, transparent 1px);
+    }
+    .hero__glow {
+      position: absolute;
+      width: 700px; height: 500px;
+      border-radius: 50%;
+      background: oklch(65% 0.2 255 / 0.12);
+      filter: blur(100px);
+      top: -100px; left: -100px;
+      pointer-events: none;
+    }
+    .hero__glow--2 {
+      background: oklch(76% 0.14 188 / 0.08);
+      width: 500px; height: 400px;
+      top: auto; left: auto;
+      bottom: -80px; right: -60px;
+    }
+    .hero__inner {
+      position: relative;
+      z-index: 2;
+      width: min(1280px, 100% - 40px);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      padding: 80px 0;
+    }
+    .hero__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent);
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 0.06em;
+      margin-bottom: 24px;
+    }
+    .hero__tag-dot {
+      display: inline-block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.7); }
+    }
+    .hero__title {
+      font-size: clamp(44px, 6vw, 80px);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.0;
+      color: var(--fg);
+      margin-bottom: 24px;
+    }
+    .hero__title span { color: var(--accent); }
+    .hero__desc {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 36px;
+    }
+    .hero__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
+    .hero__stats { display: flex; gap: 40px; }
+    .hero__stat-num {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--fg);
+      letter-spacing: -0.05em;
+      line-height: 1;
+      font-family: 'DM Mono', monospace;
+    }
+    .hero__stat-num span { color: var(--accent); }
+    .hero__stat-label {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* Hero visual card */
+    .hero__card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      z-index: 2;
+    }
+    .hero__card-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-family: 'DM Mono', monospace;
+      margin-bottom: 20px;
+    }
+    .hero__card-list { display: flex; flex-direction: column; gap: 14px; }
+    .hero__card-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--soft);
+    }
+    .hero__card-dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .hero__card-dot--purple { background: var(--accent-2); }
+    .hero__card-dot--green  { background: oklch(68% 0.18 160); }
+
+    /* Floating badges */
+    .hero__float {
+      position: absolute;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      box-shadow: var(--shadow);
+      z-index: 3;
+    }
+    .hero__float--1 { right: -32px; top: 32px; }
+    .hero__float--2 { right: 16px; bottom: -24px; }
+    .hero__float-badge {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+      font-family: 'DM Mono', monospace;
+    }
+    .hero__float-num {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--fg);
+      letter-spacing: -0.04em;
+      font-family: 'DM Mono', monospace;
+    }
+    .hero__float-label {
+      font-size: 11px;
+      font-weight: 300;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    @media (max-width: 900px) {
+      .hero__inner { grid-template-columns: 1fr; gap: 48px; padding: 60px 0; }
+      .hero__float { display: none; }
+      .hero__stats { gap: 24px; }
+    }
+    @media (max-width: 540px) {
+      .hero__actions { flex-direction: column; }
+      .hero__actions .btn { width: 100%; justify-content: center; }
+      .hero__stats { gap: 20px; flex-wrap: wrap; }
+    }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Teema Solution","url":"https://ongkub.github.io/teemasolution/","logo":"https://ongkub.github.io/teemasolution/img/logo/teema.png","email":"contact@teemasolution.com","telephone":"0615656599","address":{"@type":"PostalAddress","streetAddress":"81/7 หมู่5 ซอยหมู่บ้านทิพวัล ซอย 21/3 ถ.เทพารักษ์ ต.บางเมืองใหม่","addressLocality":"เมืองสมุทรปราการ","addressRegion":"สมุทรปราการ","postalCode":"10270","addressCountry":"TH"}}</script>
 </head>
 <body>
 
 <!-- ══════════ NAV ══════════ -->
 <nav class="nav" id="mainNav">
-  <div class="nav__logo">
+  <a href="index.html" class="nav__logo">
     <img src="img/logo/teema.png" alt="Teema Solution" class="nav__logo-img"/>
     <span class="nav__logo-text">TEEMA <span>SOLUTION</span></span>
-  </div>
+  </a>
   <ul class="nav__links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html" class="active" data-i18n="nav-home">Home</a></li>
+    <li><a href="services.html" data-i18n="nav-services">Services</a></li>
+    <li><a href="portfolio.html" data-i18n="nav-portfolio">Portfolio</a></li>
+    <li><a href="about.html" data-i18n="nav-about">About</a></li>
+    <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
   </ul>
+  <div class="nav-controls">
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme"></button>
+    <button class="lang-btn" id="langBtn" aria-label="Switch language">
+      <span class="lang-th">TH</span><span class="lang-sep"> | </span><span class="lang-en">EN</span>
+    </button>
+  </div>
   <div class="nav__cta">
-    <a href="contact.html" class="btn btn--primary btn--sm">ติดต่อเรา</a>
+    <a href="contact.html" class="btn btn--primary btn--sm" data-i18n="nav-cta">ติดต่อเรา</a>
   </div>
-  <div class="nav__hamburger" id="hamburger">
-    <span></span><span></span><span></span>
-  </div>
+  <div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
 
 <!-- ══════════ HERO ══════════ -->
@@ -87,78 +248,52 @@
   <div class="hero__glow"></div>
   <div class="hero__glow hero__glow--2"></div>
   <div class="hero__inner">
-    <!-- Left: Text -->
     <div class="hero__text">
       <div class="hero__tag">
         <span class="hero__tag-dot"></span>
-        Software House · Thailand
+        <span data-i18n="hero-tag">Software House · Thailand</span>
       </div>
-      <h1 class="hero__title">
-        ที่มาของ<br/>
-        <span>Solution</span><br/>
-        ที่ดีที่สุด
-      </h1>
-      <p class="hero__desc">
-        <strong>Teema Solution</strong> คือ <strong>Software House</strong> และ
-        <strong>บริษัทรับจ้างเขียนโปรแกรม</strong> ที่พร้อมส่งมอบบริการ
-        <strong>เขียนโปรแกรม</strong>, พัฒนา Website, Mobile App,
-        LINE OA, SEO และ Web Security สำหรับธุรกิจที่ต้องการระบบคุณภาพ
-      </p>
+      <h1 class="hero__title" data-i18n="hero-title">ที่มาของ<br/><span>Solution</span><br/>ที่ดีที่สุด</h1>
+      <p class="hero__desc" data-i18n="hero-desc"><strong>Teema Solution</strong> คือ <strong>Software House</strong> และ <strong>บริษัทรับจ้างเขียนโปรแกรม</strong> ที่พร้อมส่งมอบบริการ <strong>เขียนโปรแกรม</strong>, พัฒนา Website, Mobile App, LINE OA, SEO และ Web Security สำหรับธุรกิจที่ต้องการระบบคุณภาพ</p>
       <div class="hero__actions">
-        <a href="portfolio.html" class="btn btn--primary btn--lg">ดูผลงานของเรา</a>
-        <a href="contact.html" class="btn btn--outline btn--lg">ติดต่อเรา</a>
+        <a href="portfolio.html" class="btn btn--primary btn--lg" data-i18n="hero-btn-portfolio">ดูผลงานของเรา</a>
+        <a href="contact.html" class="btn btn--outline btn--lg" data-i18n="hero-btn-contact">ติดต่อเรา</a>
       </div>
       <div class="hero__stats">
         <div>
           <div class="hero__stat-num">50<span>+</span></div>
-          <div class="hero__stat-label">Projects Delivered</div>
+          <div class="hero__stat-label" data-i18n="hero-stat-1">Projects Delivered</div>
         </div>
         <div>
           <div class="hero__stat-num">10<span>+</span></div>
-          <div class="hero__stat-label">ปีประสบการณ์</div>
+          <div class="hero__stat-label" data-i18n="hero-stat-2">ปีประสบการณ์</div>
         </div>
         <div>
           <div class="hero__stat-num">30<span>+</span></div>
-          <div class="hero__stat-label">ลูกค้าชั้นนำ</div>
+          <div class="hero__stat-label" data-i18n="hero-stat-3">ลูกค้าชั้นนำ</div>
         </div>
       </div>
     </div>
-    <!-- Right: Visual Card -->
-    <div class="hero__visual" style="position:relative;">
+    <div style="position:relative;">
       <div class="hero__card">
-        <div class="hero__card-label">Services We Deliver</div>
+        <div class="hero__card-label" data-i18n="hero-card-label">Services We Deliver</div>
         <div class="hero__card-list">
-          <div class="hero__card-item">
-            <span class="hero__card-dot"></span>
-            Website Development & Security
-          </div>
-          <div class="hero__card-item">
-            <span class="hero__card-dot hero__card-dot--purple"></span>
-            Mobile Application (iOS & Android)
-          </div>
-          <div class="hero__card-item">
-            <span class="hero__card-dot hero__card-dot--green"></span>
-            LINE OA & Mini Program
-          </div>
-          <div class="hero__card-item">
-            <span class="hero__card-dot"></span>
-            UI/UX Design Direction
-          </div>
-          <div class="hero__card-item">
-            <span class="hero__card-dot hero__card-dot--purple"></span>
-            SEO, SEM & Ads Optimization
-          </div>
+          <div class="hero__card-item"><span class="hero__card-dot"></span><span data-i18n="hero-card-1">Website Development &amp; Security</span></div>
+          <div class="hero__card-item"><span class="hero__card-dot hero__card-dot--purple"></span><span data-i18n="hero-card-2">Mobile Application (iOS &amp; Android)</span></div>
+          <div class="hero__card-item"><span class="hero__card-dot hero__card-dot--green"></span><span data-i18n="hero-card-3">LINE OA &amp; Mini Program</span></div>
+          <div class="hero__card-item"><span class="hero__card-dot"></span><span data-i18n="hero-card-4">UI/UX Design Direction</span></div>
+          <div class="hero__card-item"><span class="hero__card-dot hero__card-dot--purple"></span><span data-i18n="hero-card-5">SEO, SEM &amp; Ads Optimization</span></div>
         </div>
       </div>
       <div class="hero__float hero__float--1">
-        <div class="hero__float-badge">Projects</div>
+        <div class="hero__float-badge" data-i18n="hero-float-1-badge">Projects</div>
         <div class="hero__float-num">50+</div>
-        <div class="hero__float-label">Delivered successfully</div>
+        <div class="hero__float-label" data-i18n="hero-float-1-label">Delivered successfully</div>
       </div>
       <div class="hero__float hero__float--2">
-        <div class="hero__float-badge">Client Satisfaction</div>
+        <div class="hero__float-badge" data-i18n="hero-float-2-badge">Client Satisfaction</div>
         <div class="hero__float-num">98%</div>
-        <div class="hero__float-label">Repeat & referral clients</div>
+        <div class="hero__float-label" data-i18n="hero-float-2-label">Repeat &amp; referral clients</div>
       </div>
     </div>
   </div>
@@ -171,55 +306,52 @@
     <div class="marquee__item">Mobile Application <span class="marquee__dot"></span></div>
     <div class="marquee__item">Web Security <span class="marquee__dot"></span></div>
     <div class="marquee__item">UI/UX Design <span class="marquee__dot"></span></div>
-    <div class="marquee__item">SEO & SEM <span class="marquee__dot"></span></div>
+    <div class="marquee__item">SEO &amp; SEM <span class="marquee__dot"></span></div>
     <div class="marquee__item">LINE OA <span class="marquee__dot"></span></div>
-    <div class="marquee__item">Cloud & Infrastructure <span class="marquee__dot"></span></div>
-    <!-- Duplicate for loop -->
+    <div class="marquee__item">Cloud &amp; Infrastructure <span class="marquee__dot"></span></div>
     <div class="marquee__item">Website Development <span class="marquee__dot"></span></div>
     <div class="marquee__item">Mobile Application <span class="marquee__dot"></span></div>
     <div class="marquee__item">Web Security <span class="marquee__dot"></span></div>
     <div class="marquee__item">UI/UX Design <span class="marquee__dot"></span></div>
-    <div class="marquee__item">SEO & SEM <span class="marquee__dot"></span></div>
+    <div class="marquee__item">SEO &amp; SEM <span class="marquee__dot"></span></div>
     <div class="marquee__item">LINE OA <span class="marquee__dot"></span></div>
-    <div class="marquee__item">Cloud & Infrastructure <span class="marquee__dot"></span></div>
+    <div class="marquee__item">Cloud &amp; Infrastructure <span class="marquee__dot"></span></div>
   </div>
 </div>
 
 <!-- ══════════ CLIENTS ══════════ -->
 <section class="clients">
   <div class="container">
-    <p class="clients__label">ลูกค้าที่ไว้วางใจเรา</p>
+    <p class="clients__label" data-i18n="clients-label">ลูกค้าที่ไว้วางใจเรา</p>
     <div class="clients__logos">
-      <img src="img/logo/AirAsia.png" alt="AirAsia" class="clients__logo"/>
-      <img src="img/logo/AstraZeneca.png" alt="AstraZeneca" class="clients__logo"/>
-      <img src="img/logo/BBL.png" alt="BBL" class="clients__logo"/>
-      <img src="img/logo/BMA.png" alt="BMA" class="clients__logo"/>
-      <img src="img/logo/BUA-1-95x95.png" alt="BUA" class="clients__logo"/>
-      <img src="img/logo/BUA.png" alt="BUA" class="clients__logo"/>
-      <img src="img/logo/CMU.png" alt="CMU" class="clients__logo"/>
-      <img src="img/logo/CMUEAF.png" alt="CMUEAF" class="clients__logo"/>
-      <img src="img/logo/CMUENG.png" alt="CMUENG" class="clients__logo"/>
-      <img src="img/logo/Chula.png" alt="Chula" class="clients__logo"/>
-      <img src="img/logo/Democrat.png" alt="Democrat" class="clients__logo"/>
-      <img src="img/logo/Dhipaya.png" alt="Dhipaya" class="clients__logo"/>
-      <img src="img/logo/EDF-Thailand.png" alt="EDF Thailand" class="clients__logo"/>
-      <img src="img/logo/Falcon.png" alt="Falcon" class="clients__logo"/>
-      <img src="img/logo/GHB.png" alt="GHB" class="clients__logo"/>
-      <img src="img/logo/Image.png" alt="GC" class="clients__logo"/>
-      <img src="img/logo/KU.png" alt="KU" class="clients__logo"/>
-      <img src="img/logo/MOFA.png" alt="MOFA" class="clients__logo"/>
-      <img src="img/logo/MOTS.png" alt="MOTS" class="clients__logo"/>
-      <img src="img/logo/NSI-1.png" alt="NSI" class="clients__logo"/>
-      <img src="img/logo/NSI.png" alt="NSI" class="clients__logo"/>
-      <img src="img/logo/Novo-Nordisk.png" alt="Novo Nordisk" class="clients__logo"/>
-      <img src="img/logo/RID.png" alt="RID" class="clients__logo"/>
-      <img src="img/logo/SCB.png" alt="SCB" class="clients__logo"/>
-      <img src="img/logo/SMEDBank.png" alt="SMEDBank" class="clients__logo"/>
-      <img src="img/logo/SPU.png" alt="SPU" class="clients__logo"/>
-      <img src="img/logo/Samitivej.png" alt="Samitivej" class="clients__logo"/>
-      <img src="img/logo/ThaiPost.png" alt="Thai Post" class="clients__logo"/>
-      <img src="img/logo/WSPA-Thailand.png" alt="WSPA Thailand" class="clients__logo"/>
-      <img src="img/logo/giz-Germany.png" alt="giz Germany" class="clients__logo"/>
+      <img src="img/logo/AirAsia.png"        alt="AirAsia"        class="clients__logo"/>
+      <img src="img/logo/AstraZeneca.png"    alt="AstraZeneca"    class="clients__logo"/>
+      <img src="img/logo/BBL.png"            alt="BBL"            class="clients__logo"/>
+      <img src="img/logo/BMA.png"            alt="BMA"            class="clients__logo"/>
+      <img src="img/logo/BUA.png"            alt="BUA"            class="clients__logo"/>
+      <img src="img/logo/CMU.png"            alt="CMU"            class="clients__logo"/>
+      <img src="img/logo/CMUEAF.png"         alt="CMUEAF"         class="clients__logo"/>
+      <img src="img/logo/CMUENG.png"         alt="CMUENG"         class="clients__logo"/>
+      <img src="img/logo/Chula.png"          alt="Chula"          class="clients__logo"/>
+      <img src="img/logo/Democrat.png"       alt="Democrat"       class="clients__logo"/>
+      <img src="img/logo/Dhipaya.png"        alt="Dhipaya"        class="clients__logo"/>
+      <img src="img/logo/EDF-Thailand.png"   alt="EDF Thailand"   class="clients__logo"/>
+      <img src="img/logo/Falcon.png"         alt="Falcon"         class="clients__logo"/>
+      <img src="img/logo/GHB.png"            alt="GHB"            class="clients__logo"/>
+      <img src="img/logo/Image.png"          alt="GC"             class="clients__logo"/>
+      <img src="img/logo/KU.png"             alt="KU"             class="clients__logo"/>
+      <img src="img/logo/MOFA.png"           alt="MOFA"           class="clients__logo"/>
+      <img src="img/logo/MOTS.png"           alt="MOTS"           class="clients__logo"/>
+      <img src="img/logo/NSI.png"            alt="NSI"            class="clients__logo"/>
+      <img src="img/logo/Novo-Nordisk.png"   alt="Novo Nordisk"   class="clients__logo"/>
+      <img src="img/logo/RID.png"            alt="RID"            class="clients__logo"/>
+      <img src="img/logo/SCB.png"            alt="SCB"            class="clients__logo"/>
+      <img src="img/logo/SMEDBank.png"       alt="SMEDBank"       class="clients__logo"/>
+      <img src="img/logo/SPU.png"            alt="SPU"            class="clients__logo"/>
+      <img src="img/logo/Samitivej.png"      alt="Samitivej"      class="clients__logo"/>
+      <img src="img/logo/ThaiPost.png"       alt="Thai Post"      class="clients__logo"/>
+      <img src="img/logo/WSPA-Thailand.png"  alt="WSPA Thailand"  class="clients__logo"/>
+      <img src="img/logo/giz-Germany.png"    alt="giz Germany"    class="clients__logo"/>
     </div>
   </div>
 </section>
@@ -229,16 +361,16 @@
   <div class="container">
     <div class="services__header">
       <div class="reveal">
-        <span class="section-label">What We Do</span>
-        <h2 class="section-title">Services ของเรา</h2>
-        <p class="section-sub">ครบทุก Solution ที่ธุรกิจคุณต้องการ</p>
+        <span class="section-label" data-i18n="services-label">What We Do</span>
+        <h2 class="section-title" style="margin-top:8px;" data-i18n="services-title">Services ของเรา</h2>
+        <p class="section-sub" data-i18n="services-sub">ครบทุก Solution ที่ธุรกิจคุณต้องการ</p>
       </div>
-      <a href="services.html" class="btn btn--outline reveal">ดู Services ทั้งหมด →</a>
+      <a href="services.html" class="btn btn--outline reveal" data-i18n="services-all-btn">ดู Services ทั้งหมด →</a>
     </div>
     <div class="services__list">
       <div class="service-row reveal">
         <span class="service-row__num">01</span>
-        <span class="service-row__title">Website Development & Security</span>
+        <span class="service-row__title" data-i18n="svc-1">Website Development &amp; Security</span>
         <div class="service-row__tags">
           <span class="tag">React</span><span class="tag">Next.js</span>
           <span class="tag">Node.js</span><span class="tag">PHP</span>
@@ -246,7 +378,7 @@
       </div>
       <div class="service-row reveal reveal-delay-1">
         <span class="service-row__num">02</span>
-        <span class="service-row__title">Mobile Application & LINE OA</span>
+        <span class="service-row__title" data-i18n="svc-2">Mobile Application &amp; LINE OA</span>
         <div class="service-row__tags">
           <span class="tag">Swift</span><span class="tag">Kotlin</span>
           <span class="tag">LINE LIFF</span>
@@ -254,7 +386,7 @@
       </div>
       <div class="service-row reveal reveal-delay-2">
         <span class="service-row__num">03</span>
-        <span class="service-row__title">UI/UX Design Direction</span>
+        <span class="service-row__title" data-i18n="svc-3">UI/UX Design Direction</span>
         <div class="service-row__tags">
           <span class="tag">Figma</span><span class="tag">Prototype</span>
           <span class="tag">Design System</span>
@@ -262,7 +394,7 @@
       </div>
       <div class="service-row reveal reveal-delay-3">
         <span class="service-row__num">04</span>
-        <span class="service-row__title">SEO, SEM & Ads Optimization</span>
+        <span class="service-row__title" data-i18n="svc-4">SEO, SEM &amp; Ads Optimization</span>
         <div class="service-row__tags">
           <span class="tag">Google Ads</span><span class="tag">Technical SEO</span>
           <span class="tag">Analytics</span>
@@ -270,7 +402,7 @@
       </div>
       <div class="service-row reveal reveal-delay-4">
         <span class="service-row__num">05</span>
-        <span class="service-row__title">Cloud & Infrastructure</span>
+        <span class="service-row__title" data-i18n="svc-5">Cloud &amp; Infrastructure</span>
         <div class="service-row__tags">
           <span class="tag">AWS</span><span class="tag">Azure</span>
           <span class="tag">DigitalOcean</span>
@@ -280,31 +412,31 @@
   </div>
 </section>
 
-<!-- ══════════ STATS (Navy Section) ══════════ -->
+<!-- ══════════ STATS ══════════ -->
 <section class="section-navy" style="padding:100px 0;">
   <div class="section-navy__glow"></div>
   <div class="section-navy__glow section-navy__glow--2"></div>
   <div class="container" style="position:relative;z-index:2;">
     <div class="text-center reveal" style="margin-bottom:56px;">
-      <span class="section-label section-label--w">Track Record</span>
-      <h2 class="section-title section-title--w">ตัวเลขที่พิสูจน์<br/>ผลงานจริง</h2>
+      <span class="section-label section-label--w" data-i18n="stats-label">Track Record</span>
+      <h2 class="section-title section-title--w" style="margin-top:8px;" data-i18n="stats-title">ตัวเลขที่พิสูจน์<br/>ผลงานจริง</h2>
     </div>
     <div class="stats-grid reveal reveal-delay-1">
       <div class="stat-cell">
         <div class="stat-cell__num">50<span>+</span></div>
-        <div class="stat-cell__label">โปรเจกต์ที่ส่งมอบสำเร็จ</div>
+        <div class="stat-cell__label" data-i18n="stat-1">โปรเจกต์ที่ส่งมอบสำเร็จ</div>
       </div>
       <div class="stat-cell">
         <div class="stat-cell__num">10<span>+</span></div>
-        <div class="stat-cell__label">ปีประสบการณ์</div>
+        <div class="stat-cell__label" data-i18n="stat-2">ปีประสบการณ์</div>
       </div>
       <div class="stat-cell">
         <div class="stat-cell__num">30<span>+</span></div>
-        <div class="stat-cell__label">องค์กรชั้นนำที่ไว้วางใจ</div>
+        <div class="stat-cell__label" data-i18n="stat-3">องค์กรชั้นนำที่ไว้วางใจ</div>
       </div>
       <div class="stat-cell">
         <div class="stat-cell__num">348<span>%</span></div>
-        <div class="stat-cell__label">Page view growth (SEO)</div>
+        <div class="stat-cell__label" data-i18n="stat-4">Page View Growth (SEO)</div>
       </div>
     </div>
   </div>
@@ -313,110 +445,65 @@
 <!-- ══════════ PORTFOLIO PREVIEW ══════════ -->
 <section class="portfolio">
   <div class="container">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:16px;" class="reveal">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;flex-wrap:wrap;gap:16px;" class="reveal">
       <div>
-        <span class="section-label">Selected Work</span>
-        <h2 class="section-title">ผลงานของเรา</h2>
+        <span class="section-label" data-i18n="port-label">Selected Work</span>
+        <h2 class="section-title" style="margin-top:8px;" data-i18n="port-title">ผลงานของเรา</h2>
       </div>
-      <a href="portfolio.html" class="btn btn--outline">ดูทั้งหมด →</a>
+      <a href="portfolio.html" class="btn btn--outline" data-i18n="port-all">ดูทั้งหมด →</a>
     </div>
-    <div class="portfolio__grid mt-8">
+    <div class="portfolio__grid">
       <div class="portfolio-card portfolio-card--wide reveal">
-        <img src="img/Image_Mitsubishi_Electric_1440x810.jpg" alt="Mitsubishi"/>
+        <img src="img/Image_Mitsubishi_Electric_1440x810.jpg" alt="Mitsubishi Electric" loading="lazy"/>
         <div class="portfolio-card__overlay">
           <div class="portfolio-card__client">Mitsubishi Electric</div>
-          <div class="portfolio-card__title">Product Information Website Design</div>
-          <span class="portfolio-card__type">Website Design (All Page)</span>
+          <div class="portfolio-card__title" data-i18n="pcard-1-title">Product Information Website Design</div>
+          <span class="portfolio-card__type">Website Design</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card reveal">
-        <img src="img/Image_Betagro_1080x810.jpg" alt="Betagro"/>
+        <img src="img/Image_Betagro_1080x810.jpg" alt="Betagro" loading="lazy"/>
         <div class="portfolio-card__overlay">
           <div class="portfolio-card__client">BET AGRO</div>
-          <div class="portfolio-card__title">Product Information Website Design</div>
-          <span class="portfolio-card__type">Website Design (All Page)</span>
+          <div class="portfolio-card__title" data-i18n="pcard-2-title">Product Information Website Design</div>
+          <span class="portfolio-card__type">Website Design</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card reveal reveal-delay-1">
-        <img src="img/Image_Stella_1080x810.jpg" alt="Stella Plus"/>
+        <img src="img/Image_Stella_1080x810.jpg" alt="Stella Plus" loading="lazy"/>
         <div class="portfolio-card__overlay">
-          <div class="portfolio-card__client">Stella Plus (Startup)</div>
-          <div class="portfolio-card__title">eSarabun & eHR for Local Government</div>
-          <span class="portfolio-card__type">Web App — React + Next.js</span>
+          <div class="portfolio-card__client">Stella Plus</div>
+          <div class="portfolio-card__title" data-i18n="pcard-3-title">eSarabun &amp; eHR for Local Government</div>
+          <span class="portfolio-card__type">SaaS — React + Next.js</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card reveal reveal-delay-2">
-        <img src="img/Image_BAAC_1080x810.jpg" alt="BAAC"/>
+        <img src="img/Image_BAAC_1080x810.jpg" alt="BAAC" loading="lazy"/>
         <div class="portfolio-card__overlay">
-          <div class="portfolio-card__client">BAAC</div>
-          <div class="portfolio-card__title">Agricultural Loan Information Website</div>
-          <span class="portfolio-card__type">Website Design (All Page)</span>
-        </div>
-        <div class="portfolio-card__arrow">↗</div>
-      </div>
-      <div class="portfolio-card reveal reveal-delay-3">
-        <img src="img/Image_Omron_1080x810.jpg" alt="OMRON"/>
-        <div class="portfolio-card__overlay">
-          <div class="portfolio-card__client">OMRON</div>
-          <div class="portfolio-card__title">Store Locator Website</div>
-          <span class="portfolio-card__type">Website Design (All Page)</span>
+          <div class="portfolio-card__client">BAAC (ธ.ก.ส.)</div>
+          <div class="portfolio-card__title" data-i18n="pcard-4-title">Agricultural Loan Information Website</div>
+          <span class="portfolio-card__type">Website Design</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card portfolio-card--wide reveal">
-        <img src="img/Image_SangThai_1440x810.jpg" alt="Sangthai"/>
+        <img src="img/Image_SangThai_1440x810.jpg" alt="Sangthai" loading="lazy"/>
         <div class="portfolio-card__overlay">
           <div class="portfolio-card__client">Sangthai Metalsheet</div>
-          <div class="portfolio-card__title">SEO & SEM Strategy — Page Views +348%</div>
-          <span class="portfolio-card__type">SEO & SEM</span>
+          <div class="portfolio-card__title" data-i18n="pcard-5-title">SEO Strategy — Page Views +348%</div>
+          <span class="portfolio-card__type">SEO &amp; SEM</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
       <div class="portfolio-card reveal">
-        <img src="img/Image_Toyota_1080x810.jpg" alt="Toyota"/>
+        <img src="img/Image_Toyota_1080x810.jpg" alt="Toyota Thailand" loading="lazy"/>
         <div class="portfolio-card__overlay">
           <div class="portfolio-card__client">Toyota Thailand</div>
-          <div class="portfolio-card__title">Road Safety LINE Web App 2023</div>
+          <div class="portfolio-card__title" data-i18n="pcard-6-title">Road Safety LINE Web App 2023</div>
           <span class="portfolio-card__type">LINE OA / Web App</span>
-        </div>
-        <div class="portfolio-card__arrow">↗</div>
-      </div>
-      <div class="portfolio-card reveal reveal-delay-1">
-        <img src="img/Image_Calories_Credit_Challenge_1080x810.jpg" alt="Calories Credit"/>
-        <div class="portfolio-card__overlay">
-          <div class="portfolio-card__client">กระทรวงการท่องเที่ยวและกีฬา</div>
-          <div class="portfolio-card__title">Calories Credit Challenge App</div>
-          <span class="portfolio-card__type">Mobile App (iOS + Android)</span>
-        </div>
-        <div class="portfolio-card__arrow">↗</div>
-      </div>
-      <div class="portfolio-card portfolio-card--wide reveal reveal-delay-2">
-        <img src="img/Image_Novo_Norvisk_1080x810.jpg" alt="Novo Nordisk"/>
-        <div class="portfolio-card__overlay">
-          <div class="portfolio-card__client">Novo Nordisk</div>
-          <div class="portfolio-card__title">Novo Nordisk Connect</div>
-          <span class="portfolio-card__type">LINE Official Account</span>
-        </div>
-        <div class="portfolio-card__arrow">↗</div>
-      </div>
-      <div class="portfolio-card reveal reveal-delay-3">
-        <img src="img/Image_Dhipaya_1080x810.jpg" alt="Dhipaya"/>
-        <div class="portfolio-card__overlay">
-          <div class="portfolio-card__client">Dhipaya Insurance</div>
-          <div class="portfolio-card__title">TIP Renew</div>
-          <span class="portfolio-card__type">LINE Official Account</span>
-        </div>
-        <div class="portfolio-card__arrow">↗</div>
-      </div>
-      <div class="portfolio-card portfolio-card--wide reveal">
-        <img src="img/Image_eXta_1080x810.jpg" alt="eXta"/>
-        <div class="portfolio-card__overlay">
-          <div class="portfolio-card__client">eXta (CP ALL)</div>
-          <div class="portfolio-card__title">SEO & SEM Ads Optimization</div>
-          <span class="portfolio-card__type">SEO & SEM</span>
         </div>
         <div class="portfolio-card__arrow">↗</div>
       </div>
@@ -428,16 +515,12 @@
 <section class="cta-banner">
   <div class="cta-banner__orb"></div>
   <div class="container" style="position:relative;z-index:2;">
-    <span class="section-label section-label--w" style="justify-content:center;margin-bottom:20px;">Ready to start?</span>
-    <h2 class="cta-banner__title reveal">
-      พร้อมสร้าง<br/>
-      <span>Solution</span><br/>
-      ด้วยกัน
-    </h2>
-    <p class="cta-banner__sub reveal reveal-delay-1">ปรึกษาทีมเราฟรี ไม่มีค่าใช้จ่าย</p>
+    <span class="section-label section-label--w" style="justify-content:center;margin-bottom:20px;" data-i18n="cta-label">Ready to start?</span>
+    <h2 class="cta-banner__title reveal" data-i18n="cta-title">พร้อมสร้าง<br/><span>Solution</span><br/>ด้วยกัน</h2>
+    <p class="cta-banner__sub reveal reveal-delay-1" data-i18n="cta-sub">ปรึกษาทีมเราฟรี ไม่มีค่าใช้จ่าย</p>
     <div class="cta-banner__actions reveal reveal-delay-2">
-      <a href="contact.html" class="btn btn--purple btn--lg">ติดต่อเราเลย →</a>
-      <a href="portfolio.html" class="btn btn--outline-w btn--lg">ดูผลงานก่อน</a>
+      <a href="contact.html" class="btn btn--purple btn--lg" data-i18n="cta-btn-1">ติดต่อเราเลย →</a>
+      <a href="portfolio.html" class="btn btn--outline-w btn--lg" data-i18n="cta-btn-2">ดูผลงานก่อน</a>
     </div>
   </div>
 </section>
@@ -448,28 +531,28 @@
     <div class="footer__grid">
       <div>
         <div class="footer__brand-name">TEEMA <span>SOLUTION</span></div>
-        <p class="footer__brand-desc">ที่มาของ Solution ที่ดีที่สุด<br/>Software House & Digital Solutions Thailand</p>
+        <p class="footer__brand-desc" data-i18n="footer-brand">ที่มาของ Solution ที่ดีที่สุด<br/>Software House &amp; Digital Solutions Thailand</p>
       </div>
       <div>
-        <p class="footer__col-title">Services</p>
+        <p class="footer__col-title" data-i18n="footer-col-services">Services</p>
         <ul class="footer__links">
-          <li><a href="services.html#web">Website Development</a></li>
-          <li><a href="services.html#security">Web Security</a></li>
-          <li><a href="services.html#mobile">Mobile Application</a></li>
-          <li><a href="services.html#design">Design Direction</a></li>
-          <li><a href="services.html#seo">SEO & SEM</a></li>
+          <li><a href="services.html" data-i18n="footer-svc-1">Website Development</a></li>
+          <li><a href="services.html" data-i18n="footer-svc-2">Web Security</a></li>
+          <li><a href="services.html" data-i18n="footer-svc-3">Mobile Application</a></li>
+          <li><a href="services.html" data-i18n="footer-svc-4">Design Direction</a></li>
+          <li><a href="services.html" data-i18n="footer-svc-5">SEO &amp; SEM</a></li>
         </ul>
       </div>
       <div>
-        <p class="footer__col-title">Company</p>
+        <p class="footer__col-title" data-i18n="footer-col-company">Company</p>
         <ul class="footer__links">
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html" data-i18n="footer-about">About Us</a></li>
+          <li><a href="portfolio.html" data-i18n="footer-portfolio">Portfolio</a></li>
+          <li><a href="contact.html" data-i18n="footer-contact">Contact</a></li>
         </ul>
       </div>
       <div>
-        <p class="footer__col-title">Contact</p>
+        <p class="footer__col-title" data-i18n="footer-col-contact">Contact</p>
         <ul class="footer__links">
           <li><a href="mailto:contact@teemasolution.com">contact@teemasolution.com</a></li>
           <li><a href="tel:0615656599">0615656599</a></li>
@@ -487,23 +570,69 @@
   </div>
 </footer>
 
+<!-- Translations -->
 <script>
-  /* Nav scroll */
-  const nav = document.getElementById('mainNav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  });
-
-  /* Hamburger */
-  document.getElementById('hamburger').addEventListener('click', () => {
-    nav.classList.toggle('menu-open');
-  });
-
-  /* Scroll reveal */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+window.TR = {
+  th: {
+    'nav-home':'Home','nav-services':'Services','nav-portfolio':'Portfolio','nav-about':'About','nav-contact':'Contact','nav-cta':'ติดต่อเรา',
+    'hero-tag':'Software House · Thailand',
+    'hero-title':'ที่มาของ<br/><span>Solution</span><br/>ที่ดีที่สุด',
+    'hero-desc':'<strong>Teema Solution</strong> คือ <strong>Software House</strong> และ <strong>บริษัทรับจ้างเขียนโปรแกรม</strong> ที่พร้อมส่งมอบบริการ <strong>เขียนโปรแกรม</strong>, พัฒนา Website, Mobile App, LINE OA, SEO และ Web Security สำหรับธุรกิจที่ต้องการระบบคุณภาพ',
+    'hero-btn-portfolio':'ดูผลงานของเรา','hero-btn-contact':'ติดต่อเรา',
+    'hero-stat-1':'Projects Delivered','hero-stat-2':'ปีประสบการณ์','hero-stat-3':'ลูกค้าชั้นนำ',
+    'hero-card-label':'Services We Deliver',
+    'hero-card-1':'Website Development &amp; Security','hero-card-2':'Mobile Application (iOS &amp; Android)',
+    'hero-card-3':'LINE OA &amp; Mini Program','hero-card-4':'UI/UX Design Direction','hero-card-5':'SEO, SEM &amp; Ads Optimization',
+    'hero-float-1-badge':'Projects','hero-float-1-label':'Delivered successfully',
+    'hero-float-2-badge':'Client Satisfaction','hero-float-2-label':'Repeat &amp; referral clients',
+    'clients-label':'ลูกค้าที่ไว้วางใจเรา',
+    'services-label':'What We Do','services-title':'Services ของเรา','services-sub':'ครบทุก Solution ที่ธุรกิจคุณต้องการ','services-all-btn':'ดู Services ทั้งหมด →',
+    'svc-1':'Website Development &amp; Security','svc-2':'Mobile Application &amp; LINE OA','svc-3':'UI/UX Design Direction','svc-4':'SEO, SEM &amp; Ads Optimization','svc-5':'Cloud &amp; Infrastructure',
+    'stats-label':'Track Record','stats-title':'ตัวเลขที่พิสูจน์<br/>ผลงานจริง',
+    'stat-1':'โปรเจกต์ที่ส่งมอบสำเร็จ','stat-2':'ปีประสบการณ์','stat-3':'องค์กรชั้นนำที่ไว้วางใจ','stat-4':'Page View Growth (SEO)',
+    'port-label':'Selected Work','port-title':'ผลงานของเรา','port-all':'ดูทั้งหมด →',
+    'pcard-1-title':'Product Information Website Design','pcard-2-title':'Product Information Website Design',
+    'pcard-3-title':'eSarabun &amp; eHR for Local Government','pcard-4-title':'Agricultural Loan Information Website',
+    'pcard-5-title':'SEO Strategy — Page Views +348%','pcard-6-title':'Road Safety LINE Web App 2023',
+    'cta-label':'Ready to start?','cta-title':'พร้อมสร้าง<br/><span>Solution</span><br/>ด้วยกัน','cta-sub':'ปรึกษาทีมเราฟรี ไม่มีค่าใช้จ่าย',
+    'cta-btn-1':'ติดต่อเราเลย →','cta-btn-2':'ดูผลงานก่อน',
+    'footer-brand':'ที่มาของ Solution ที่ดีที่สุด<br/>Software House &amp; Digital Solutions Thailand',
+    'footer-col-services':'Services','footer-svc-1':'Website Development','footer-svc-2':'Web Security',
+    'footer-svc-3':'Mobile Application','footer-svc-4':'Design Direction','footer-svc-5':'SEO &amp; SEM',
+    'footer-col-company':'Company','footer-about':'About Us','footer-portfolio':'Portfolio','footer-contact':'Contact',
+    'footer-col-contact':'Contact'
+  },
+  en: {
+    'nav-home':'Home','nav-services':'Services','nav-portfolio':'Portfolio','nav-about':'About','nav-contact':'Contact','nav-cta':'Contact Us',
+    'hero-tag':'Software House · Thailand',
+    'hero-title':'The Source of<br/><span>the Best</span><br/>Solution',
+    'hero-desc':'<strong>Teema Solution</strong> is a <strong>Software House</strong> and <strong>software development company</strong> ready to deliver <strong>programming</strong>, Website, Mobile App, LINE OA, SEO and Web Security for businesses that demand quality systems.',
+    'hero-btn-portfolio':'View Our Work','hero-btn-contact':'Contact Us',
+    'hero-stat-1':'Projects Delivered','hero-stat-2':'Years Experience','hero-stat-3':'Leading Clients',
+    'hero-card-label':'Services We Deliver',
+    'hero-card-1':'Website Development &amp; Security','hero-card-2':'Mobile Application (iOS &amp; Android)',
+    'hero-card-3':'LINE OA &amp; Mini Program','hero-card-4':'UI/UX Design Direction','hero-card-5':'SEO, SEM &amp; Ads Optimization',
+    'hero-float-1-badge':'Projects','hero-float-1-label':'Delivered successfully',
+    'hero-float-2-badge':'Client Satisfaction','hero-float-2-label':'Repeat &amp; referral clients',
+    'clients-label':'Trusted by Leading Organizations',
+    'services-label':'What We Do','services-title':'Our Services','services-sub':'Complete solutions for every business need','services-all-btn':'View All Services →',
+    'svc-1':'Website Development &amp; Security','svc-2':'Mobile Application &amp; LINE OA','svc-3':'UI/UX Design Direction','svc-4':'SEO, SEM &amp; Ads Optimization','svc-5':'Cloud &amp; Infrastructure',
+    'stats-label':'Track Record','stats-title':'Numbers That<br/>Prove Real Results',
+    'stat-1':'Projects Delivered','stat-2':'Years Experience','stat-3':'Leading Organizations','stat-4':'Page View Growth (SEO)',
+    'port-label':'Selected Work','port-title':'Our Projects','port-all':'View All →',
+    'pcard-1-title':'Product Information Website Design','pcard-2-title':'Product Information Website Design',
+    'pcard-3-title':'eSarabun &amp; eHR for Local Government','pcard-4-title':'Agricultural Loan Information Website',
+    'pcard-5-title':'SEO Strategy — Page Views +348%','pcard-6-title':'Road Safety LINE Web App 2023',
+    'cta-label':'Ready to start?','cta-title':'Ready to Build<br/><span>a Solution</span><br/>Together','cta-sub':'Free consultation, no obligations',
+    'cta-btn-1':'Contact Us Now →','cta-btn-2':'View Portfolio First',
+    'footer-brand':'The Source of the Best Solution<br/>Software House &amp; Digital Solutions Thailand',
+    'footer-col-services':'Services','footer-svc-1':'Website Development','footer-svc-2':'Web Security',
+    'footer-svc-3':'Mobile Application','footer-svc-4':'Design Direction','footer-svc-5':'SEO &amp; SEM',
+    'footer-col-company':'Company','footer-about':'About Us','footer-portfolio':'Portfolio','footer-contact':'Contact',
+    'footer-col-contact':'Contact'
+  }
+};
 </script>
+<script src="theme.js"></script>
 </body>
 </html>
