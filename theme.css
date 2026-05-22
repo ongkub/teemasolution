@@ -460,7 +460,7 @@ p  { color: var(--muted); }
   min-height: 320px;
   display: flex;
   align-items: flex-end;
-  padding-top: 120px;
+  padding-top: clamp(48px, 7vw, 96px);
   padding-bottom: 64px;
   background: oklch(10% 0.02 247);
   overflow: hidden;
