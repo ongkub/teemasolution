@@ -476,12 +476,19 @@ p  { color: var(--muted); }
 .page-hero__breadcrumb {
   font-size: 12px;
   font-weight: 400;
-  color: oklch(60% 0.012 250);
+  color: oklch(65% 0.012 250);
   margin-bottom: 20px;
   font-family: 'DM Mono', monospace;
 }
 .page-hero__breadcrumb a { color: inherit; }
-.page-hero__breadcrumb a:hover { color: var(--accent); }
+.page-hero__breadcrumb a:hover { color: oklch(78% 0.16 255); }
+
+/* page-hero always has dark bg — force bright text regardless of theme */
+.page-hero .section-label {
+  color: oklch(76% 0.18 290);
+}
+.page-hero .section-title { color: #fff; }
+.page-hero .section-sub  { color: oklch(78% 0.012 250); }
 
 /* ── Section Navy (always dark) ───────────────────── */
 .section-navy {
