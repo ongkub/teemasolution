@@ -90,8 +90,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 1px 0 oklch(100% 0 0 / 0.06);
 }
+[data-theme="light"] .nav {
+  background: rgba(242,245,252,0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
 [data-theme="light"] .nav.scrolled {
-  background: rgba(242,245,252,0.94);
+  background: rgba(242,245,252,0.98);
   box-shadow: 0 1px 0 rgba(27,58,143,0.08);
 }
 
